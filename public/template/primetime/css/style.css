@@ -1,0 +1,58 @@
+@import url('html5-reset.css');
+@import url('font-awesome.min.css');
+@import url('ionicons.min.css');
+
+.header{background:#F5FF00}
+.header img{display:block}
+.header .logo{float:left}
+.header .hotline{float:right; margin-top:8px; color:#F00}
+.header .hotline span{margin-right:5px}
+.header .hotline span i{margin-right:6px}
+.entry-title{margin-bottom:60px; margin-top:30px; text-align:center; text-transform:uppercase}
+.entry-title h1, .entry-title h2{font-size:30px; color:#000; font-weight:bold; font-style:italic}
+.pie-p-left{position:absolute; bottom:70px; left:-45px;}
+.pie-p-right{position:absolute; bottom:-15px; right:15px}
+.prime-time-product{}
+.prime-time-product img{display:block; width:100%;}
+.info-prime-time-product{background:#F6F6F6; text-align:center; padding:15px}
+.info-prime-time-product h2{text-transform:uppercase; margin:15px 0}
+.info-prime-time-product h2 a{font-weight:bold; font-size:16px; color:#333}
+.info-prime-time-product .price{margin-bottom:15px; font-weight:bold; color:#CE0000; font-size:28px}
+.info-prime-time-product button{background:#EE1C25; text-transform:uppercase; font-weight:bold; font-size:16px; padding-left:25px; padding-right:25px; border-radius:8px}
+
+.b-product{border:1px solid #BCBCBC; position:relative; padding:15px ; transform: rotate(1deg);}
+.products{ position:relative; margin-bottom:30px}
+.products img{width:100%; display:block;}
+.products h2{margin:10px 0; width:50%}
+.products h2 a{font-size:18px; color:#333; text-transform:uppercase; font-weight:bold}
+.products .price{position:absolute; background:url(../images/label-price.png) no-repeat; width:122px; height:53px; top:-26px; left:-18px; padding-top:10px; padding-left:15px; color:#fff; font-weight:bold; font-size:20px; z-index:10}
+.products .label-number{background:url(../images/label-number.png) no-repeat; width:124px; height:38px; position:absolute; bottom:22px; right:0px; padding-left:25px; font-style:italic; padding-top:6px; color:#fff}
+.products h2 a:hover{color:#999; transition:all 0.3s ease-in-out}
+.products h2, .products .label-number, .products .price, .products img{transform: rotate(-1deg);}
+
+.banner-ads{margin-bottom:30px}
+.banner-ads img{border:1px solid #fff}
+
+.footer{padding:40px 0 40px 0; font-size:13px;  width:100%; background:#eee;}
+.footer .item-footer h3{margin-bottom:10px; float:left; width:100%; font-size:16px; text-transform:uppercase; font-weight:bold; color:##323232 }
+.footer .item-footer ul li{margin-bottom:0;}
+.footer .item-footer ul li a{color:#666}
+.footer .item-footer ul li i{margin-right:5px; display:none}
+.footer .mgr-top{margin-top:30px}
+.footer .mgr-60{margin-top:60px}
+.footer .bold{font-weight:bold; font-size:16px; margin-bottom:15px}
+.footer .certify{margin-top:15px; text-transform:uppercase; position:relative}
+.footer .certify span{position:relative; float:left; margin-top:15px; font-size:15px; margin-right:10px}
+
+.social{margin-top:40px; display:block}
+.social a{color:#fff; width:36px;  height:36px; line-height:34px; display:inline-block; text-align:center; font-size:16px; margin-right:6px; border-radius:1px;}
+.social a:hover{background:#09c; color:#fff}
+.social .fb{background:#3949A9}
+.social .tw{background:#D64116}
+.social .gl{background:#41A4F5}
+.social .yt{background:#D84512}
+
+.back-to-top { cursor: pointer;position: fixed; bottom:70px; right: 20px; display:none;}
+.back-to-top{border-radius:4px; width:45px; line-height:45px; font-size:24px; text-align:center; color:#fff; background:#222 }
+.back-to-top:hover{transition:all 0.3s ease-out; color:#ccc}
+.back-to-top:focus{color:#ccc}

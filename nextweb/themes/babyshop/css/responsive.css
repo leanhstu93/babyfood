@@ -1,0 +1,124 @@
+/* Mobile Portrait View */
+@media screen and (max-width:767px) {
+.header_info { width:100%; float:left; }
+.lindo-header_top_menu { width:100%; float:left; }
+.lindo-header_top_menu ul { float:left}
+a.a_pading { margin:0; clear:both; width:100%; float:left; text-align:center}
+a.a_pading  img {display: block; margin-left: auto; margin-right: auto}
+.search_box  { width:100%; float:left; padding:5px 0}
+.header_menu_bottom { display:none}
+.widget_lindo-nav-menu { display:none}
+.lindo-header_top_menu ul li a { margin:0; padding:5px }
+.lindo-right-0 { padding-right:15px;}
+.lindo-left-0 { padding-left:15px;}
+.category_box .lindotang { min-height:100% !important}
+.category_box .banner { height:auto !important; background:none !important}
+.footer_img_ads { padding-top:15PX;}
+.category_box .items .item:nth-child(2n) { border-right:1px solid #e5e5e5; }
+.category_box .items .item:nth-child(1) { border-top:1px solid #e5e5e5; }
+.category_box .items .item:nth-child(2) { border-top:1px solid #e5e5e5; }
+.woocommerce ul.products li.lindo_produc_style .button { display:none}
+.woocommerce .woocommerce-ordering select { float:left}
+.woocommerce ul.products .col-md-4:nth-child(3n+1) { clear:none !important}
+.woocommerce ul.products .col-xs-6:nth-child(2n+1) { clear:both !important}
+.footer_news_lindo .lindo_ads_commem_news .footer_img_ads { border:none !important}
+.list_news_beweb .info_new p {display:none}
+.cont-news-page .list-news-page .cat_img { width:35%;}
+.cont-news-page .list-news-page .cat_note { width:60%; float:right}
+.cont-news-page .list-news-page .cat_note p { display:none} 
+.cont-news-page .list-news-page .cat_note h2 { font-size:15px; line-height:120%; margin:0; padding:10px 0}
+.cont-news-page .list-news-page .cat_note a { font-size:15px; font-weight:bold; line-height:120%}
+.post_page img { max-width:100% !important; float:left !important; height:auto}
+
+}
+
+@media screen and (min-width:300px) and (max-width: 480px){
+	.header_info { width:100%; float:left; }
+.lindo-header_top_menu { width:100%; float:left; }
+.lindo-header_top_menu ul { float:left}
+a.a_pading { margin:0; clear:both; width:100%; float:left; text-align:center}
+a.a_pading  img {display: block; margin-left: auto; margin-right: auto}
+.search_box  { width:100%; float:left; padding:5px 0}
+.header_menu_bottom { display:none}
+.widget_lindo-nav-menu { display:none}
+.lindo-header_top_menu ul li a { margin:0; padding:5px }
+.lindo-right-0 { padding-right:15px;}
+.lindo-left-0 { padding-left:15px;}
+.category_box .lindotang { min-height:100% !important}
+.category_box .banner { height:auto !important; background:none !important}
+.footer_img_ads { padding-top:15PX;}
+.category_box .items .item:nth-child(2n) { border-right:1px solid #e5e5e5; }
+.category_box .items .item:nth-child(1) { border-top:1px solid #e5e5e5; }
+.category_box .items .item:nth-child(2) { border-top:1px solid #e5e5e5; }
+.woocommerce ul.products li.lindo_produc_style .button { display:none}
+.woocommerce .woocommerce-ordering select { float:left}
+.woocommerce ul.products .col-md-4:nth-child(3n+1) { clear:none !important}
+.woocommerce ul.products .col-xs-6:nth-child(2n+1) { clear:both !important}
+.footer_news_lindo .lindo_ads_commem_news .footer_img_ads { border:none !important}
+.list_news_beweb .info_new p {display:none}
+.cont-news-page .list-news-page .cat_img { width:35%;}
+.cont-news-page .list-news-page .cat_note { width:60%; float:right}
+.cont-news-page .list-news-page .cat_note p { display:none} 
+.cont-news-page .list-news-page .cat_note h2 { font-size:15px; line-height:120%; margin:0; padding:10px 0}
+.cont-news-page .list-news-page .cat_note a { font-size:15px; font-weight:bold; line-height:120%}
+.post_page img { max-width:100% !important; float:left !important; height:auto}
+
+}
+/* Mobile Landscape View */
+@media screen and (min-width: 480px) and (max-width: 767px){
+	.header_info { width:100%; float:left; }
+.lindo-header_top_menu { width:100%; float:left; }
+.lindo-header_top_menu ul { float:left}
+a.a_pading { margin:0; clear:both; width:100%; float:left; text-align:center}
+a.a_pading  img {display: block; margin-left: auto; margin-right: auto}
+.search_box  { width:100%; float:left; padding:5px 0}
+.header_menu_bottom { display:none}
+.widget_lindo-nav-menu { display:none}
+.lindo-header_top_menu ul li a { margin:0; padding:5px }
+.lindo-right-0 { padding-right:15px;}
+.lindo-left-0 { padding-left:15px;}
+.category_box .lindotang { min-height:100% !important}
+.category_box .banner { height:auto !important; background:none !important}
+.footer_img_ads { padding-top:15PX;}
+.category_box .items .item:nth-child(2n) { border-right:1px solid #e5e5e5; }
+.category_box .items .item:nth-child(1) { border-top:1px solid #e5e5e5; }
+.category_box .items .item:nth-child(2) { border-top:1px solid #e5e5e5; }
+.woocommerce ul.products li.lindo_produc_style .button { display:none}
+.woocommerce .woocommerce-ordering select { float:left}
+.woocommerce ul.products .col-md-4:nth-child(3n+1) { clear:none !important}
+.woocommerce ul.products .col-xs-6:nth-child(2n+1) { clear:both !important}
+.footer_news_lindo .lindo_ads_commem_news .footer_img_ads { border:none !important}
+.list_news_beweb .info_new p {display:none}
+.cont-news-page .list-news-page .cat_img { width:35%;}
+.cont-news-page .list-news-page .cat_note { width:60%; float:right}
+.cont-news-page .list-news-page .cat_note p { display:none} 
+.cont-news-page .list-news-page .cat_note h2 { font-size:15px; line-height:120%; margin:0; padding:10px 0}
+.cont-news-page .list-news-page .cat_note a { font-size:15px; font-weight:bold; line-height:120%}
+.post_page img { max-width:100% !important; float:left !important; height:auto}
+
+}
+
+
+/* Tablet View */
+@media screen and (max-width:1209px) and (min-width:768px) { 
+.container { width:100%;}
+.header_menu_bottom h2.nav_lindo { font-size:10px;}
+.lindo_mega_left li a { font-size:12px;}
+.lindo_mega_left li ul { left:145px;}
+.lindo_mega_left li a img  { width:20px; height:20px; margin:0 5px}
+}
+
+@media screen and (min-width:768px) and (max-width: 980px){
+.container { width:100%;}
+.header_menu_bottom h2.nav_lindo { font-size:10px;}
+.lindo_mega_left li a { font-size:12px;}
+.lindo_mega_left li ul { left:145px;}
+.lindo_mega_left li a img  { width:20px; height:20px; margin:0 5px}
+
+}
+
+
+@media screen and (max-width: 980px){
+
+
+}

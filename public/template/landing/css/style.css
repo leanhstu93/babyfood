@@ -1,0 +1,78 @@
+@import url('html5-reset.css');
+@import url('font-awesome.min.css');
+@import 'https://fonts.googleapis.com/css?family=Lobster';
+
+.home{position:relative; overflow:hidden}
+.home img{max-width:100%; display:inline-block}
+.home .logo{text-align:center; margin-top:6px}
+.home .salogan{text-align:center; margin-bottom:60px}
+.home .pie-top{position:absolute; top:5px; left:15px}
+.home .pie-bottom{position:absolute; bottom:0; left:15px}
+.home .pie-top-right{position:absolute; top:5px; right:15px}
+.home .pie-center-right{position:absolute; bottom:20%; right:15px}
+.home .pie-bottom-right{position:absolute; bottom:0; right:150px}
+
+.pie-popular{position:relative; overflow:hidden; padding:60px 0 150px 0;}
+.product{text-align:center}
+.box-product{background:url(../images/bd.png) no-repeat; padding:28px 30px 23px 25px; width:375px; height:375px; display:inline-block; overflow:hidden; position:relative}
+.box-product img{border-radius:300px; width:320px; height:320px; display:block; transition:all 0.3s ease-in-out}
+.product h2{font-family: 'Lobster', cursive; margin:10px 0}
+.product h2 a{color:#010101; font-size:25px}
+.product .price{color:#DC1114; font-weight:bold; font-size:16px}
+.product h2 a:hover{color:#666}
+.product:hover .box-product img{transform:scale(1.1); transition:all 0.3s ease-in-out}
+
+.category-pie{background:url(../images/1_03.jpg) top center no-repeat; background-color:#670001; padding:60px 0; color:#fff; text-align:center}
+.category-pie h2{font-family: 'Lobster'}
+.entry-title{margin-bottom:60px}
+.entry-title h2{font-size:40px;}
+.pie-p-left{position:absolute; bottom:70px; left:-45px;}
+.pie-p-right{position:absolute; bottom:-15px; right:15px}
+
+.products{margin-bottom:30px}
+.bd-prouduct{background:url(../images/trungthu-v2_03.png) no-repeat; width:268px; height:264px; display:inline-block; padding:15px; overflow:hidden; position:relative}
+.bd-prouduct img{width:100%; display:block; border-radius:300px; transition:all 0.3s linear}
+.products h2{margin:10px 0}
+.products h2 a{font-size:18px; color:#fff}
+.products .price{color:#E40002; font-weight:bold; font-size:16px}
+.row-page{margin-bottom:30px}
+.products:hover .bd-prouduct img{opacity:0.3; transition:all 0.3s linear}
+.products h2 a:hover{color:#ccc; transition:all 0.3s ease-in-out}
+
+.pie-special{ text-align:center; padding:60px 0; background:#fff}
+.pie-special h2{font-family: 'Lobster'}
+.bd-red{background:url(../images/br_prod_red.png) no-repeat; width:262px; height:261px}
+.pie-special .products {margin-bottom:60px}
+.pie-special .products h2 a{color:#000}
+.pie-special .products h2 a:hover{color:#666}
+
+.footer{padding:40px 0 40px 0; font-size:13px;  width:100%; color:#fff;  background:#670001; border-bottom:1px solid #222 }
+.footer .item-footer h3{margin-bottom:10px; float:left; width:100%; font-size:16px; text-transform:uppercase; font-weight:bold; color:#fff }
+.footer .item-footer ul li{margin-bottom:0;}
+.footer .item-footer ul li a{color:#BCBCBA}
+.footer .item-footer ul li i{margin-right:5px; display:none}
+.footer .mgr-top{margin-top:30px}
+.footer .mgr-60{margin-top:60px}
+.footer .bold{font-weight:bold; font-size:16px}
+.footer .certify{margin-top:15px; text-transform:uppercase; position:relative}
+.footer .certify span{position:relative; float:left; margin-top:15px; font-size:15px; margin-right:10px}
+
+.social{margin-top:40px; display:block}
+.social a{color:#fff; width:36px;  height:36px; line-height:34px; display:inline-block; text-align:center; font-size:16px; margin-right:6px}
+.social a:hover{background:#09c; color:#fff}
+.social .fb{background:#3949A9}
+.social .tw{background:#D64116}
+.social .gl{background:#41A4F5}
+.social .yt{background:#D84512}
+
+
+.pagination{ margin:0px !important; margin-bottom:30px; padding-bottom:24px; width:100%; text-align:center}
+.pagination li a{color:#333; border:0px; padding:5px 15px; margin-left:6px; border-radius:0px !important; display:inline-block; float:inherit}
+.pagination li.active a:hover, .pagination li.active a{color:#fff; background:#42afc7; }
+.pagination li:hover a{color:#F00}
+.pagination .frist a, .next a {background:#7d7d7d !important; color:#fff !important}
+
+.back-to-top { cursor: pointer;position: fixed; bottom:70px; right: 20px; display:none;}
+.back-to-top{border-radius:4px; width:45px; line-height:45px; font-size:24px; text-align:center; color:#fff; background:#222 }
+.back-to-top:hover{transition:all 0.3s ease-out; color:#ccc}
+.back-to-top:focus{color:#ccc}

@@ -1,0 +1,49 @@
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	width:500px;
+	height:auto;
+	font-size:13px;
+	margin:auto;
+}
+.tbody {margin:auto; margin-top:30px; width:500px;overflow:hidden; border: solid 1px #444; padding: 0 10px 10px 10px; box-sizing:border-box;}
+table {
+	border-collapse:collapse;
+	width:100%;
+}
+.cart td, .cart th  {
+	border-collapse:collapse;
+	border: solid 1px #CCC;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding:5px;
+}
+.bg_tren {
+    background: url("template/images/main_sprite.1.0.3.png") repeat-x scroll 0 -1105px transparent;
+    border-bottom: medium none;
+    color: #333333;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+}
+.title_td {
+	width:150px;
+}
+td { padding:5px;}
+.tbody h1 { color:#000; font-size:16px; padding:10px; text-align:center; margin:0px;}
+.lnine { margin:5px 0 5px; clear:both; color:#444;}
+.lnine  span { display:inline-block; width:15px; height:15px; border: solid 1px #ccc; padding:2px; }
+.header { overflow:hidden; padding:5px 0;}
+.header .left { float:left;}
+.header .left img { height:55px;}
+.header .right { float:right; font-style:italic; font-size:14px;}
+ p { margin:0 0 5px 0;}
+.payment { text-align:right; font-weight:bold; text-transform:uppercase;}
+.money { margin:5px 0;}
+.kygot { padding:10px 0 0 0;}
+.money  { font-weight:bold;}
+.vat,.money { font-style:italic;}
+@page {
+    size: auto;   /* auto is the initial value */
+    margin: 0;  /* this affects the margin in the printer settings */
+}

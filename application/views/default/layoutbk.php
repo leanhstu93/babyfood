@@ -1,0 +1,600 @@
+<?php
+$data['web'] = $web  =$this->pagehtml_model->get_website(1);
+$data['menu_bottom']  = $this->catelog_model->list_data();
+//data['catelog'] = $this->pagehtml_model->get_catelog(0);
+$data['logo'] = $logo = $this->flash_model->list_data();
+$data['hotro'] = $this->pagehtml_model->get_newsidcat(8,10,0);
+$data['thongtin'] = $this->pagehtml_model->get_newsidcat(5,10,0);
+$data['baiviet'] = $this->pagehtml_model->get_newsidcat(10,10,0);
+$data['banner_bottom'] = $this->pagehtml_model->get_on_list_weblink(array('style'=>4, 'layout'=>'', 'ticlock'=>'0'),1);
+$data['banner_top'] = $this->pagehtml_model->get_on_list_weblink(array('style'=>2, 'layout'=>'', 'ticlock'=>'0'),1);
+$data['info_footer'] = $info_footer  =$this->pagehtml_model->list_data(1);
+$tag = $this->tags_model->list_data(10,0);
+$cart = $this->session->userdata('cart');
+?>
+
+<?php if ($this->session->flashdata('message_success')) { ?>
+    <?php $message = $this->session->flashdata('message_success');
+       echo "<script type='text/javascript'>alert('$message');</script>"; ?>
+<?php } ?>
+
+<!DOCTYPE html>
+<html lang="vi" class="no-js"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title><?php echo $web['title_vn'] ?></title>
+    <base href="<?php echo BASE_URL ?>" />
+    <link rel="stylesheet" href="wp-content/themes/babyshop/css/reset.css" />
+    <link rel="stylesheet" href="wp-content/themes/babyshop/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="wp-content/themes/babyshop/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="wp-content/themes/babyshop/owl-carousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="wp-content/themes/babyshop/css/style.css" />
+    <link rel="stylesheet" href="wp-content/themes/babyshop/css/product.css" />
+    <link rel="stylesheet" href="wp-content/themes/babyshop/css/lindo_menu_cat.css" /> 
+    <link rel="stylesheet" href="wp-content/themes/babyshop/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="wp-content/themes/babyshop/css/responsive.css" />
+                <script type="text/javascript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+                        <style>
+                .wishlist_table .add_to_cart, a.add_to_wishlist.button.alt { border-radius: 16px; -moz-border-radius: 16px; -webkit-border-radius: 16px; }          </style>
+            <script type="text/javascript">
+                var yith_wcwl_plugin_ajax_web_url = '/wp-admin/admin-ajax.php';
+            </script>
+        
+    <!-- This site is optimized with the Yoast SEO plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="robots" content="noindex,follow,noodp"/>
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?php echo $web['title_vn'] ?>" />
+    <meta property="og:description" content="<?php echo $web['description_vn'] ?>" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="<?php echo $web['title_vn'] ?>" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="<?php echo $web['title_vn'] ?>" />
+    <meta name="twitter:title" content="B<?php echo $web['title_vn'] ?>" />
+    <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/babyshop.mauwebsitedep.com\/","name":"Baby Shop \u0110\u1ed3 Ch\u01a1i Tr\u1ebb Em","potentialAction":{"@type":"SearchAction","target":"https:\/\/babyshop.mauwebsitedep.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <!-- / Yoast SEO plugin. -->
+
+    <script type="text/javascript">
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/babyshop.mauwebsitedep.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.11"}};
+        !function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+img.wp-smiley,
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+header .header_maincontent.fixed-top{padding: 3px 0}
+.header_maincontent .title_cat{display: none;
+    top: 0;
+    position: relative;
+    padding: 22px 0;
+    line-height: 0px;
+    width:190px;
+    height:36px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#fff;
+    cursor: pointer;
+}
+.header_maincontent .search-box-fixed{display: none;}
+.header_maincontent .search-box-fixed .search_box,
+.header_maincontent.fixed-top .group_like_cart{margin-top: 0}
+.header_maincontent .search-box-fixed .search_box input[type="submit"]{
+    background: #f6b900;
+}
+.fixed-top{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 10;
+    background: red;
+}
+.fixed-top .logo-header{
+    display: none;
+}
+.header_maincontent.fixed-top .title_cat{display: block;}
+.header_maincontent.fixed-top .search-box-fixed{display: block;}
+.header_maincontent.fixed-top .search-box-header{display: none;}
+#banner_top{position: absolute;width:100%;background: #fff;top:55px;left:0;z-index: 1000}
+#backdrop{position: fixed;
+    display: none;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    width: 110%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: auto;
+    overflow-y: scroll;
+    background-color: #000;
+    opacity: 0.5;}
+.home-top3-news{background: #fff;padding: 5px;}
+.top3-news{margin-bottom: 5px;}
+.home-top3-news .top3-news:last-child{margin-bottom: 0}
+.top3-news:after{content:'';display: block;clear: both;}
+.top3-news .thumb{width:90px;float:left;height: 60px;overflow: hidden;}
+.top3-news h4{float:left;width:230px;font-size: 14px;margin: 0 0 5px 5px;}
+
+</style>
+<link rel='stylesheet' id='validate-engine-css-css'  href='wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='wp-content/plugins/woocommerce/assets/css/woocommerce.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='wp-content/plugins/wp-pagenavi/pagenavi-css.css' type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wacp-frontend-css'  href='wp-content/plugins/yith-woocommerce-added-to-cart-popup/assets/css/wacp-frontend.css' type='text/css' media='all' />
+<style id='yith-wacp-frontend-inline-css' type='text/css'>
+
+                #yith-wacp-popup .yith-wacp-content a.button {
+                        background: #ebe9eb;
+                        color: #515151;
+                }
+                #yith-wacp-popup .yith-wacp-content a.button:hover {
+                        background: #dad8da;
+                        color: #515151;
+                }
+</style>
+<link rel='stylesheet' id='ywcca_accordion_style-css'  href='wp-content/plugins/yith-woocommerce-category-accordion/assets/css/ywcca_style.css?ver=1.0.11' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-colorbox-css'  href='wp-content/plugins/yith-woocommerce-compare/assets/css/colorbox.css?ver=4.7.11' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'  href='wp-content/plugins/woocommerce/assets/css/prettyPhoto.css?ver=3.1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-selectBox-css'  href='wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox.css?ver=1.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcwl-main-css'  href='wp-content/plugins/yith-woocommerce-wishlist/assets/css/style.css?ver=2.0.16' type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcwl-font-awesome-css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='decent-comments-widget-css'  href='wp-content/plugins/decent-comments/css/decent-comments-widget.css' type='text/css' media='all' />
+      <!-- <script>
+      if (document.location.protocol != "https:") {
+          document.location = document.URL.replace(/^http:/i, "https:");
+      }
+      </script> -->
+      <script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<!-- <link rel='https://api.w.org/' href='wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />  -->
+<meta name="generator" content="WordPress 4.7.11" />
+<meta name="generator" content="WooCommerce 2.6.14" />
+  
+<link rel="shortcut icon" type="image/x-icon" href="https://mauwebsitedep.com/wp-content/uploads/2015/09/favicon1.png"/>
+</head>
+<body data-rsssl=1 class="home blog">
+<?php if (!empty($data['banner_top'])) { ?>
+    <div class="adv-header" style="background-color: #f26e21">
+        <div class="container">
+            <a href="<?php echo base_url($data['banner_top'][0]['link']); ?>">
+                <img class="img-responsive" alt="banner ads" src="<?php echo PATH_IMG_BANNER.$data['banner_top'][0]['images']."?v=".time();?>">
+            </a>
+        </div>
+    </div>
+<?php } ?>
+
+
+<div id="page">
+ <header>
+    <nav class="navbar_lindo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="header_info">
+                        <h1 class="site-title"><a title="<?php echo $web['title_vn'] ?>" href="" rel="home"><?php echo $web['title_vn'] ?></a></h1>
+                         <p class="hotline_header"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Tổng đài: <strong><a href="tel:<?php echo $web['hotline'] ?>" title="Call"><?php echo $web['hotline'] ?></a></strong></p>
+                    </div>
+                 <div class="lindo-header_top_menu">
+
+                <div class="menu-menu-top-container">
+                    <ul id="menu-menu-top" class="nav navbar-nav navbar-right">
+                    <?php foreach($data['thongtin'] as $item) { ?>
+                        <?php if ($item['alias'] == "gioi-thieu" || $item['alias'] == "lien-he" ) { ?>
+                        <li id="" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216">
+                            <a href="<?php echo base_url('page/'.$item['alias']); ?>"><?php echo $item['title_vn']; ?></a>
+                        </li>
+                        <?php } ?>
+                    <?php } ?>
+                    <!-- <li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="lien-he/">Liên Hệ</a></li>
+                    <li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a href="cau-hoi-thuong-gap/">Câu hỏi</a></li> -->
+                    <!-- <li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="chinh-sach-doi-tra-hang/">Chính sách</a></li> -->
+                    </ul>
+                </div>                
+            </div>
+                </div><!-- /.navbar-collapse -->
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+    <div class="header_maincontent">
+        <div class="container" style="position: relative;">
+            <div class="row">
+              <div class="title_cat col-md-4 col-sm-24 col-xs-24">
+                <img src="https://bibomart.com.vn/themes/v4/images/cat.png" style="margin: -9px 20px 0 16px; float: left;">
+                Danh mục
+                </div>
+              <div class="col-sm-3 col-md-3 logo-header">
+                  <div class="row">
+                   <div class="col-xs-4 visible-xs">
+                    <a class="mlindo_mobile" href="#mlindo_mobile"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+                  </div>
+                   <div class="col-xs-4 col-md-12">
+                            <a class="a_pading"  title="<?php echo $web['title_vn'] ?>" href="">
+
+                    <img src="<?php echo PATH_IMG_FLASH.$data['logo'][0]->file_vn."?v=".time();?>" alt="<?php echo $web['title_vn'] ?>" class="img-responsive" />
+                    </a>
+                                  </div>
+                       <div class="col-xs-4 col-md-12">
+                       
+                       </div>
+                
+                  </div>
+              </div>
+              <div class="search-box-fixed col-sm-7 col-md-7">
+              <div class="search_box">
+                <form role="search" method="get" class="woocommerce-product-search" id="search-form" action="<?php echo base_url().'tim-kiem' ?>">
+                    <div class="form-group search_input">
+                    <input type="search" id="input_searchword" class="form-control" placeholder="Tìm sản phẩm&hellip;" value="" name="s" title="Tìm kiếm:" />
+                    </div>
+                    <input type="submit" class="btn btn-default pull-right button" value="Tìm kiếm" />
+                    <input type="hidden" name="post_type" value="product" />
+                </form>
+                </div>
+              </div>
+              <div class="search-box-header col-sm-7 col-md-7">
+              <div class="search_box">
+                <form role="search" method="get" class="woocommerce-product-search" id="search-form" action="<?php echo base_url().'tim-kiem' ?>">
+                    <div class="form-group search_input">
+                    <input type="search" id="input_searchword" class="form-control" placeholder="Tìm sản phẩm&hellip;" value="" name="s" title="Tìm kiếm:" />
+                    </div>
+                    <input type="submit" class="btn btn-default pull-right button" value="Tìm kiếm" />
+                    <input type="hidden" name="post_type" value="product" />
+                </form>
+                </div>
+              </div>
+               <div class="col-sm-2 col-md-2">
+             
+                    <div class="group_like_cart">
+                    <div class="row">
+                    <!-- <div class=" col-xs-6 col-sm-6 col-md-6">
+                    <div class="fl header_like">
+                    <a rel="nofollow" target="_blank" title="Yêu thích" href="wishlist/" class="follow">
+                    <i class="icon_vg40 icon_vg40_like"></i>
+                    <span>Yêu thích</span>
+                    <div class="notify">0</div>
+                    </a>
+                    </div>
+                    </div> -->
+                    <div class=" col-xs-5 col-sm-10 col-md-10">
+                    <div class="fr header_cart">
+                     <a rel="nofollow" target="_blank" title="Giỏ hàng" href="<?php echo base_url("gio-hang") ?>" class="cart">
+                    <i class="icon_vg40 icon_vg40_cart"></i>
+                    <span>Giỏ hàng</span>
+                    <div class="notify"><?php echo count($cart); ?></div>
+                    </a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="clear"></div>
+                    </div>
+              </div>
+            </div>
+            <?php $this->load->view('default/dropdown_menu'); ?>
+            <div id="backdrop"></div>
+        </div>
+
+    </div>
+</header>
+
+  <?php  $this->load->view($template,$data); ?>
+
+<div class="clearfix"></div>
+<!-- <div class="footer_top_logo">
+    <div class="container">
+        <div class="lindo_logo">
+            <div class="owl-carousel owl-theme" id="lindo_logo">
+                <div class="item">
+                    <a href="" title="Logo">
+                    <img class="img-responsive" data-src="wp-content/uploads/2016/07/unimom.png" src="wp-content/uploads/2016/07/unimom.png" alt="Logo">
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="clearfix"></div>
+
+<div class="footer_news_lindo">
+<div class="container">
+<div class="lindo_ads_commem_news">
+ <div class="col-md-4 col-sm-4 col-xs-12 lindo-left-0">
+
+ <div class="footer_img_ads">
+     <a title="seo title" href="<?php echo base_url($data['banner_bottom'][0]['link']); ?>" target="_blank">
+        <img alt="seo alt" src="<?php echo PATH_IMG_BANNER.$data['banner_bottom'][0]['images']."?v=".time();?>">
+    </a>
+</div>
+
+
+</div>
+ <!-- <div class="col-md-4 col-sm-4 col-xs-12">
+ <div class="footer_news_commen">
+<div id="decent_comments_widget-2" class="widget widget_decent_comments_widget"><h3 class="title_new_footer"><i class="fa fa-commenting-o" aria-hidden="true"></i>  Bình luận mới</h3><div class="decent-comments"><ul><li><div class="comment"><span class="comment-date"> 11/07/2016 at 12:09 chiều</span><span class="comment-link"> on <a href="tam-chanh-cho-sai-lam-nao-cung-mac-phai/#comment-2">Tắm chanh cho bé &#8211; Sai lầm mẹ nào cũng mắc phải</a></span><span class="comment-body">Dùng khăn sạch lau lại người bé. Tuyệt đối không dội nước trực tiếp lên người trẻ vì có thể khiến trẻ cảm thấy bất an</span></div></li><li><div class="comment"><span class="comment-date"> 11/07/2016 at 12:09 chiều</span><span class="comment-link"> on <a href="tam-chanh-cho-sai-lam-nao-cung-mac-phai/#comment-3">Tắm chanh cho bé &#8211; Sai lầm mẹ nào cũng mắc phải</a></span><span class="comment-body">Mộ tay giữ giữa đầu và cổ bé để nâng bé ra khỏi bồn tắm, tay còn lại đặt ở mông bé, ngón cái và ngón trỏ vươn ra phía đùi (bởi các bé rất trơn khi ướt)</span></div></li><li><div class="comment"><span class="comment-date"> 18/07/2016 at 6:19 sáng</span><span class="comment-link"> on <a href="7-nguyen-tac-giup-tre-nang-cao-suc-de-khang/#comment-4">7 nguyên tắc giúp trẻ nâng cao sức đề kháng</a></span><span class="comment-body">Bài viết hay quá</span></div></li><li><div class="comment"><span class="comment-date"> 18/07/2016 at 6:19 sáng</span><span class="comment-link"> on <a href="mach-cach-quan-khan-cho-tre-sinh-nhanh-gon-le/#comment-5">Mách mẹ cách quấn khăn cho trẻ sơ sinh &#8220;nhanh-gọn-lẹ&#8221;</a></span><span class="comment-body">Cảm ơn admin viết bài hay (chỉ là demo bình luận)</span></div></li><li><div class="comment"><span class="comment-date"> 18/07/2016 at 6:20 sáng</span><span class="comment-link"> on <a href="con-bi-nga-xe-dap-va-cach-ung-xu-binh-tinh-tuyet-voi-cua-ong-bo-tay/#comment-6">Con bị ngã xe đạp và cách ứng xử bình tĩnh tuyệt vời của ông bố Tây</a></span><span class="comment-body">demo Bình luận bài viết</span></div></li></ul></div></div> </div>
+ </div>  -->
+ <div class="col-md-8 col-sm-4 col-xs-12">
+    <div class="footer_news_lindo_right">
+        <h3 class="title_new_footer"><i class="fa fa-newspaper-o" aria-hidden="true"></i> 
+            <a title="Tin tức" href="chu-de/bai-viet">
+            Tin tức    </a>
+            <a rel="nofollow" class="xemtc" title="Tin tức" href="<?php echo base_url("chu-de/bai-viet"); ?>">
+            Xem tất cả <i class="fa fa-angle-double-right"></i>
+            </a>
+        </h3>
+        <div class="row">
+        <?php $i=0; ?>
+        <?php foreach($data['baiviet'] as $item) { ?>
+            <?php if($i==7) break; ?>
+                <?php if($i==0){?>
+                <div class="list_news_beweb col-md-12">
+                    <div class=" col-md-3">
+                        <a href="<?php echo base_url('bai-viet/'.$item['alias']); ?>" title="<?php echo $item['title_vn'] ?>">
+                            <img width="150" height="150" src="<?php echo PATH_IMG_NEWS.$item['images']."?v=".time();?>" class="img-responsive wp-post-image" alt="" srcset="<?php echo PATH_IMG_NEWS.$item['images']."?v=".time();?>" sizes="(max-width: 150px) 100vw, 150px" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            <a href="<?php echo base_url('bai-viet/'.$item['alias']); ?>" title="<?php echo $item['title_vn'] ?>"><?php echo $item['title_vn'] ?></a><span class="icon_news"></span> <span class="time" style="float: right;"> <?php echo date("d-m-Y",$item['date']) ?></span>
+                        </h5>
+                        <span><?php echo $item['description_vn']; ?></span>
+                        
+                     </div>
+                </div>
+                <?php }else{ ?>
+                <div class="list_news_beweb col-md-12">
+                    <div class="info_new_f col-md-12">
+                        <h5><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            <a href="<?php echo base_url('bai-viet/'.$item['alias']); ?>" title="<?php echo $item['title_vn'] ?>"><?php echo $item['title_vn'] ?></a><span class="icon_news"></span> <span class="time" style="float: right;"> <?php echo date("d-m-Y",$item['date']) ?></span>
+                        </h5>                        
+                     </div>
+                </div>
+                <?php } ?>
+            <?php $i++; ?>
+        <?php } ?>
+    </div>
+     </div>
+
+ </div>
+</div>
+</div>
+</div>
+
+<div class="footer_bottom_end">
+<footer>
+<div class="container info" style="position: relative;">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+            
+            <!-- <div id="wysija-2" class="border-dash widget_wysija"><h4 class="box_title">Đăng ký để nhận bản tin của chúng tôi.</h4><div class="widget_wysija_cont"><div id="msg-form-wysija-2" class="wysija-msg ajax"></div>
+
+            <form id="form-wysija-2" method="post" action="#wysija" class="widget_wysija">
+                <div>Nhập Email để có thể nhận được thông tin đầy đủ và mới nhất mỗi khi có khuyến mãi</div><div class="clearfix"></div>
+                <p class="wysija-paragraph">
+                <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Email của bạn" placeholder="Email của bạn" value="" />
+                <span class="abs-req">
+                <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value="" />
+                </span>
+                </p>
+                <input class="wysija-submit wysija-submit-field" type="submit" value="Đăng ký email" />
+                <input type="hidden" name="form_id" value="1" />
+                <input type="hidden" name="action" value="save" />
+                <input type="hidden" name="controller" value="subscribers" />
+                <input type="hidden" value="1" name="wysija-page" />
+                <input type="hidden" name="wysija[user_list][list_ids]" value="1" />
+            </form>
+            </div>
+
+            </div> -->
+                <div id="nav_menu-3" class="padding-foot widget_nav_menu">
+                    <h4 class="box_title">Giới thiệu - Quy định chính sách</h4>
+                    <div class="menu-footer-ve-chung-toi-container">
+                        <ul id="menu-footer-ve-chung-toi" class="menu">
+                            <?php foreach($data['thongtin'] as $item) { ?>
+                                <li id="" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-320">
+                                    <a href="<?php echo base_url('page/'.$item['alias']); ?>"><?php echo $item['title_vn']; ?></a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+            </div>
+                <div id="Subscribe">
+                    <a rel="nofollow" title="facebook" href="#">
+                    <div class="social-background social-fb"></div>
+                    </a>
+
+                    <a rel="nofollow" title="google plus" href="#">
+                    <div class="social-background social-google"></div>
+                    </a>
+
+                    <a rel="nofollow" title="twitter" href="#">
+                    <div class="social-background social-tw"></div>
+                    </a>
+
+                    <a rel="nofollow" title="linkedin" href="#">
+                    <div class="social-background social-pint"></div>
+                    </a>
+                </div>
+                
+            </div>
+
+            <div class="col-md-8 col-sm-8 col-xs-12 info_footer_mn">
+            <div class="row">
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div id="nav_menu-4" class="padding-foot widget_nav_menu"><h5 class="box_title">Hướng dẫn, hỗ trợ</h5>
+                    <div class="menu-footer-huong-dan-ho-tro-container">
+                        <ul id="menu-footer-huong-dan-ho-tro" class="menu">
+                            <?php foreach($data['hotro'] as $item) { ?>
+                                <li id="" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-320">
+                                    <a href="<?php echo base_url('page/'.$item['alias']); ?>"><?php echo $item['title_vn']; ?></a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>            
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div id="nav_menu-4" class="padding-foot widget_nav_menu"><h5 class="box_title">Sản phẩm được tìm kiếm nhiều</h5>
+                    <div class="menu-footer-huong-dan-ho-tro-container">
+                        <ul id="menu-footer-huong-dan-ho-tro" class="menu">
+                            <?php foreach($tag as $item) { ?>
+                                <?php if ($item->title_vn != ''){ ?>
+                                <p style="display: inline-block;padding:4px 2px;text-align: center;box-sizing: border-box;font-size: 12px;margin: 0 2px;text-decoration: none;color: #4c3434; background-color: #e0d9d9;margin: 2px"><?php echo $item->title_vn; ?></p>
+                                <?php } ?>
+                            <?php } ?>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</div>
+<div class="clearfix"></div>
+<div class="footer_info_lindo">
+   <div class="copyright">
+        <div class="container">
+            <div class="row copyright-content">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <a href="<?php echo base_url(); ?>">
+                        <img src="<?php echo PATH_IMG_FLASH.$data['logo'][0]->file_vn."?v=".time();?>" alt="Baby Shop Đồ Chơi Trẻ Em" title="<?php echo $web['title_vn'] ?>" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                   <div id="text-2" class="linfooter widget_text">
+                    <?php foreach($info_footer as $item) { ?>
+                        <?php if ($item->title_vn == "Thông tin footer" ) { ?>
+                             <?php echo $item->content_vn ?>
+                        <?php } ?>
+                    <?php } ?>
+                    </div>  
+</div>
+<div class="col-md-3 col-sm-3 col-xs-12">
+<div id="text-3" class="linfooter-img widget_text">         
+    <div class="textwidget"><!-- <img alt="lindo" src="wp-content/uploads/2016/07/code-lindo.png"> -->
+
+<img src="wp-content/uploads/2016/07/dk_bo_cong_thuong.png" alt="bo cong thuong">
+
+</div>
+        </div>  
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+   
+</div>
+
+<div class="clearfix"></div>
+
+<div class="footer_bottom_end" style="padding:15px 0">
+<div class="container">
+<div class="row">
+<div  class="col-md-9 col-sm-6 col-xs-12">
+Copyright © <?php echo $web['title_vn'] ?>. All right Reserved
+</div>
+</div>
+</div>
+</div>
+                    
+<script src="wp-content/themes/babyshop/js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/babyshop/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/babyshop/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/babyshop/owl-carousel/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="wp-content/themes/babyshop/js/functions_main.js" type="text/javascript"></script>
+  
+<script src="wp-content/themes/babyshop/js/lindo_menu_cat.js" type="text/javascript"></script>
+
+<link type="text/css" rel="stylesheet" href="wp-content/themes/babyshop/mmenu/css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="wp-content/themes/babyshop/mmenu/js/jquery.mmenu.all.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('nav#mlindo_mobile').mmenu();
+    $(window).scroll(function () {
+            if ($(window).scrollTop() >= 500) {
+                $('.header_maincontent').addClass('fixed-top');
+            } else {
+                $('.header_maincontent').removeClass('fixed-top');
+            }
+        });
+    $('.title_cat').on('mouseover', function() {
+        $('#banner_top').show();
+        $('#backdrop').show();
+    }).on('mouseleave', function(){
+        if($('#banner_top').is(':visible')) {
+            $('#banner_top').on('mouseleave', function(){
+                $(this).hide();
+                $('#backdrop').hide();
+            })
+        }
+    });
+    $('.menu_root > li').on('mouseover', function(){
+       var target = $(this).attr('data-child');
+       console.log(target)
+       $('.menu_root').find('.background_menu').hide();
+       $(target).show();
+    })
+});
+</script>
+        
+<nav id="mlindo_mobile">
+    <div class="navbar-mobile">
+        <ul id="menu-menu-produc" class="menu">
+            <?php foreach($data['menu_bottom'] as $item) { ?>
+                <?php if ($item['parentid'] == 0){ ?>
+                <li id="" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-403">
+                    <a href="<?php echo base_url($item['alias']); ?>"><?php echo $item['title_vn']; ?></a>
+                    <!-- <ul class="sub-menu">
+                        <li id="menu-item-404" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-404">
+                            <a href="">Cân sức khỏe</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <?php } ?>
+            <?php } ?>
+        </ul>
+    </div>
+</nav> 
+               
+<div id="yith-wacp-popup">
+
+    <div class="yith-wacp-overlay"></div>
+
+    <div class="yith-wacp-wrapper woocommerce">
+
+        <div class="yith-wacp-main">
+
+            <div class="yith-wacp-head">
+                <a href="#" class="yith-wacp-close">X</a>
+            </div>
+
+            <div class="yith-wacp-content"></div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

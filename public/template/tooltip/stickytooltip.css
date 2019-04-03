@@ -1,0 +1,23 @@
+.stickytooltip{
+width:500px;
+height:500px;
+overflow:scroll;
+display:none;
+position:absolute;
+display:none;
+background:white;
+padding:5px;
+z-index:3000;
+border: solid 2px #168AB0;
+border-radius:5px;
+}
+
+.stickytooltip img { max-width:100%; height:auto !important;}
+.stickytooltip .stickystatus{ /*Style for footer bar within tooltip*/
+background:black;
+color:white;
+padding-top:5px;
+text-align:left;
+font:bold 11px Arial;
+}
+.stickytooltip{text-align:left;}

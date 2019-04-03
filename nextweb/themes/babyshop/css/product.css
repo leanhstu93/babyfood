@@ -1,0 +1,28 @@
+.percent {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    position: absolute;
+    z-index: 200;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    font-family: RobotoMedium;
+    text-align: center;
+    padding-top: 3px;
+    bottom: 5px;
+    right: 5px;
+    background: url("sale.png")/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/sale.png*/;
+}
+.percent .percent-sale {
+    color: white;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.product_lists .percent {
+    right: 19px;
+    top: 3.2%;
+}
+.details_page .percent {
+    top: 7px;
+}

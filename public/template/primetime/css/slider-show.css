@@ -1,0 +1,32 @@
+.slidershow .btn-red{padding:11px 20px}
+/* slidershow Necessary Styles
+*********************************/ 
+.slidershow {width: 100%; margin: 0;}
+.slidershow .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.slidershow .slides img {max-width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+.no-js .slides > li:first-child {display: block;}
+.slidershow {position: relative; zoom: 1;}
+.slidershow .slides {zoom: 1;}
+.slidershow .slides > li {position: relative;}
+.flex-container {zoom: 1; position: relative;}
+
+/* Direction Nav */
+.flex-direction-nav li a { width:33px; height:100px; margin:0; display: block; position: absolute; cursor: pointer; text-indent: -9999px; display:none}
+.flex-direction-nav li a.next {}
+.flex-direction-nav li a.prev {}
+/*.flex-direction-nav li a.next:hover {background:url(images/next_a.png) no-repeat center;}
+.flex-direction-nav li a.prev:hover {background:url(images/prev_a.png) no-repeat center;}*/
+.flex-direction-nav li a.disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.slidershow .flex-control-nav {position:absolute; width:100%; text-align:center; bottom:20px;  }
+.slidershow .flex-control-nav li {margin: 0 8px 0 8px; display: inline-block; zoom: 1; *display: inline;}
+.slidershow .flex-control-nav li:first-child {margin: 0;}
+.slidershow .flex-control-nav li a {width: 13px; height: 13px; border-radius:30px; background:#B7B7B7;  display: block; cursor: pointer; text-indent: -9999px;}
+.slidershow .flex-control-nav li a:hover {background:#ED1C24; }
+.slidershow .flex-control-nav li a.active {background:#ED1C24; box-shadow:1px 1px 1px -1px #000; cursor: default;}
+

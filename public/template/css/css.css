@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+@import url('bootstrap.min.css');
+@import url('reset.css?v=1');
+@import url('style1.css');
+@import url('sweetalert.css');
+@import url('font-awesome.min.css');
+@import url('../fonts/stylesheet.css'); 

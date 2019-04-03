@@ -1,0 +1,793 @@
+.lindo_mega_left li a{
+	text-decoration: none;
+}
+.sub_category li{
+	/*background-color: #a0ce29;*/
+	margin: 0px -5px;
+	text-decoration: none;
+}
+.category_box ul.sub_category li a {
+    text-decoration: none;
+    /*color: #fff !important;*/
+}
+.category_box ul.sub_category li:hover{
+	background-color: #a0ce29;
+    text-decoration: none;
+    color: #fff;
+}
+.lindo_mega_left li a:hover{
+	color: #fff;
+    background-color: #e74847;
+}
+.max-lines{
+   overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+    line-height: 1.4em;
+    max-height: 63px;
+    font-weight: 700;
+}
+.pagination{
+    margin: auto;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 8px 10px;
+    display: block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+  }
+
+  .pagination a{
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #eee;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #686868;
+    margin: 0 2px;
+    text-decoration: none!important;
+  }
+  .pagination a:hover{
+    color: #fff;
+    background-color: #e74847;
+  }
+  .pagination strong {
+    display: inline-block;
+    padding: 6px 10px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 12px;
+    margin: 0 2px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e74847;
+}
+.home-top3-news .header-news a{color:#fff}
+.cont-news-detail-page img{max-width: 100% !important; height: auto;}
+/*
+Theme Name: Baby-nextweb
+Theme URI: http://nextweb.vn
+Author: Beweb Team ( Nextweb 0983 676 959)
+Author http://nextweb.vn
+Description: Dự án Mẫu website đẹp là một dự án mà mình ấp ủ đã rất lâu rồi.  Và dành nhiều thời gian cũng như tâm huyết xây dựng 1  theme wordpress bán hàng  phù hợp với nhiều nghành nghề kinh doanh và có chức năng tùy biến cao nhất để 2 người dùng 1 giao diện nhưng nhìn không giống nhau !
+Version: 2.0
+Tags: giao dien thuong mai dien tu, thiet ke website thuong mai dien tu, web thuong mai dien tu chuan seo
+*/
+html,body,div,span,object,iframe,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;font-size:16px;vertical-align:baseline;background:transparent}
+body{font-family:Arial,sans-serif;font-size:12px;overflow-x:hidden}
+body,body a{color:#333}
+.border{border:1px red solid}
+.title_2{font-size:20px;font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;line-height:40px;text-transform:uppercase}
+.title_3{font-size:16px;font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;padding:10px 0;text-transform:uppercase}
+.breadcrumb{background:none;padding-left:0;margin-bottom:0}
+.breadcrumb h2.top_breadcrumb{float:right;padding-top:2px;padding-right:10px}
+
+header { width:100%; float:left; margin:0; padding:0;}
+.navbar_lindo { width:100%; float:left; margin:0; padding:0; background:#f2f2f2; border-bottom:1px solid #e5e5e5;}
+.header_info { display:inline-block; padding:5px 0; font-size:12px; float:left}
+.header_info .site-title { display:inline-block; padding-right:10px;  margin:0; font-size:13px}
+.header_info .hotline_header{ display:inline-block; text-transform:uppercase}
+.header_info .hotline_header a { font-size:12px; color:#F00; font-weight:bold}
+
+.lindo-header_top_menu { display:inline-block; padding:5px 0; font-size:12px; float:right}
+.lindo-header_top_menu ul { margin:0; padding:0; float:right}
+.lindo-header_top_menu ul li { float:left; margin:0; padding:0;} 
+.lindo-header_top_menu ul li a  { margin:0; padding:0; float:right; padding-left:10px; margin-left:10px; font-size:12px}
+.lindo-left-0 { padding-left:0;}
+.lindo-right-0 { padding-right:0;}
+
+.header_menu_bottom {width:100%; float:left; margin:0; padding:0}
+.header_menu_bottom h2.nav_lindo {width:100%; float:left; margin:0; padding:6px 0; background:#0f7fc1; border-radius:5px 5px 0 0; font-size:15px; text-indent:5px; font-weight:bold; color:#FFF}
+.header_menu_bottom ul.menu { width:100%; float:left}
+.header_menu_bottom ul.menu li { float:left; list-style:none}
+.header_menu_bottom ul.menu li a .icon-hot{background: rgba(0, 0, 0, 0) url("hot.gif")/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/hot.gif*/ no-repeat scroll 0 0;
+    display: inline-block;
+    height: 12px;
+    width: 21px;}
+.header_menu_bottom ul.menu li a { padding:6px 15px; float:left;}
+
+header .header_maincontent{width:100%; float:left; margin:0; padding:10px 0}
+header .maincontent .box_chose_gender{padding-left:10px;cursor:pointer;border-left:1px solid #999}
+header .maincontent .box_chose_gender p{font-size:12px;text-transform:uppercase}
+header .maincontent .box_chose_gender p.gender_age{font-size:7.7px}
+header .maincontent .box_chose_gender p.age{text-align:right;padding-right:7px}
+header .maincontent .cart,header .maincontent .count_cart{padding-top:15px}
+header .maincontent.affix{z-index:999;margin-top:0;top:0;background:#e45e5d;height:50px}
+header .maincontent.affix .logo{background-image:url(logo2.png-v=0.3.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/logo2.png?v=0.3*/;height:50px}
+header .maincontent.affix .search_box{margin-top:3px}
+header .maincontent.affix .search_box form{border:none;background-color:transparent}
+header .maincontent.affix .search_box button,header .maincontent.affix .search_box button:hover{background-color:#f6b900}
+header .maincontent.affix .search_box ul{display:none}
+header .maincontent.affix .search_box .search_input{background-color:#fff}
+header .maincontent.affix .header_extra{margin-top:0;color:#fff}
+header .maincontent.affix .header_extra #count_product_cart{color:#db2827;background:#fff}
+header .maincontent.affix .header_extra .age_position{float:none}
+header .maincontent.affix .header_extra .select_gender{margin-top:-3px}
+header .maincontent.affix .hotline{display:none}
+header .maincontent.affix .box_chose_gender{border-left:1px solid #fff;height:50px;padding-top:2px}
+header .maincontent.affix .box_chose_gender p{font-size:11px}
+header .maincontent.affix .box_chose_gender p.gender_age{display:none}
+header .maincontent.affix .cart,header .maincontent.affix .count_cart{padding-top:5px}
+header .maincontent .header_extra{padding-left:10px;color:#666;font-size:32px;margin-top:20px}
+header .maincontent .header_extra #count_product_cart{width:26px;height:26px;border-radius:50%;background:#db2827;color:#fff;font-size:16.5px;font-family:Arial;font-weight:700;text-align:center;line-height:26px}
+header .maincontent .header_extra span{cursor:pointer}
+header .maincontent .header_extra .modal-content{color:#333}
+header .maincontent .header_extra .select_gender p{color:#999;clear:both}
+header .maincontent .header_extra .age_position{float:right}
+header .navbar-top{height:26px;min-height:26px;background:#f2f2f2;border-bottom:1px solid #e5e5e5;margin-bottom:0}
+header .navbar-top li>a{padding-top:0;padding-bottom:0;line-height:26px}
+header .navbar-top .mart_system:hover .list_store{display:block}
+header .navbar-top .mart_system a{font-weight:700;text-transform:uppercase}
+header .navbar-top .mart_system .list_store{background-color:#fff;position:absolute;border:1px solid #e5e5e5;border-top:0;display:none;padding:16px;-webkit-box-shadow:2px 2px 3px 0 rgba(236,236,236,0.75);-moz-box-shadow:2px 2px 3px 0 rgba(236,236,236,0.75);box-shadow:2px 2px 3px 0 rgba(236,236,236,0.75)}
+header .navbar-top .mart_system .list_store .store-city{color:#555;font-weight:700;font-size:15px;padding-bottom:15px}
+header .navbar-top .mart_system .list_store .store-list{line-height:25px}
+header .navbar-top .text_form_reset{font-size:11px;width:90%;height:25px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;-webkit-border-radius:0!important;-moz-border-radius:0!important;border-radius:0!important;margin:0 auto}
+header .navbar-top .button_reset{background:#db2827 0 -425px no-repeat;width:90%;height:34px;display:block;border:0;font-size:13px;color:#fff;border-radius:0;margin:0 auto}
+header .navbar-top .checkbox{font-size:11px;float:left;height:30px;line-height:30px;margin:3px 0 0 25px;float:none;height:auto;line-height:20px}
+header .navbar-top .checkbox input[type="checkbox"]{margin:0;left:-15px;top:1px}
+header .search_box{margin-top:15px}
+header .search_box form{position:relative}
+header .search_box .search_input{margin-bottom:0;height:44px;width:88.6%;line-height:32px;border:1px solid #e6e6e6;border-radius:5px 0 0 5px}
+header .search_box .search_input ::-webkit-input-placeholder{font-weight:400}
+header .search_box .search_input :-moz-placeholder{font-weight:400}
+header .search_box .search_input ::-moz-placeholder{font-weight:400}
+header .search_box .search_input :-ms-input-placeholder{font-weight:400}
+header .search_box .search_input input#input_searchword{width:100%;color:#666;padding:5px 3px 5px 15px;border:0;height:100%; border-radius:5px 0 0 5px; box-shadow:none}
+header .search_box .button{position:absolute;top:0;right:0;height:32px;cursor:pointer;border:0;font-size:16px;height:100%;}
+header .search_box .button,header .search_box .button:hover{background-color:#db2827;color:#fff}
+
+.woocommerce header .search_box .button{position:absolute;top:0;right:0;height:32px;cursor:pointer;border:0;font-size:16px;height:100%;}
+.woocommerce header .search_box .button,header .search_box .button:hover{background-color:#db2827;color:#fff}
+
+header .search_box ul{list-style:none;padding-left:0;margin-top:6px}
+header .search_box ul li{font-size:13px;display:inline;padding-right:7px}
+header .search_box ul li+li{border-left:1px solid #ccc;padding:0 5px 0 7px}
+header .search_box ul li a{color:#999}
+
+
+.group_like_cart{
+	float: right;
+	line-height: 38px;
+	width:100%; margin-top: 15px;
+}
+.header_like{
+	padding-right: 10px;
+}
+.group_like_cart .header_cart{
+	padding-right: 10px;
+}
+.group_like_cart span{
+	color: #000;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 14px;
+	text-transform: uppercase;
+	padding-left: 5px;
+	max-width: 35px;
+	vertical-align: middle;
+}
+.group_like_cart .header_like .notify{
+	background: #F44F00;
+	border-radius: 3px;
+	color: #FFF;
+	height: 25px;
+	line-height: 25px;
+	left: 86px;
+	position: absolute;
+	top: 7px;
+	text-align: center;
+	width: 25px;
+}
+.group_like_cart .header_cart .notify{
+	background: #F44F00;
+	border-radius: 3px;
+	color: #FFF;
+	height: 25px;
+	line-height: 25px;
+	right: 26px;
+	position: absolute;
+	top: 7px;
+	text-align: center;
+	width: 25px;
+}
+.group_like_cart .notify:after{
+	border: solid 6px transparent;
+	border-right: solid 6px #F44F00;
+	content: " ";
+	left: -11px;
+	position: absolute;
+	top: 6px;
+}
+.icon_vg40{
+	background: url(beacon_40.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/beacon_40.png*/;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.icon_vg40_like{
+	background-position: -7px -208px;
+	height: 24px;
+	width: 26px;
+}
+.icon_vg40_cart{
+	background-position: -3px -247px;
+	height: 26px;
+	width: 35px;
+}
+
+.ads_home_lindo_three_col { width:100%; float:left; margin:0; padding:0;background:#f5f5f5; padding-top:15px;}
+
+.ads_home_lindo_three_col .lindo_ads_3 { background-color: #fff;
+    padding: 5px;float:left; width:100%;
+	-moz-box-shadow:0 5px 5px rgba(182, 182, 182, 0.75);
+-webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+    }
+.ads_home_lindo_three_col .lindo_ads_3 a{ float:left; width:100%;}
+
+.ads_home_lindo_three_col img { max-width:100%; height:auto}
+
+.home_main_lindo { width:100%; float:left; margin:0; padding:0;background:#f5f5f5}
+.background_main{background:#f5f5f5;width:100%; float:left; padding:15px 0}
+.content_block{margin-top:20px;padding-bottom:10px}
+.nav_style1 ul{list-style:none;margin-bottom:0}
+.nav_style1 ul li{display:inline;margin-left:20px;line-height:32px}
+.nav_style1 ul li a{font-size:13px;color:#666}
+.main_nav .title_bar{margin-top:-33px}
+.main_nav .title_bar .title_text{background:#db2827;color:#fff;text-align:center;font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:17px;line-height:33px;text-transform:uppercase}
+.main_nav .slides{height:418px;width:100%}
+.main_nav .slides .slide_block{height:418px}
+.main_nav .slides .slide_block.category_slide_default{display:block}
+.main_nav .slides .slide_block .carousel-inner{height:418px}
+.main_nav .slides .slide_block .banner_cat_right img{transition:transform .2s linear;-webkit-transition:-webkit-transform .2s linear;-moz-transition:-moz-transform .2s linear;-o-transition:-o-transform .2s linear}
+.main_nav .slides .slide_block .banner_cat_right img:hover{transform:translateX(45px);-webkit-transform:translateX(45px);-moz-transform:translateX(45px);-ms-transform:translateX(45px);-o-transform:translateX(45px)}
+.main_nav .slides .slide_block .child_slide{height:418px}
+ul.triggers{list-style:none;position:relative;margin-bottom:0;z-index:200}
+ul.triggers .banner-tet{background:url(banner-lefft.png-v=0.1)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/8-3/banner-lefft.png?v=0.1*/ 0 0 no-repeat;height:100%;width:417px;position:absolute;left:-417px;top:0;overflow:hidden}
+ul.triggers>li{background:#f5f5f5;color:#000}
+ul.triggers>li.selected,ul.triggers>li:hover{background:#e7e7e7}
+ul.triggers>li.selected a,ul.triggers>li:hover a,ul.triggers>li.selected span,ul.triggers>li:hover span{color:#333}
+ul.triggers>li:hover ul{display:block}
+ul.triggers>li:hover ul a{color:#333}
+ul.triggers>li>span{margin-right:10px;font-size:20px;line-height:33px}
+ul.triggers>li a{color:#000;font-size:14px}
+ul.triggers>li ul{box-shadow:1px 0 5px #ccc;-moz-box-shadow:1px 0 5px #ccc;-webkit-box-shadow:1px 0 5px #ccc;-o-box-shadow:1px 0 5px #ccc;-ms-box-shadow:1px 0 5px #ccc;opacity:.8;filter:alpha(opacity=80);display:none;background:#fbfbfb;position:absolute;top:0;right:-180px;width:180px;height:100%;list-style:none;padding:0 8px;z-index:200}
+ul.triggers>li ul li{line-height:35px}
+ul.triggers>li ul li+li{border-top:1px dotted #d5d5d5}
+ul.triggers>li ul li a{color:#363636}
+#left-menu-scroll{top:100px;left:0;position:fixed;display:none;font-size:21px;z-index:400}
+#left-menu-scroll li a{padding:0;color:#7f7f7f;border-radius:0;height:39px}
+#left-menu-scroll li a:hover{background-color:transparent;color:#fff}
+#left-menu-scroll .active a{background-color:transparent;color:#fff}
+#left-menu-scroll .tooltip.right{white-space:nowrap}
+
+.category_box a:hover{text-decoration:none}
+
+.category_box .title{font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;height:91px;background:#db2827;text-align:center;padding-top:15px;margin-top:-1px;}
+.category_box .title,.category_box .title a{color:#fff}
+.category_box .title span{font-size:30px}
+.category_box .title h2{font-size:19px}
+.category_box .title.style_2{background-position:0 -100px}
+.category_box .title.style_3{background-position:0 -200px}
+.category_box .title.style_4{background-position:0 -304px}
+.category_box .title.style_5{background-position:0 -400px}
+.category_box .title.style_6{background-position:0 -500px}
+.category_box .title.style_7{background-position:0 -600px}
+.category_box .title.style_8{background-position:0 -700px}
+.category_box .title.style_9{background-position:0 -800px}
+.category_box .title.style_10{background-position:0 -900px}
+.category_box .title.style_11{background-position:0 -1000px}
+.category_box .title.style_12{background-position:0 -1100px;background-position:0 -1200px}
+.category_box ul.sub_category{list-style:none;padding:10px 0; width:100%; float:left; background:#fafaf8 }
+.category_box ul.sub_category li {line-height:23px; width:100%; float:left; padding:3px 10px}
+.category_box ul.sub_category li::before{ font-family:FontAwesome; content:"\f0da"; padding-right:5px; color:#999}
+.category_box ul.sub_category li a{color:#333}
+.category_box ul.sub_category li a:hover{text-decoration:underline}
+.category_box .brand_logo{background:#fff;padding:10px 0;min-height:110px; width:100%; float:left}
+.category_box .brand_logo img{margin:0 auto; max-width:95px; padding:15px 0}
+.category_box .brand_logo .carousel-inner{height:90px}
+.category_box .brand_logo .carousel-inner img{transition:transform .2s linear;-webkit-transition:-webkit-transform .2s linear;-moz-transition:-moz-transform .2s linear;-o-transition:-o-transform .2s linear}
+.category_box .brand_logo .carousel-inner img:hover{transform:translateX(-10px);-webkit-transform:translateX(-10px);-moz-transform:translateX(-10px);-ms-transform:translateX(-10px);-o-transform:translateX(-10px)}
+.category_box .brand_logo .carousel-inner i.fa { color:#666; font-size:20px; box-shadow:none}
+.category_box .brand_logo .carousel-inner a.carousel-control { width:40px; box-shadow:none; color:#666; top:20px;}
+
+.category_box .banner img,.category_box .items img{width:100%}
+.category_box .lindo-pro-style-sp { background:#FFF; width:100%; float:left}
+.category_box .items .item{position:relative;border-left:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;height:236px;background:#fff}
+.category_box .items .item  a { width:100%; text-align:center; display:block}
+.category_box .items .item img{ width:80%; margin:15px auto; height:auto;}
+.category_box .items .item .price  { width:100%; float:left; text-align:center}
+.category_box .items .item a h3 { width:100%; float:left; text-align:center; padding:4px 0; font-weight:bold; font-size:13px; margin:0} 
+.category_box .items .item .price .amount { font-style:normal; font-weight:bold; text-decoration:none; color:#F00; font-size:15px}
+.category_box .items .item .price del { color:#666; font-size:12px}
+.category_box .items .item .price del .amount { color:#666; font-size:12px; padding-right:10px; font-weight:normal}
+.category_box .items .item .price ins { font-style:normal; font-weight:bold; text-decoration:none; color:#F00; font-size:15px}
+.category_box .items .item .sale_off_lindo { position:absolute; z-index:3; background:url(../sale.svg) no-repeat top center; color:#FFF; width:46px;height:48px; text-align:center; padding:5px 0; border-radius:3px; right:10px; top:10px}
+.category_box .items .item .sale_off_lindo strong{display:block;margin-top:15px;}
+.category_box .items .item img {transition:transform .2s linear;-webkit-transition:-webkit-transform .2s linear}
+.category_box .items .item :hover img{transform:translateX(-5px);-webkit-transform:translateX(-5px); opacity:0.8}
+.category_box .lindotang { width:100%; float:left; margin:0; padding:0; min-height:472px; background:#fafaf8}
+.category_box .lindo_tang_1f { background:url(1f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/1f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_2f { background:url(2f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/2f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_3f { background:url(3f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/3f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_4f { background:url(4f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/4f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_5f { background:url(5f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/5f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_6f { background:url(6f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_7f { background:url(7f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/7f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_8f { background:url(8f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/8f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_9f { background:url(9f.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/9f.png*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_10f { background:url(1f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/1f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_11f { background:url(2f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/2f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_12f { background:url(3f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/3f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_13f { background:url(4f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/4f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_14f { background:url(5f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/5f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_15f { background:url(6f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_16f { background:url(7f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_17f { background:url(8f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_18f { background:url(9f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_19f { background:url(1f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_20f { background:url(2f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_21f { background:url(3f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_22f { background:url(4f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+.category_box .lindo_tang_23f { background:url(5f.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/6f.jpg*/ no-repeat left top scroll #fafaf8}
+
+
+.category_box .banner { height:472px; float:left; background:#fafaf8}
+.category_box .banner img { max-height:472px; width:100%;}
+
+.woocommerce ul.products .col-md-4:nth-child(3n+1) { clear:both !important}
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range { background:#666 !important}
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle { background:#000 !important}
+
+.category_box .lindotang .lindo-category_icon { width:40px; padding-top:5px; text-transform:uppercase;  color:#FFF; font-size:18px; text-align:center; float:left}
+.category_box .lindotang a { width:90px;text-align:center; display:inline; font-size:12px}
+.category_box .lindotang a .pro-lindo-title { width:100%; float:left; margin:0; padding:0; text-align:center}
+.category_box .lindotang a .pro-lindo-title .icon-lindo img{ width:40px; height:auto; margin-top:-30px;}
+.category_box .lindotang a .pro-lindo-title h2 { font-size:15px; font-weight:bold; color:#FFF; padding:5px 0 10px 0; margin:0}
+
+.title_breadcrumb{line-height:25px;margin:7px 0}
+.line-top{border-top:3px solid #db2827}
+.line-top .special-price{margin-top:5px}
+.line-top .special-price li:before{content:""}
+.line-top .special-price li+li{margin-left:15px}
+.line-top .special-price li:active a{color:#333}
+.line-top .special-price .active{font-weight:700;white-space:nowrap}
+.line-top .title_2{margin-top:12px}
+.count_product{background:url(count_product.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/count_product.png*/;width:157px;height:35px;margin:-1px 0 0 2px;color:#fff;font-size:14px;text-align:right;padding-right:13px}
+.filters{padding-right:15px}
+.filters .title_2{line-height:25px;margin-bottom:13px}
+.filters .content_block{margin-top:0;margin-bottom:20px;padding-bottom:20px;border-bottom:1px #ccc solid;padding-left:8px;background:none}
+.filters .content_block .age-box{padding-left:8px!important}
+.filters .content_block .age-box a{color:#666;font-size:14px}
+.filters .content_block .checkbox-list{margin-bottom:6px;white-space:nowrap}
+.filters .content_block .lite-green-check{background-image:url(lite-gray-check.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/lite-gray-check.png*/;padding-left:25px;height:15px;display:inline-block;line-height:15px;background-repeat:no-repeat;background-position:0 0;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;font-size:13px;color:#666;font-family:Arial;text-decoration:none}
+.filters .content_block .checked{background-position:0 -15px}
+.filters .content_block .trademark{height:155px;overflow-y:scroll;padding-left:8px!important}
+.filters .content_block .trademark::-webkit-scrollbar{width:7px}
+.filters .content_block .trademark::-webkit-scrollbar-track{background-color:transparent}
+.filters .content_block .trademark::-webkit-scrollbar-thumb{border-radius:10px;background-color:#aaa}
+.filters .content_block .post-range{margin-top:5px}
+.filters .cat_parent{font-size:18px;margin-top:7px}
+.filters .cat_parent .arrow{font-size:12px;margin-right:5px}
+.filters .cat_parent .arrow:hover{cursor:pointer}
+.filters .cat_childs{list-style:none;padding-left:18px;line-height:24px}
+.range .display-price{margin-top:13px}
+.range #slider-range{width:94%;margin:0 auto;height:0}
+.range #slider-range a.ui-corner-all{background:url(dotted.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/dotted.png*/;width:14px;height:14px;border:none;top:-7px}
+.range #post-range input[type="text"]{border:1px solid #e5e5e5;padding-left:5px;outline:0;width:100%;color:#999;background:transparent}
+.range #post-range .col-text{padding-right:0}
+.range #post-range .col-submit{text-align:right;padding-left:0}
+.range #post-range .col-submit input[type="submit"]{background:url(search.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/search.png*/;width:21px;height:21px;border:0}
+#listThumb{width:95%;height:326px;margin:0 auto 13px;border:1px solid #e5e5e5;background:#fff;text-align:center}
+#listThumb a:hover{color:#333}
+#listThumb a .imageCounter .dot{width:6px;height:6px;border-radius:50%;display:inline-block;border:1px solid #fff;background:#c9c9c9;margin-left:2px}
+#listThumb a .imageCounter .dot.active{background:#333}
+#listThumb .imageCounter{position:absolute;top:0;right:16px}
+#listThumb img{max-width:100%}
+.product_lists .breadcrumb{margin-bottom:1px;margin-top:4px}
+.product_lists .price{color:#db2827;font-size:20px}
+.product_lists .old_price{color:#666;text-decoration:line-through;line-height:35px;margin-left:15px}
+.product_lists h1{display:initial;font-size:19px;line-height:24px}
+.product_lists .product_title{margin:10px 0 4px;font-size:13px;padding:0 9px;height:28px;text-align:left}
+.product_lists .percent{bottom:30.2%;right:19px}
+.breadcrumb_list{padding:8px 0 0}
+.breadcrumb_content li+li+li:before{content:" "}
+.description_list{border-top:1px solid #c1c2c2;padding-top:10px}
+.description_list a{color:#337ab7}
+.breadcrumb li{position:relative}
+.breadcrumb li:hover .sub_parent_breadcrumb{display:block}
+.breadcrumb .sub_parent_breadcrumb{position:absolute;display:none;margin:0;line-height:20px;list-style:none;z-index:100}
+.details_page{border-bottom:2px solid #979797}
+.details_page h1{font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:30px;text-transform:uppercase;padding-bottom:10px}
+.details_page .extra_info{font-size:15px;color:#666;border-top:2px solid #ccc;border-bottom:2px solid #ccc;padding:10px 0;margin-bottom:5px}
+.details_page .extra_info span{margin-right:10px}
+.details_page .attribute-info{color:#848484;margin:5px 0 9px 15px}
+.details_page .brand-description{font-size:11px;color:#666;font-style:italic;margin:5px 0}
+.details_page .brand-name a{padding-right:5px}
+.details_page .add_to_cart .price{font-size:30px;color:#c00}
+.details_page .add_to_cart .box-price-old{line-height:1.42857143!important;font-size:23px;color:#999}
+.details_page .add_to_cart .old-price{text-decoration:line-through}
+.details_page .add_to_cart .box-price{margin-bottom:10px;padding-top:29px}
+.details_page .add_to_cart .bizo-plus-detail{font-size:12px}
+.details_page .add_to_cart .btn{width:100%;margin-bottom:15px;line-height:20px;font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:19.32px;text-transform:uppercase}
+.add-to-cart-btn{border-color:#fd7837;background:#fff;color:#fc6113}
+.details_page .add_to_cart .policy{text-align:center;margin-top:12px;color:#999}
+.details_page .add_to_cart .policy p{font-family:Arial;font-size:11px}
+.details_page .add_to_cart .policy span{font-size:35px}
+.details_page .add_to_cart p{font-family:arial;font-size:11px;text-transform:none}
+.details_page .add_to_cart .bibomart-cart{color:#ffb1d4;font-size:32px}
+.details_page .brand{padding:5px 0 0 16px}
+.details_page .logistics{margin-left:7px;padding-left:7px;border-left:1px #ccc solid;min-height:365px}
+.details_page .logistics .box-region-price{height:114px;border:1px dashed #999;margin-bottom:25px;color:#666;font-family:Arial}
+.details_page .logistics .box-region-price .row{padding:0 6px}
+.details_page .logistics .box-region-price .region{border-bottom:1px dashed #999;padding:7px 3px}
+.details_page .logistics .box-region-price .region:last-child{border-bottom:0}
+.details_page .logistics .box-region-price .region select{border:0;outline:0;background:transparent;box-shadow:none;padding:0;height:auto}
+.details_page .store{font-family:Arial;font-size:12px;color:#666;min-height:186px}
+.details_page .store #note-store{color:#333;font-weight:700}
+.details_page .store .boxStore{font-size:11px;height:98px;line-height:25px;overflow-y:scroll;margin-bottom:28px}
+.details_page .store .boxStore ul{list-style-image:url(location.jpg)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/location.jpg*/;padding:0 0 0 18px}
+.details_page .store .boxStore::-webkit-scrollbar{width:7px}
+.details_page .store .boxStore::-webkit-scrollbar-track{background-color:transparent}
+.details_page .store .boxStore::-webkit-scrollbar-thumb{border-radius:10px;background-color:#aaa}
+#example3{margin:0 auto;margin-bottom:10px!important}
+#example3 li.etalage_thumb{-webkit-box-shadow:none!important;-moz-box-shadow:none!important;box-shadow:none!important}
+#example3 .etalage_smallthumb_active{-webkit-box-shadow:none!important;-moz-box-shadow:none!important;box-shadow:none!important;border:1px solid #ffcf0d!important}
+#example3 .etalage_small_thumbs li{opacity:1!important;border:1px solid #e6e6e6}
+.specInfo{padding-bottom:18px;border-bottom:2px solid #979797;margin-bottom:20px}
+.specTable{width:100%;margin-top:19px;font-size:13px}
+.specTable .specsKey{width:16%;border-bottom:1px dotted #c9c9c9;border-right:1px solid #c9c9c9}
+.specTable .specsValue{border-bottom:1px dotted #c9c9c9;border-left:1px solid #c9c9c9}
+.specTable td,.specTable th{padding:6px;vertical-align:top;text-align:left;border:0;font-size:100%;font:inherit}
+.specTable .groupHead{background-color:#f2f2f2;text-transform:uppercase;font-weight:700}
+.content-infomation{border-right:1px solid #e8e8e8;padding:0 21px 31px 0}
+.detail_content{border-bottom:2px solid #979797;padding-bottom:17px;line-height:1.5}
+.detail_content h1,h2,h3,h4,h5,h6{line-height:1.5;margin-top: 0; margin-bottom: 0;}
+.related_products{padding-left:20px;padding-right:7px}
+.related_products .box_product_related{padding-bottom:14px}
+.related_products .box_product_related:last-child{border-bottom:0}
+.related_products .related_product{height:248px;border-left:1px solid #e6e6e6}
+.related_products .related_product .percent{top:5px;left:8px}
+.related_products .related_product:last-child{margin-bottom:0}
+.related_products .related_product .related-infomation{font-size:13px;font-family:Arial;padding:0 11px 3px 7px}
+.related_products .related_product .related-infomation .price{font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px;color:#db2827;margin-top:5px}
+.related_products .related_product .related-infomation .old-price{color:#b5b5b5;text-decoration:line-through;font-size:12px;margin-top:8px;margin-left:5px}
+.related_products .related_product .related-infomation a{text-decoration:none}
+
+footer{position:relative;padding-top:45px;z-index:500;z-index:0}
+footer .store_footer p{text-transform:uppercase;color:#db2827;font-size:16px}
+footer .store_footer .store-list{list-style:none;line-height:25px;margin:10px 0}
+footer .box_title{font-size:15px;font-weight:700;margin-bottom:10px}
+footer .menu {padding-left:10px;list-style:square;color:#9a9a9a;}
+footer .menu li {margin-top:10px; width:100%; float:left}
+footer .menu li a{color:#666;font-size:13px;line-height:15px; }
+footer #Subscribe{color:#666; width:100%; float:left; margin:15px 0}
+footer #Subscribe a{margin-right:5px; float:left}
+footer .widget_wysija_cont .widget_wysija{margin-top:15px 0; float:left; width:100%}
+footer .widget_wysija_cont .widget_wysija .wysija-paragraph { display:inline-block; min-width:60%}
+footer .widget_wysija_cont .widget_wysija .wysija-input {border:1px solid #eee;border-radius:0;-webkit-box-shadow:inherit;box-shadow:inherit;outline:none; padding:5px 10px; width:100%;}
+footer .widget_wysija_cont .widget_wysija .wysija-submit  {background:#ffa707;background:-moz-linear-gradient(top,#ffa707 0,#ff9024 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#ffa707),color-stop(100%,#ff9024));background:-webkit-linear-gradient(top,#ffa707 0,#ff9024 100%);background:-o-linear-gradient(top,#ffa707 0,#ff9024 100%);background:-ms-linear-gradient(top,#ffa707 0,#ff9024 100%);background:linear-gradient(to bottom,#ffa707 0,#ff9024 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa707',endColorstr='#ff9024',GradientType=0);border-radius:0;border:1px solid #eb8e2f;color:#fff;font-weight:700; display:inline; padding:5px 10px}
+
+footer .copyright-content{border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;margin:20px 0;padding:12px 0 11px;line-height:22px}
+footer .padding-foot:last-child{border-right:0}
+footer .logo{background-size:69%;height:66px}
+footer .footer-tags{color:#cbcbcb;text-align:center}
+footer .footer-tags a{color:#cbcbcb;position:relative}
+footer .social-background{background:url(social.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/social.png*/ no-repeat;height:34px;margin:13px 10px 0 0;width:34px}
+footer .social-fb{background-position:94.8% -21px}
+footer .social-google{background-position:66.7% 58.5%}
+footer .social-tw{background-position:66.7% 5.6%}
+footer .social-pint{background-position:76% 58.5%}
+
+.footer_info_lindo { width:100%; float:left; background:#EEE; margin-top:15px; padding:20px 0}
+.footer_info_lindo .linfooter-img img { max-height:60px; width:auto; float:left; padding:2px; margin:3px}
+.footer_info_lindo .linfooter h6 { font-size:15px; font-weight:bold}  
+
+.percent{width:50px;height:50px;border:2px dotted #fb7000;position:absolute;z-index:200;border-radius:50%;color:#db2827;font-size:16px;font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;text-align:center;padding-top:3px;bottom:5px;right:5px;background:#fff}
+.percent .sale{font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;color:#666;font-size:13px;padding-left:1px;margin-top:1px}
+.percent .percent-sale{font-size:18px;margin-top:-5px;font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serifItalic;color:#fb7000;padding-left:2px}
+.control{background-image:none!important}
+.carousel-img{right:25%;left:25%!important}
+.help-inline{color:#db2827}
+.cart-success{background:url(success.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/img/icons/success.png*/ 0 0 no-repeat;width:1000px;height:490px;margin:30px auto;position:relative}
+.emptycart{text-align:center}
+.brand_description img{max-width:100%}
+#brand_description{color:#db2827;font:22px Arial}
+#sort-price{margin-right:0!important;width:141px!important;height:24px!important;margin-top:0!important;border-radius:0;color:#fff;border:none;background:#db2827;font:13px Arial;text-transform:capitalize}
+.content-search option{background-color:#fff;color:#000}
+.autocomplete-suggestions{padding:0;border:1px solid #ababab;background-color:#fff;overflow:hidden;z-index:1999999;text-align:left;border-top:0;top:44px!important;left:7px!important}
+.autocomplete-suggestion{margin:0 10px;padding:2px 0;cursor:default;display:block;font:menu;font-size:12px;line-height:16px;overflow:hidden;border-bottom:1px dashed #c1c2c2;line-height:20px}
+.autocomplete-selected{background-color:#72f9ab}
+.ex-tools{position:fixed;right:12px;bottom:30px;margin-left:590px;z-index:9999}
+.ex-tools a{width:44px;height:35px;display:block;margin-bottom:10px;background:url(ex-tool.png-v=0.6.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/ex-tool.png?v=0.6*/ -1px -5px no-repeat transparent;position:relative}
+.ex-tools a .ex-message{position:absolute;padding:0 10px;height:35px;line-height:35px;color:#fff;display:block;left:-126px;top:-2px;text-align:center;font-size:12px;background:#db2827;-webkit-border-radius:50px;-moz-border-radius:50px;border-radius:50px;display:none;width:130px}
+.ex-tools .ex-deal{background-position:-37px 0}
+.ex-tools .ex-deal:hover{background-position:0 0}
+.ex-tools .ex-deal:hover span{display:block}
+.ex-tools .ex-cart{background-position:0 -46px}
+.ex-tools .ex-cart:hover{background-position:-44px -46px}
+.ex-tools .ex-cart:hover span{display:block}
+.ex-tools .ex-survey{background-position:0 -92px}
+.ex-tools .ex-survey:hover{background-position:-44px -92px}
+.ex-tools .ex-survey:hover span{display:block}
+.ex-tools .ex-info{background-position:0 -138px}
+.ex-tools .ex-info:hover{background-position:-44px -138px}
+.ex-tools .ex-info:hover span{display:block}
+.ex-tools .ex-chat{background-position:0 -228px}
+.ex-tools .ex-chat:hover{background-position:-44px -228px}
+.ex-tools .ex-chat:hover span{display:block}
+.ex-tools .ex-totop{display:none;background-position:0 -183px}
+.ex-tools .ex-totop:hover{background-position:-44px -183px}
+.ex-tools .ex-totop:hover span{display:block}
+.email-bottom{position:fixed;left:10px;bottom:-154px;background:url(bg_email.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/bg_email.png*/ 0 0 transparent no-repeat;width:317px;height:197px;z-index:9999;cursor:pointer}
+.email-bottom .email-title{height:50px;z-index:9}
+.email-bottom .send-email{margin:21px 14px 0}
+.email-bottom.open{bottom:0}
+#region_box{display:none}
+.page-error{background:url(error.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/error.png*/ center top no-repeat;width:100%;height:540px}
+.desctiption-tag-link{font-weight:700;font-style:italic}
+.box-cat-one{margin-left:14px;margin-top:64px}
+.cat-icon{text-align:center}
+.remove-background{background-image:none!important}
+.remove-background .glyphicon-chevron-right{right:0;margin-right:10px;background:#bd3e3f;height:45px;border-radius:50%;width:45px;padding-top:6px}
+.remove-background .glyphicon-chevron-left{left:0;margin-left:10px;background:#bd3e3f;height:45px;border-radius:50%;width:45px;padding-top:6px}
+.policy{text-align:center;margin-top:20px;color:#999}
+.policy span{font-size:40px}
+.tooltip_policy .tooltip{width:280px}
+.tooltip_policy .tooltip-inner{text-align:left;background:#de3f3a}
+.tooltip_policy .tooltip-arrow{border-right-color:#de3f3a!important}
+.close-adv-header{cursor:pointer;color:#cbcbcb;display:inline-block;font-size:20px;font-weight:700;line-height:65px;position:absolute;right:0;text-align:center;top:0;width:80px}
+.gift_content{background:#eae8e9;border-radius:7px;padding:10px;margin:10px 0}
+.lineweb p{color:#f50a56}
+#event{border:1px solid #ff9595;height:270px}
+.event-list img{margin:5px 10px 2px;max-width:100%}
+.title-article{vertical-align:middle;padding:10px}
+.custom_carousel{bottom:0!important}
+.custom_carousel .active{background-color:#9e712c!important}
+.custom_carousel_container{margin:5px}
+.box_deals{border-radius:7px;background:#f0f0f0;padding:10px;margin-top:7px}
+.color_hex{width:34px;height:30px;border:2px solid #c6c6c6;padding:4px;margin-right:6px}
+.custom_elasticslide_container .elasticslide_custom{margin-bottom:4px!important}
+.custom_elasticslide_container .elasticslide_custom img{border:1px solid #e0e0e0!important}
+#preview{max-width:380px;border:1px solid #ddd}
+#image_preview{position:relative;height:385px}
+.preview_zoom{position:absolute;top:0;left:385px;background-color:#fff;border:1px solid silver;border-radius:10px;z-index:10}
+.add-to-cart-now{background:#fc5300;border-color:#fc5300}
+.add-to-cart-now:hover{background:#fc5300;border-color:#fc5300}
+
+.footer_top_logo { width:100%; float:left; margin:0; padding:20px 0;background:#f5f5f5;}
+.footer_top_logo .lindo_logo { width:100%; float:left; background:#FFF}
+.footer_top_logo .lindo_logo .owl-carousel .owl-nav .owl-next { position:absolute; right:0; top:35%; font-size:0}
+.footer_top_logo .lindo_logo .owl-carousel .owl-nav .owl-next::before{ color: #999;
+    content: "\f054";
+    font-family: FontAwesome;
+    padding: 5px;
+	 border:1px solid #CCC;
+	 font-size:15px;
+	 right:0; position:absolute;
+	 background:#FFF; z-index:9999; opacity:0.3;
+}
+
+
+.footer_top_logo .lindo_logo .owl-carousel .owl-nav .owl-prev { position:absolute; left:0; top:35%; font-size:0}
+.footer_top_logo .lindo_logo .owl-carousel .owl-nav .owl-prev::before{ color: #999;
+    content: "\f053";
+    font-family: FontAwesome;
+    padding: 5px;
+	 border:1px solid #CCC;
+	 font-size:15px;
+	 left:0; position:absolute;
+	 background:#FFF; z-index:9999; opacity:0.3;
+}
+
+.footer_top_logo .lindo_logo .owl-carousel .owl-nav .disabled { opacity:0.1;}
+.footer_bottom_end  { width:100%; float:left; margin:0; padding:0;}
+.footer_news_lindo { width:100%; float:left; margin:0; padding:20px 0;background:#f5f5f5;}
+.footer_news_lindo .lindo_ads_commem_news  { width:100%; float:left; margin:0; padding: 0;background:#FFF; border:1px solid #CCC}
+.footer_news_lindo .lindo_ads_commem_news  .footer_img_ads  { width:100%; float:left; margin:0; padding: 0; border-right:1px solid #CCC;}
+.footer_news_lindo .lindo_ads_commem_news  .footer_img_ads img { max-width:100%; float:left; }
+.footer_news_lindo .lindo_ads_commem_news  h3.title_new_footer { width:100%; float:left; padding:15px 0; font-size:16px; text-transform:uppercase; margin:0}
+.footer_news_lindo .lindo_ads_commem_news  h3.title_new_footer .fa { color:#b96401}
+.footer_news_lindo .lindo_ads_commem_news  .decent-comments  { margin:0; padding:0; width:100%; float:left}
+.footer_news_lindo .lindo_ads_commem_news  .decent-comments a { color:#00F; font-weight:bold; font-size:13px}
+.footer_news_lindo .lindo_ads_commem_news  .comment-body { font-size:12px;}
+.footer_news_lindo .lindo_ads_commem_news  .decent-comments ul { margin:0; padding:0; width:100%; float:left}
+.footer_news_lindo .lindo_ads_commem_news  .decent-comments ul li { margin:0; padding:0 0 5px 0; width:100%; float:left; list-style:none}
+.footer_news_lindo .lindo_ads_commem_news  .decent-comments ul li  .comment-date { color:#666}
+.footer_news_lindo .lindo_ads_commem_news  h3.title_new_footer .xemtc { float:right; font-size:15px; text-transform:none; color:#00F}
+.footer_news_lindo .lindo_ads_commem_news  h3.title_new_footer .xemtc .fa { color:#00F}
+.list_news_beweb { width:100%; float:left; padding-bottom:5px; margin-bottom:5px; font-size:13px}
+.list_news_beweb .img_news { width:35%; float:left}
+.list_news_beweb .info_new { width:60%; float:right}
+.list_news_beweb .info_new h4 { width:100%; float: left; margin:0; padding:0 0 8px 0;font-size:13px; line-height:15px;}
+.list_news_beweb .info_new h4 a{font-size:16px; line-height:100%; font-weight:bold; color:#555}
+.list_news_beweb .info_new .time { font-size:12px; color:#666;}
+.list_news_beweb .info_new_f { width:100%; float:right}
+.list_news_beweb .info_new_f .icon_news { width:30px; height:9px; content:" "; background:url(news.png)/*tpa=https://babyshop.mauwebsitedep.com/wp-content/themes/babyshop/images/news.png*/ no-repeat center; display:inline-block}
+.list_news_beweb .info_new_f .time { font-size:12px; color:#666;}
+.list_news_beweb .info_new_f h4{ font-size:13px; line-height:15px; margin:0; padding:3px 0}
+
+
+.lindo_wd { width:100%; float:left; margin:0 0 20px 0; padding:0; background:#FFF; border:1px solid #EEE;border-radius:3px}
+.widget_yith_wc_category_accordion h3.ywcca_widget_title { width:100%; float:left; padding:6px 0; background:#0f7fc1; font-size:16px; font-weight:bold; color:#FFF; border-radius:3px 3px 0 0;  margin:0; margin-bottom:10px; text-transform:uppercase; margin:0}
+.widget_yith_wc_category_accordion h3.ywcca_widget_title::before { font-family:FontAwesome; content:"\f0c9"; padding:0 10px}
+.sidebar-web .widget_yith_wc_category_accordion ul{ margin:0; padding:0; float:left; width:100%}
+.sidebar-web .widget_yith_wc_category_accordion ul.ywcca_category_accordion_widget > li { border-bottom:1px solid #EEE; padding:6px 10px;}
+.sidebar-web .widget_yith_wc_category_accordion ul li { text-transform:none; font-size:15px}
+.sidebar-web .widget_yith_wc_category_accordion .highlight_cat { color:#F00;}
+.sidebar-web .widget_yith_wc_category_accordion ul.children li::before {font-family:FontAwesome; content:"\f105"; margin-left:0; color:#999}
+.lindo_wd .title-section { width:100%; float:left; padding:6px 0;}
+.lindo_wd .title-section span { padding:0 10px; font-size:16px; text-transform:uppercase; font-weight:bold}
+.lindo_wd  .price_slider_wrapper { width:100%; float:left; padding:10px;}
+.woocommerce .products ul li.lindo_produc_style, .woocommerce ul.products li.lindo_produc_style { width:100%; float:left; margin:0; padding:8px; background:#FFF !important; margin-bottom:30px; border:2px solid #FFF; text-align:center}
+.woocommerce ul.products li:hover { border:2px solid #db2827;}
+
+.woocommerce ul.products li.lindo_produc_style h3 { font-size:13px; line-height:130%; font-weight:bold; color:#666; width:100%; float:left; margin:0; padding:10px; min-height:55px; text-align:center}
+.woocommerce ul.products li.lindo_produc_style .price { width:100%; float:left; text-align:center;}
+.woocommerce ul.products li.lindo_produc_style .price .amount { font-style:normal; font-weight:bold; text-decoration:none; color:#F00; font-size:15px}
+.woocommerce ul.products li.lindo_produc_style .price del { color:#666; font-size:12px;text-decoration:none}
+.woocommerce ul.products li.lindo_produc_style .price del .amount { color:#666; font-size:12px; padding-right:5px; font-weight:normal;text-decoration:line-through}
+.woocommerce ul.products li.lindo_produc_style .price ins { font-style:normal; font-weight:bold; text-decoration:none; color:#F00; font-size:15px}
+.woocommerce ul.products li.lindo_produc_style .sale_off_lindo { position:absolute; z-index:3; background:url(../sale.svg) no-repeat top center; color:#FFF; width:35px;height:47px; text-align:center; padding:3px 0; border-radius:3px; right:12%; top:10px; font-size:12px}
+.woocommerce ul.products li.lindo_produc_style .sale_off_lindo strong{display:block;margin-top:17px}
+.woocommerce ul.products li.lindo_produc_style .button { margin-top:10px;}
+.woocommerce ul.products li.lindo_produc_style:hover .button { background:#db2827; color:#FFF}
+.woocommerce .woocommerce-breadcrumb { font-size:12px;}
+.woocommerce h1.page-title { font-size:20px; font-weight:bold; margin:10px 0; padding:5px 0}
+.woocommerce_archive_description .term-description { width:100%; float:left; padding:10px; margin:15px 0; background:#FFF; color:#666; font-size:15px}
+.woocommerce_archive_description p { padding:5px 0;}
+.woocommerce_archive_description a { color:#09F}
+.woocommerce div.product .entry-summary h1.product_title { font-size:30px; margin:0; padding:0 0 10px 0; width:100%; float:left}
+.woocommerce .background_list_product { width:100%; float:left; background: #FFF none repeat scroll 0 0;
+    border-top: 1px solid #e8e8e8;
+    box-shadow: 0 1px 3px #e8e8e8; padding:15px 0}
+.share_lindo { width:100%; float:left; margin:0; padding:10px 0}
+.share_lindo li { float:left; list-style:none; margin-right:10px;}
+.share_lindo li a { font-size:28px;}
+.share_lindo li a i.fa-facebook-square{ font-size:28px; color:#3c5aa3}
+.share_lindo li a i.fa-google-plus-square{ font-size:28px; color:#eb4722}
+.share_lindo li a i.a-pinterest-square{ font-size:28px; color:#00abf1}
+.share_lindo li a i.fa-twitter-square{ font-size:28px; color:#00adea}
+.share_lindo li span { float:left; padding-top:12px}
+.woocommerce .star-rating span { color:#FC0; font-size:18px}
+.woocommerce div.product .rating_sku { width:100%; float:left; padding:10px 0;}
+.woocommerce div.product .rating_sku .sku_lindo { float:left; width:auto; padding-right:10px; font-size:15px; line-height:25px}
+.woocommerce div.product .rating_sku .rating_lindo { float:left; width:auto; font-size:15px}
+
+.woocommerce div.product .woocommerce-product-rating { margin-bottom:0 !important; line-height:none !important}
+.woocommerce .woocommerce-product-rating .star-rating { margin:2px !important; font-size:18px}
+
+.woocommerce-page div.product div.summary .price { width:100%; float:left; padding:0 0 10px 0}
+.woocommerce-page div.product div.summary .price del  { display:block;}
+.woocommerce-page div.product div.summary .price ins { display:block; text-decoration:none}
+.woocommerce div.product p.price del, .woocommerce div.product span.price del { text-decoration:none}
+.woocommerce-page div.product div.summary .price ins span { color:#F00; font-size:19px}
+.woocommerce div.product p.price del  span, .woocommerce div.product span.price del span { text-decoration:line-through; color:#333}
+.woocommerce-page div.product div.summary .price del:before  { content:"Giá gốc : "; color:#000; font-size:1em; }
+.woocommerce-page div.product div.summary .price ins:before  { content:"Giá bán : "; color:#000; font-size:1em; font-weight:normal}
+.woocommerce  div.summary  .description  { width:100%; float:left; padding:10px 10px 0 20px; margin-bottom:10px; border:1px solid #EEE; border-radius:3px;}
+.woocommerce  div.summary  .description  li { padding-bottom:3px; font-size:15px; color:#666}
+
+.woocommerce div.product .lindo_sale_price { width:100%; float:left;}
+.woocommerce div.product .lindo_sale_price .lindo_price { float:left; width:auto; padding-right:20px;}
+.woocommerce div.product .lindo_sale_price .lindo_sale { float:left; width:auto; font-size:13px; line-height:25px}
+.woocommerce div.product .lindo_sale_price .lindo_sale .sale_off strong { font-size:15px; background:#C03; color:#FFF; padding:3px 5px; border-radius:3px;}
+
+.page  #respond input#submit.alt, .page  a.button.alt, .woocommerce button.button.alt, .page  input.button.alt { background:#F00 !important; color:#FFF; padding:10px 18px; font-size:18px; font-weight:normal; border:none; text-transform:uppercase;}
+.page  #respond input#submit, .page .post_page a.button, .page .post_page  button.button, .page .post_page  input.button { background:#090 !important; color:#FFF !important}
+
+.woocommerce div.product form.cart .button { background:#F00 !important; color:#FFF; padding:10px 15px; font-size:15px; font-weight:normal; border:none; text-transform:uppercase;}
+.woocommerce div.product form.cart { padding-top:10px; width:100%; float:left; margin:0 !important}
+.woocommerce div.product form.cart .button i.fa { padding-right:10px;}
+.woocommerce .quantity .qty { border:1px solid #EEE; border-radius:3px; padding:8px; width:68px !important;  float:left}
+.woocommerce span.onsale { display:none}
+
+.yith-wcwl-add-to-wishlist{float: left;width:auto;margin: 10px 0;padding-left: 20px;position: relative;}
+.yith-wcwl-add-to-wishlist:before{position: absolute;content: "\f004";display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;top:2px; color:#9f058b; left: 0;}
+.woocommerce-page div.product div.summary .compare{float: left;width:auto;margin: 6px 0;padding-left: 40px;border:none; background:none; font-weight:normal; line-height:9px}
+.woocommerce-page div.product div.summary .compare:before{position: absolute;content: "\f24e";display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;top: 6px;left:15px; background:none; color:#59cb06}
+.woocommerce-page .product_meta { padding-top:10px; width:100%; float:left; border-top:2px solid #EEE;}
+.woocommerce-page div.product div.summary .clear { display:none}
+.woocommerce-page div.product div.summary { font-size:15px;} 
+.woocommerce-page .woocommerce-tabs { width:100%; float:left; }
+.woocommerce div.product .woocommerce-tabs ul.tabs { background:#EEE; padding-top:10px !important; width:100%; float:left} 
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before { display:none}
+.woocommerce div.product .woocommerce-tabs ul.tabs li { border-radius:0 !important; font-size:15px}
+.woocommerce-page .woocommerce-tabs  .panel { box-shadow:none; border:none; font-size:15px;}
+.woocommerce-page .woocommerce-tabs   .panel  p { padding-bottom:10px;}
+.woocommerce-page .woocommerce-tabs   .panel img { max-width:100% !important; display:block}
+
+.woocommerce .related_products {width:100%; float:left; padding:10px 0} 
+.woocommerce .related_products  h2.title_related { width:100%; float:left; padding:8px 0; margin:10px 0; background:#EEE; font-size:16px; text-transform:uppercase; text-indent:10px}\
+.woocommerce .woocommerce-breadcrumb a { font-size:13px !important;}
+.woocommerce .woocommerce-breadcrumb { font-size:13px !important; width:100%; float:left; padding:10px 0}
+.woocommerce li.lindo_produc_style .star-rating { display:none}
+.woocommerce #tab-reviews span { font-size:13px;}
+.woocommerce #review_form #respond textarea { border:1px solid #EEE; border-radius:3px; margin:10px 0;}
+.woocommerce #review_form #respond input { border:1px solid #EEE; border-radius:3px; margin:0; padding:8px;}
+.woocommerce #review_form #commentform label { min-width:60px;}
+.woocommerce #review_form #commentform  .form-submit input  { background:#090; color:#FFF; font-size:18px; padding:10px 15px;}
+.woocommerce-pagination { width:100%; float:left; background:#FFF; padding:6px 0; margin:0}
+.woocommerce .woocommerce-pagination ul.page-numbers, .woocommerce-page .woocommerce-pagination ul.page-numbers  { border:none}
+.woocommerce .woocommerce-pagination ul.page-numbers li, .woocommerce-page .woocommerce-pagination ul.page-numbers li { padding:0; border:1px solid #EEE; margin:2px}
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span { padding:10px !important; float:left; font-size:15px}
+.sidebar-single-page .lindo_wd ul { width:100%; float:left; padding:0 10px 10px 10px;}
+.sidebar-single-page .lindo_wd ul li { width:100%; float:left; padding:3px 0; list-style:none}
+.sidebar-single-page .lindo_wd  .post-date { font-size:12px; color:#999}
+.sidebar-single-page .lindo_wd  .tagcloud { padding:0 10px 10px 10px;}
+.cont-news-page { width:100%; float:left}
+.cont-news-page .list-news-page  { width:100%; float:left; padding:10px; margin:15px 0; background:#FFF}
+ .cont-news-page .list-news-page  .cat_img { width:20%; float:left}
+ .cont-news-page .list-news-page  .cat_note { width:78%; float:right}
+  .cont-news-page .list-news-page  .cat_note  h2 { margin:0; padding:10px 0; font-size:22px; line-height:120%}
+.panigation-page { width:100%; float:left; background:#FFF; padding:10px 0 !important; margin:0; text-align:center}
+.wp-pagenavi span.pages { border:none}
+.singpages_lindo { width:100%; float:left; padding:10px; background:#FFF; border-radius:3px; margin:10px 0; border:1px solid #EEE}
+.home .lindo_pr_right .star-rating, .home .lindo-pro-style-sp  .star-rating{ display:none}
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{ border:1px solid #EEE; padding:8px;}
+h1.single_title { font-size:22px; line-height:120%; font-weight:bold}
+.post_page { width:100%; float:left; font-size:15px; text-align:justify}
+.post_page p { padding-bottom:10px;}
+.post_page img { max-height:100% !important; display:block}
+.onsale { display:none}
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+.extra-blogs { width:100%; float:left;}
+.extra-blogs ul{ width:100%; float:left; padding-left:20px;}
+.extra-blogs ul li { list-style:outside none square; padding:3px 0}
+.mlindo_mobile { font-size:18px; text-transform:uppercase; color:#333}
+.description p { padding-bottom:10px;}
+#tab-description  p { padding-bottom:10px;}
+@media screen and (max-width:480px){
+	.woocommerce div.product form.cart div.quantity{display:block;float:none!important}
+	.woocommerce div.product form.cart div.quantity:after{display:block;clear:both;content:''}
+.woocommerce div.product form.cart .button{width:49%;}
+.woocommerce div.product .entry-summary h1.product_title{font-size:18px}
+}
+/* responsive facebook comment */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style], .fb-comments span, .fb-comments iframe {
+width: 100% !important;
+}
+.row-mobile{display: none}
+.woocommerce_archive_description {margin-bottom: 15px;}
+@media screen and (max-width: 480px){
+	#banner_top{display: none}
+	.title_cat.col-md-4{display: none}
+	.row-mobile{display: block;}
+	.row-desktop{display: none}
+	.row-mobile .ads_mobile{width:50%;float:left;}
+	.row-mobile .ads_mobile img{max-width: 100%}
+	.woocommerce div.product form.cart div.quantity{float:left!important;width: auto!important}
+	.woocommerce .quantity .qty{width:45px!important;}
+	.woocommerce div.product form.cart .button{padding: 10px;font-size: 14px;width:auto;}
+}
