@@ -61,6 +61,15 @@
    		 <?php echo form_error('codepro'); ?>
      </td>
 </tr>
+    <tr>
+        <td class="title_td">Kho hàng</td>
+        <td>
+            <select name="status">
+                <option value="0">Còn hàng</option>
+                <option value="1" >Hết hàng</option>
+            </select>
+        </td>
+    </tr>
 <tr>
     <td class = 'title_td' width="100">Thương hiệu</td>
     <td>

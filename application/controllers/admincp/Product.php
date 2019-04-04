@@ -130,7 +130,7 @@ class Product extends CI_Controller  {
 		$q  = $this->input->get('q', TRUE); 
 		$query =json_decode(base64_decode($q),TRUE);
 		$link = BASE_URL.'admincp/product/index?tukhoa='.$query['tukhoa']."&status_check=".$query['status_check']."&iduser=".$query['iduser']."&catelog=".$query['catelog']."&p=".$query['page']; 
-		
+
 		$id = $this->uri->segment(4);
 		$info = $this->product_model->get_Id($id);
 		$temp['data']['info'] = $info[0];

@@ -71,6 +71,15 @@
 					 </td>
 				</tr>
                 <tr>
+                    <td class="title_td">Kho hàng</td>
+                    <td>
+                        <select name="status">
+                            <option value="0" <?php echo ($info['status']==0)?'selected' : '' ?>>Còn hàng</option>
+                            <option value="1" <?php echo ($info['status']==1)?'selected' : '' ?>>Hết hàng</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                   <td class = 'title_td' width="100">Thương hiệu</td>
                   <td><select name = 'idmanufacturer'  >
                       <option value = ''>- - Chọn nhà sản xuất - -</option>

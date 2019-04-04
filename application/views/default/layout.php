@@ -1,15 +1,15 @@
 <?php
 $data['web'] = $web  =$this->pagehtml_model->get_website(1);
-$data['menu_bottom']  = $this->catelog_model->list_data();
+$data['menu_bottom']  = $this->catelog_model->list_data(null,null);
 //data['catelog'] = $this->pagehtml_model->get_catelog(0);
-$data['logo'] = $logo = $this->flash_model->list_data();
+$data['logo'] = $logo = $this->flash_model->list_data(null,null);
 $data['hotro'] = $this->pagehtml_model->get_newsidcat(8,10,0);
 $data['thongtin'] = $this->pagehtml_model->get_newsidcat(5,10,0);
 $data['quydinh'] = $this->pagehtml_model->get_newsidcat(11,10,0);
 $data['baiviet'] = $this->pagehtml_model->get_newsidcat(10,10,0);
 $data['banner_bottom'] = $this->pagehtml_model->get_on_list_weblink(array('style'=>4, 'layout'=>'', 'ticlock'=>'0'),1);
 $data['banner_top'] = $this->pagehtml_model->get_on_list_weblink(array('style'=>2, 'layout'=>'', 'ticlock'=>'0'),1);
-$data['info_footer'] = $info_footer  =$this->pagehtml_model->list_data(1);
+$data['info_footer'] = $info_footer  =$this->pagehtml_model->list_data(1,null);
 $tag = $this->tags_model->list_data(10,0);
 $cart = $this->session->userdata('cart');
 ?>
@@ -183,6 +183,7 @@ header .header_maincontent.fixed-top{padding: 3px 0}
 <link rel="shortcut icon" type="image/x-icon" href="/public/template/images/favicon1.png"/>
 </head>
 <body data-rsssl=1 class="home blog">
+<?php $this->load->view('messenger-fb'); ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -583,18 +584,38 @@ $(document).ready(function(){
 <nav id="mlindo_mobile">
     <div class="navbar-mobile">
         <ul id="menu-menu-produc" class="menu">
-            <?php foreach($data['menu_bottom'] as $item) { ?>
-                <?php if ($item['parentid'] == 0){ ?>
+            <?php
+            $menus = $this->catelog_model->get_list(array('ticlock'=>'0', 'parentid' => 0),'sort ASC',0,0);
+
+            foreach($menus as $item) {
+            ?>
                 <li id="" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-403">
                     <a href="<?php echo base_url($item['alias']); ?>"><?php echo $item['title_vn']; ?></a>
-                    <!-- <ul class="sub-menu">
-                        <li id="menu-item-404" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-404">
-                            <a href="">Cân sức khỏe</a>
-                        </li>
-                    </ul> -->
+                    <?php
+                        $sub1_menus = $this->catelog_model->get_list(array('ticlock'=>'0', 'parentid' => $item['Id']),'sort ASC',0,0);
+                        if(count($sub1_menus) > 0) {
+                    ?>
+                        <ul>
+                            <?php foreach($sub1_menus as $sub1) { ?>
+                                <li>
+                                    <a  href="<?=site_url($sub1['alias'])?>" class="m-child2"><?=$sub1['title_vn']?></a>
+                                    <?php
+                                    $sub2_menus = $this->catelog_model->get_list(array('ticlock'=>'0', 'parentid' => $sub1['Id']),'sort ASC',0,0);
+                                    if(count($sub2_menus) > 0) {
+                                    ?>
+                                        <ul>
+                                            <?php
+                                            foreach($sub2_menus as $key => $sub2) { ?>
+                                                <li><a style="font-weight: normal;" title="" href="<?=site_url($sub2['alias'])?>"><?=$sub2['title_vn']?></a></li>
+                                        <?php }  ?>
+                                        </ul>
+                                <?php } ?>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    <?php } ?>
                 </li>
                 <?php } ?>
-            <?php } ?>
         </ul>
     </div>
 </nav> 
@@ -618,6 +639,8 @@ $(document).ready(function(){
     </div>
 
 </div>
+
+\
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107154781-1"></script>
 <script>

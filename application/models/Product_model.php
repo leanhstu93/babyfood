@@ -144,6 +144,7 @@ class Product_model extends CI_Model {
 				$data['idmanufacturer'] = $this->input->post('idmanufacturer');
 			}
 			$data['idcat'] = (int)$this->input->post('idcat');
+            $data['status'] = (int)$this->input->post('status');
 			$data['sale_price'] = (int)str_replace(".", "",$this->input->post('sale_price'));
 			$data['price'] =(int)str_replace(".", "",$this->input->post('price'));
 			$data['description_vn'] = $this->page->replace_script($this->input->post('description_vn'));
@@ -170,6 +171,7 @@ class Product_model extends CI_Model {
 				$data['alias'] = $this->input->post('alias');
 			}
 			$data['idcat'] = (int)$this->input->post('idcat');
+            $data['status'] = (int)$this->input->post('status');
 			$data['codepro'] = $this->input->post('codepro');
 			if($this->input->post('idmanufacturer')==0){
 				$data['idmanufacturer'] = '-1';
@@ -188,8 +190,9 @@ class Product_model extends CI_Model {
 			$data['meta_keyword'] = $this->input->post('meta_keyword');	
 			$data['meta_description'] = $this->input->post('meta_description');	
 		}
+
 		$this->db->where('Id', $id);
-		$result = $this->db->update('mn_product', $data); 
+		$result = $this->db->update('mn_product', $data);
 		 
 		return $result;
 	}

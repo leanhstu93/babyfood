@@ -1,3 +1,9 @@
+.out-stock{
+	color: red;
+}
+.in-stock{
+	color: #28a745;
+}
 .lindo_mega_left li a{
 	text-decoration: none;
 }
