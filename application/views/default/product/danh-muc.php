@@ -68,12 +68,23 @@
 
       <div class="price_slider_wrapper">
         <div class="price_slider_amount">
-          <input type="text" id="" name="min_price" value="" onkeyup="this.value = GetNumber(this.value);" placeholder="Giá thấp nhất" style="float: left;margin: 4px"/><span> VND</span>
-          <br>
-          <input type="text" id="" name="max_price" value="" onkeyup="this.value = GetNumber(this.value);" data-max="" placeholder="Giá cao nhất" style="float: left;;margin: 4px"/><span> VND</span>
-          <div class="clear"></div>
-          
-          <button type="submit" class="button">Lọc</button>
+<!--          <input type="text" id="" name="min_price" value="" onkeyup="this.value = GetNumber(this.value);" placeholder="Giá thấp nhất" style="float: left;margin: 4px"/><span> VND</span>-->
+<!--          <br>-->
+<!--          <input type="text" id="" name="max_price" value="" onkeyup="this.value = GetNumber(this.value);" data-max="" placeholder="Giá cao nhất" style="float: left;;margin: 4px"/><span> VND</span>-->
+<!--          <div class="clear"></div>-->
+<!--          -->
+<!--          <button type="submit" class="button">Lọc</button>-->
+            <div class="price-filter">
+                <div id="slider-range" data-val-max="4500000" data-val-min="0"
+                     data-step="10000" data-min="0" data-max="4500000"></div>
+                <input type="hidden" value="" name="price_min" class="price_min">
+                <input type="hidden" value="" name="price_max" class="price_max">
+                <div class="price-slider-amount">
+                    <div class="label-input">
+                        <input type="text" id="amount" name="price" placeholder="Add your price"/>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
@@ -96,7 +107,7 @@
     <h1 class="page-title" style="font-size: 20px;font-weight: bold;margin: 10px 0;padding: 5px 0;"><?php echo $data['cat'][0]['meta_title']; ?></h1>
   <?php }elseif(($data['namepage']=='search')){ ?>
   	<nav class="woocommerce-breadcrumb"><a href="<?php echo base_url() ?>">Trang chủ</a>&nbsp;/&nbsp;Tìm kiếm</nav>
-  	<h1 class="page-title" style="font-size: 20px;font-weight: bold;margin: 10px 0;padding: 5px 0;">Tìm kiếm</h1>
+  	<h1 class="page-title" style="font-size: 20px;font-weight: bold;margin: 10px 0;padding: 5px 0;">Tìm kiếm: <?php  echo !empty($_GET['s']) ? "'".$_GET['s']."'" : '' ?></h1>
   <?php }elseif(($data['namepage']=='getsales')){ ?>
     <nav class="woocommerce-breadcrumb"><a href="<?php echo base_url() ?>">Trang chủ</a>&nbsp;/&nbsp;Sản phẩm đang khuyến mãi</nav>
     <h1 class="page-title" style="font-size: 20px;font-weight: bold;margin: 10px 0;padding: 5px 0;">Sản phẩm đang khuyến mãi</h1>

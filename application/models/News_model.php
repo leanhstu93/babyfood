@@ -71,6 +71,7 @@ class News_model extends CI_Model {
 		$data['date'] = time(); 
 		$data['content_vn'] = $this->input->post('content_vn');
 		$data['description_vn'] = $this->input->post('description_vn');
+        $data['link_extend'] = $this->input->post('link_extend');
         $data['tag'] = $this->input->post('tag');
         
 		return $this->db->insert('mn_news', $data);
@@ -97,6 +98,7 @@ class News_model extends CI_Model {
 			//$data['date'] = time(); 
 			$data['content_vn'] = $this->input->post('content_vn');
 			$data['description_vn'] = $this->input->post('description_vn');
+            $data['link_extend'] = $this->input->post('link_extend');
             $data['tag'] = $this->input->post('tag');
 		}
 		$this->db->where('Id', $id);

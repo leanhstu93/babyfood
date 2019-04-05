@@ -56,6 +56,13 @@
 		?>
 	    <div style="margin: 15px 0;"><strong>Tags:</strong> <?php echo implode(",", $tags)?></div>
 	    <?php }?>
+        <?php if(!empty($info[0]['link_extend'])){ ?>
+            <div class="js-buy-now btn-buy-now">
+                <a target="_blank" href="<?php echo $info[0]['link_extend'] ?>">
+                    Mua ngay
+                </a>
+            </div>
+        <?php } ?>
 
 		<div class="share-post">
 			<ul class="share_lindo">

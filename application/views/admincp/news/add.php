@@ -70,8 +70,15 @@
     </td>
 </tr>
 <tr>
+    <td class = 'title_td' >Link mở rộng</td>
+    <td>
+        <input type="text" name="link_extend" value="<?php echo set_value('link_extend', '');  ?>"  style="width:400px">
+        <?php echo form_error('link_extend'); ?>
+    </td>
+</tr>
+<tr>
 	<td class = 'title_td' >Meta Keywork</td>
-    <td> 
+    <td>
     <textarea  name="meta_keyword" class="textarea" ><?php echo set_value('meta_keyword','') ?></textarea>
      <?php echo form_error('meta_keyword'); ?>
     </td>

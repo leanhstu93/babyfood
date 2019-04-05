@@ -176,6 +176,7 @@ header .header_maincontent.fixed-top{padding: 3px 0}
 <link rel='stylesheet' id='decent-comments-widget-css'  href='nextweb/plugins/decent-comments/css/decent-comments-widget.css' type='text/css' media='all' />
 
 <script type='text/javascript' src='nextweb/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='nextweb/js/jquery/product.js?ver=1.12.4'></script>
 <script type='text/javascript' src='nextweb/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <meta name="generator" content="Nextweb 5.0" />
 <meta name="generator" content="Nextweb 5.0" />

@@ -75,6 +75,15 @@
      <?php echo form_error('meta_description'); ?>
     </td>
 </tr>
+
+<tr>
+    <td class = 'title_td' >Link mở rộng</td>
+    <td>
+        <input type="text" name="link_extend" value="<?php echo set_value('link_extend', $info['link_extend']);  ?>"  style="width:400px">
+        <?php echo form_error('link_extend'); ?>
+    </td>
+</tr>
+
 <tr>
 	<td class = 'title_td' >Meta Keywork</td>
     <td> 

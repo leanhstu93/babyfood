@@ -29,7 +29,7 @@ class News extends CI_Controller {
 		$temp['data']['baiviet'] = $this->pagehtml_model->get_newsidcat(10,10,0);
 		$temp['data']['mostviews'] = $this->pagehtml_model->get_news_most_view(10);
 		$temp['template']='default/news/detail';
-		$temp['data']['all_tag'] = $this->catelog_model->list_data();
+		$temp['data']['all_tag'] = $this->catelog_model->list_data(null,null);
 		$this->load->view("default/layout",$temp); 
 	}
 	public function catelog($alias,$p=0){

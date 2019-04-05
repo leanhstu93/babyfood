@@ -114,9 +114,9 @@ class Product extends CI_Controller {
 		$div = 5;
 		$skip = $p * $numrow;
 		$temp['data']['linkredirect'] = BASE_URL.$info_cat[0]['alias'];
-		$temp['data']['linked'] =  getLink($temp['data']['linkredirect'],0,$arr_manu,$fromprice,$toprice,$sort,$task = 'link');
+		$temp['data']['linked'] =  getLink($temp['data']['linkredirect'],0,$arr_manu,$fromprice,$toprice,$sort,$task = 'link',null,null);
 		
-		$temp['data']['linkedsort'] =  getLink($temp['data']['linkredirect'],0,$arr_manu,$fromprice,$toprice,$sort,$task = 'no-sort');
+		$temp['data']['linkedsort'] =  getLink($temp['data']['linkredirect'],0,$arr_manu,$fromprice,$toprice,$sort,$task = 'no-sort',null,null);
 				
 		$total= count($this->product_model->get_query($sql_total,0,0));
 		$temp['data']['totalItem']= count($this->product_model->get_query($sql_total,0,0));
@@ -345,25 +345,21 @@ class Product extends CI_Controller {
 		(SELECT COUNT(Id) as total FROM mn_comment
 		 WHERE ticlock = 0 AND mn_comment.idpro= mn_product.Id) AS countstar
 		 FROM mn_product 
-		 WHERE   ( mn_product.title_vn like '%".$s."%' OR mn_product.content_vn like '%".$s."%' OR mn_product.codepro like '%".$s."%' OR mn_product.description_vn like '%".$s."%' )  AND  mn_product.ticlock = 0 AND mn_product.trash= 0 
+		 WHERE   mn_product.title_vn like '%".$s."%'  AND  mn_product.ticlock = 0 AND mn_product.trash= 0 
 		 	AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." 
 		 	AND (mn_product.idcat= '".$catelog."' OR ".$catelog."= 0) 
 		 GROUP BY mn_product.Id
 		 ORDER BY date DESC";
 			
 		$sql_total = "SELECT COUNT(mn_product.Id) AS total FROM mn_product  
-		WHERE ( mn_product.title_vn like '%".$s."%' OR mn_product.content_vn like '%".$s."%' OR mn_product.content_vn like '%".$s."%' OR mn_product.description_vn like '%".$s."%' ) AND   mn_product.ticlock = 0 AND mn_product.trash= 0
+		WHERE mn_product.title_vn like '%".$s."%' AND   mn_product.ticlock = 0 AND mn_product.trash= 0
 			AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." 
 			AND (mn_product.idcat= '".$catelog."' OR ".$catelog."= 0)
 		ORDER BY date DESC";
-		
-		//print_r($sort);
-		
-		//print_r($sql_total);
+
 		$temp['data']['subcat']= $this->pagehtml_model->get_catelog(0);
 		$temp['data']['info']= $this->product_model->get_query($sql,$numrow,$skip);
 		$temp['data']['totalItem'] = $total= count($this->product_model->get_query($sql,0,0));
-		
 		$temp['data']['linkredirect'] = BASE_URL."tim-kiem";
 		//$temp['data']['linked'] = BASE_URL."tim-kiem?s=".$s."&catelog=".$catelog;
 		//$temp['data']['linked'] =  getLink($temp['data']['linkredirect'],0,$arr_manu,$fromprice,$toprice,$sort,$task = 'link');
