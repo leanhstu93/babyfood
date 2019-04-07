@@ -1,6 +1,7 @@
 DirectoryIndex index.php
 RewriteEngine on
- RewriteRule ^index.php/(.*)$ /$1 [R=302,L]
+RewriteRule ^data/Product/(.+)_w([0-9]+)_h([0-9]+)(_t)*([1|2]*)\.(jpg|png|JPG|PNG).*$ images.php [L]
+RewriteRule ^index.php/(.*)$ /$1 [R=302,L]
 
 RewriteCond $1 !^(index\.php|(.*)\.swf|forums|images|css|downloads|jquery|js|robots\.txt|favicon\.ico)
 RewriteCond %{REQUEST_FILENAME} !-f

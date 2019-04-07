@@ -176,7 +176,6 @@ header .header_maincontent.fixed-top{padding: 3px 0}
 <link rel='stylesheet' id='decent-comments-widget-css'  href='nextweb/plugins/decent-comments/css/decent-comments-widget.css' type='text/css' media='all' />
 
 <script type='text/javascript' src='nextweb/js/jquery/jquery.js?ver=1.12.4'></script>
-<script type='text/javascript' src='nextweb/js/jquery/product.js?ver=1.12.4'></script>
 <script type='text/javascript' src='nextweb/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <meta name="generator" content="Nextweb 5.0" />
 <meta name="generator" content="Nextweb 5.0" />
@@ -482,6 +481,7 @@ Copyright © <?php echo $web['title_vn'] ?>. All right Reserved
                     
 <script src="nextweb/themes/babyshop/js/jquery-2.1.3.min.js" type="text/javascript"></script>
 <script src="nextweb/themes/babyshop/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script type='text/javascript' src='nextweb/js/product.js?ver=1.12.4'></script>
 <script src="nextweb/themes/babyshop/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="nextweb/themes/babyshop/owl-carousel/js/owl.carousel.min.js" type="text/javascript"></script>
 <script src="nextweb/themes/babyshop/js/functions_main.js" type="text/javascript"></script>

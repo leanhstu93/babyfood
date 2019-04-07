@@ -61,36 +61,41 @@
       <?php }?>
   </div>
 </div>
-
-<div id="woocommerce_price_filter-2" class="lindo_wd widget woocommerce widget_price_filter"><div class="title-section"><span>Lọc theo giá</span></div>
-<form method="get" action="<?php echo $linked; ?>">
-  <div class="price_slider_wrapper">
-
+<?php if($this->router->method == 'get_product'){?>
+    <div id="woocommerce_price_filter-2" class="lindo_wd widget woocommerce widget_price_filter"><div class="title-section"><span>Lọc theo giá</span></div>
+    <form method="get" action="<?php echo $linked; ?>">
       <div class="price_slider_wrapper">
-        <div class="price_slider_amount">
-<!--          <input type="text" id="" name="min_price" value="" onkeyup="this.value = GetNumber(this.value);" placeholder="Giá thấp nhất" style="float: left;margin: 4px"/><span> VND</span>-->
-<!--          <br>-->
-<!--          <input type="text" id="" name="max_price" value="" onkeyup="this.value = GetNumber(this.value);" data-max="" placeholder="Giá cao nhất" style="float: left;;margin: 4px"/><span> VND</span>-->
-<!--          <div class="clear"></div>-->
-<!--          -->
-<!--          <button type="submit" class="button">Lọc</button>-->
-            <div class="price-filter">
-                <div id="slider-range" data-val-max="4500000" data-val-min="0"
-                     data-step="10000" data-min="0" data-max="4500000"></div>
-                <input type="hidden" value="" name="price_min" class="price_min">
-                <input type="hidden" value="" name="price_max" class="price_max">
-                <div class="price-slider-amount">
-                    <div class="label-input">
-                        <input type="text" id="amount" name="price" placeholder="Add your price"/>
+
+          <div class="price_slider_wrapper">
+            <div class="price_slider_amount">
+    <!--          <input type="text" id="" name="min_price" value="" onkeyup="this.value = GetNumber(this.value);" placeholder="Giá thấp nhất" style="float: left;margin: 4px"/><span> VND</span>-->
+    <!--          <br>-->
+    <!--          <input type="text" id="" name="max_price" value="" onkeyup="this.value = GetNumber(this.value);" data-max="" placeholder="Giá cao nhất" style="float: left;;margin: 4px"/><span> VND</span>-->
+    <!--          <div class="clear"></div>-->
+    <!--          -->
+    <!--          <button type="submit" class="button">Lọc</button>-->
+                <?php
+                    $price_val_min = !empty($_GET['min_price']) ? $_GET['min_price'] : 0;
+                    $price_val_max = !empty($_GET['max_price']) ? $_GET['max_price'] : $data['info_price']['price_max'];
+                ?>
+
+                <div class="price-filter">
+                    <div id="slider-range" data-val-max="<?php echo $price_val_max ?>" data-val-min="<?php echo $price_val_min ?>"
+                         data-step="10000" data-min="<?php echo $data['info_price']['price_min'] ?>" data-max="<?php echo $data['info_price']['price_max'] ?>"></div>
+                    <input type="hidden" value="<?php echo $data['info_price']['price_min'] ?>" name="min_price" class="price_min">
+                    <input type="hidden" value="<?php echo $data['info_price']['price_max'] ?>" name="max_price" class="price_max">
+                    <div class="price-slider-amount">
+                        <div class="label-input">
+                            <input type="text" id="amount" name="priceex" placeholder="Add your price"/>
+                        </div>
                     </div>
                 </div>
             </div>
+          </div>
         </div>
-      </div>
+    </form>
     </div>
-</form>
-
-</div>
+<?php } ?>
 </div>                 
 </div><!--end .sidebar-home-->
 

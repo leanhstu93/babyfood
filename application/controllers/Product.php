@@ -50,7 +50,10 @@ class Product extends CI_Controller {
 			$sql ="SELECT * FROM  mn_product 
 			 	 WHERE idcat IN (".$info_cat[0]['Id'].",".$subid.") AND ticlock = 0  AND trash = 0 AND status = 0
 			 	 AND sale_price >=".$fromprice." AND sale_price <=".$toprice." 
-			 	 GROUP BY mn_product.Id
+			 	 ORDER BY ".$sort;
+
+            $sql_price ="SELECT MAX(mn_product.sale_price) AS price_max, MIN(mn_product.sale_price) AS price_min FROM  mn_product 
+			 	 WHERE idcat IN (".$info_cat[0]['Id'].",".$subid.") AND ticlock = 0  AND trash = 0 AND status = 0
 			 	 ORDER BY ".$sort;
 				 //$subid[] = $cat_id;*/
 			//var_dump($subid);
@@ -83,6 +86,10 @@ class Product extends CI_Controller {
 				FROM  mn_product LEFT JOIN pro_color ON mn_product.Id = pro_color.idpro
 				 LEFT JOIN pro_size ON mn_product.Id = pro_size.idpro
 				 WHERE  ticlock =0 and idcat = '".$info_cat[0]['Id']."'";
+
+            $sql_price ="SELECT MAX(mn_product.sale_price) AS price_max, MIN(mn_product.sale_price) AS price_min FROM  mn_product 
+			 	 WHERE idcat IN (".$info_cat[0]['Id'].") AND ticlock = 0  AND trash = 0 AND status = 0
+			 	 ORDER BY ".$sort;
 				
 		}
 		$temp['data']['subcat']   = $this->pagehtml_model->get_catelog($info_cat[0]['Id'],50);
@@ -123,6 +130,7 @@ class Product extends CI_Controller {
 		//$temp['data']['info']= $this->product_model->get_query($sql,$numrow,$skip);
 		//$temp['data']['page']= $this->page->divPageF($total,$p,$div,$numrow,$temp['data']['linked']."&page=" );
 		$info_max_price =  $this->product_model->get_query($sql_max_price,1,0);
+        $info_price =  $this->product_model->get_query($sql_price);
 		$temp['data']['toprice'] = $info_max_price/*[0]['pricemax']*/;
 		/*if($info_cat[0]['parentid'] == 0) {
 			$menus = $this->catelog_model->get_list(array('parentid'=>$info_cat[0]['Id']),0,0);
@@ -138,6 +146,7 @@ class Product extends CI_Controller {
 		$temp['data']['menu']  = $this->catelog_model->get_list(array('ticlock'=>'0'),0,0);
 		*/
 		$config['base_url'] = BASE_URL.$info_cat[0]['alias'];
+        $config['reuse_query_string'] = TRUE;
 		$config["total_rows"] = $total;
 		$config["per_page"] = $data["per_page"] = 12;
 		$config["uri_segment"] = 2;
@@ -165,8 +174,9 @@ class Product extends CI_Controller {
 		$page = ($this->uri->segment(2))? $this->uri->segment(2) : 0;
 		$offset = ($page  == 0) ? 0 : ($page * $config['per_page']) - $config['per_page'];
 		$temp['data']['info']= $this->product_model->get_query($sql,$config["per_page"],$offset);
-		
+		$temp['data']['info_price'] = $info_price[0];
 		$temp['data']['phantrang']= $this->pagination->create_links();
+        //debug($sql);
 		/*$sqli = $this->db->last_query();
 			echo $sqli;*/
 		$temp['template']='default/product/danh-muc';
@@ -349,7 +359,13 @@ class Product extends CI_Controller {
 		 	AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." 
 		 	AND (mn_product.idcat= '".$catelog."' OR ".$catelog."= 0) 
 		 GROUP BY mn_product.Id
-		 ORDER BY date DESC";
+		 ORDER BY ".$sort;
+
+        $sql_price = "SELECT MAX(mn_product.sale_price) AS price_max, MIN(mn_product.sale_price) AS price_min FROM mn_product  
+		WHERE mn_product.title_vn like '%".$s."%' AND   mn_product.ticlock = 0 AND mn_product.trash= 0
+			AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." 
+			AND (mn_product.idcat= '".$catelog."' OR ".$catelog."= 0)
+		ORDER BY date DESC";
 			
 		$sql_total = "SELECT COUNT(mn_product.Id) AS total FROM mn_product  
 		WHERE mn_product.title_vn like '%".$s."%' AND   mn_product.ticlock = 0 AND mn_product.trash= 0
@@ -359,6 +375,7 @@ class Product extends CI_Controller {
 
 		$temp['data']['subcat']= $this->pagehtml_model->get_catelog(0);
 		$temp['data']['info']= $this->product_model->get_query($sql,$numrow,$skip);
+        $temp['data']['info_price']= $this->product_model->get_query($sql_price,null,null)[0];
 		$temp['data']['totalItem'] = $total= count($this->product_model->get_query($sql,0,0));
 		$temp['data']['linkredirect'] = BASE_URL."tim-kiem";
 		//$temp['data']['linked'] = BASE_URL."tim-kiem?s=".$s."&catelog=".$catelog;
@@ -440,6 +457,7 @@ class Product extends CI_Controller {
 				 FROM  mn_product LEFT JOIN pro_color ON mn_product.Id = pro_color.idpro
 				 LEFT JOIN pro_size ON mn_product.Id = pro_size.idpro
 				 WHERE mn_product.idcat IN (".$info_cat[0]['Id'].",".$subid.") and mn_product.ticlock = 0 ";
+
 				 	
 			$sql_color = "SELECT mn_color.Id,mn_color.title_vn,mn_color.color 
 					FROM mn_color LEFT JOIN pro_color ON mn_color.Id = pro_color.idcolor

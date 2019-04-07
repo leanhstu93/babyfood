@@ -15,7 +15,7 @@ class Product_model extends CI_Model {
 		if($limit>0)
 			$sql  .=" LIMIT ".$skip.",".$limit;
 		$query = $this->db->query($sql);
-		return $query->result_array();	
+		return $query->result_array();
 	}
 	public function get_product($id,$sale_price = '', $toprice = ''){
 		$this->db->select('*');
