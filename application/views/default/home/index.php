@@ -264,7 +264,7 @@ foreach ($contents as $key => $item) { ?>
                     <?php foreach ($info_pr as $item_pr){ ?>
                         <?php //if (in_array($item_pr['idcat'], $arrId)){ ?>
                       <?php if ($i == 10) break; ?>
-                      <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product" class="col-md-5th-1 col-sm-3 col-xs-6 item">
+                      <div itemprop="itemListElement" itemscope="" name="<?php echo $item_pr['name'] ?>" itemtype="http://schema.org/Product" class="col-md-5th-1 col-sm-3 col-xs-6 item">
                         <?php $price = (int)$item_pr['price'];$sale_price = $item_pr['sale_price'];
                         if ($price != 0 && $price != $sale_price) {
                             $pt = 100-floor(($sale_price/ $price)*100) ?>
@@ -274,7 +274,12 @@ foreach ($contents as $key => $item) { ?>
 
                         <a href="<?php echo base_url($item_pr['alias'].'.html'); ?>" rel="bookmark" title="<?php echo $item_pr['title_vn'] ?>">
                           <span class="onsale">Giảm giá!</span>
-                          <img width="300" height="300" src="<?php echo PATH_IMG_PRODUCT.$item_pr['images']."?v=".time();?>" class="lazyload attachment-shop_catalog size-shop_catalog wp-post-image" alt="<?php echo $item_pr['title_vn'] ?>" title="<?php echo $item_pr['title_vn'] ?>" srcset="<?php echo PATH_IMG_PRODUCT.$item_pr['images']."?v=".time();?>" sizes="(max-width: 300px) 100vw, 300px" style="max-height: 160px"/><p class="max-lines"><?php echo $item_pr['title_vn'] ?></p>
+                          <img width="300" height="300"
+                               src="<?php echo LAZYLOAD_IMAGE ?>"
+                               class="lazyload attachment-shop_catalog size-shop_catalog wp-post-image"
+                               alt="<?php echo $item_pr['title_vn'] ?>" title="<?php echo $item_pr['title_vn'] ?>"
+                               data-src="<?php echo resizeImage(PATH_IMG_PRODUCT.$item_pr['images'], 129,129,3)?>" />
+                            <p class="max-lines"><?php echo $item_pr['title_vn'] ?></p>
                         </a>
                           <div style="text-align:center;font-size:13px;font-weight:bold;">Mã SP: <?=$item_pr['codepro']?></div>                
                           <!-- <div class="star-rating" title="Được xếp hạng 5 5 sao"><span style="width:100%"><strong class="rating">5</strong> trên 5</span></div> -->

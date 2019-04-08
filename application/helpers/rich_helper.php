@@ -165,3 +165,11 @@
 		}
 		return $images;
 	}
+
+	function resizeImage($data,$with,$height,$t)
+    {
+        $match = '_w'.$with.'_h'.$height.'_t'.$t;
+        preg_match("/^.*.(jpg|JPG|PNG|png|GIF|gif)$/",$data,$m);
+        $result = preg_replace("~.".end($m)."(?!.*.".end($m).")~", $match.'.'.end($m), $data);
+        return $result;
+    }

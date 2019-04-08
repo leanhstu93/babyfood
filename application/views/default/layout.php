@@ -481,7 +481,7 @@ Copyright © <?php echo $web['title_vn'] ?>. All right Reserved
 </div>
                     
 <script src="nextweb/themes/babyshop/js/jquery-2.1.3.min.js" type="text/javascript"></script>
-<script src="nextweb/themes/babyshop/assets/lazyload.min.js" type="text/javascript"></script>
+<script src="nextweb/themes/babyshop/assets/lazyload/lazyload.min.js" type="text/javascript"></script>
 <script src="nextweb/themes/babyshop/js/jquery-ui.min.js" type="text/javascript"></script>
     <script type='text/javascript' src='nextweb/js/product.js?ver=1.12.4'></script>
 <script src="nextweb/themes/babyshop/js/bootstrap.min.js" type="text/javascript"></script>
@@ -643,7 +643,11 @@ $(document).ready(function(){
 
 </div>
 
-\
+    <script>
+        $(function(){
+            $("img.lazyload").lazyload();
+        })
+    </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107154781-1"></script>
 <script>

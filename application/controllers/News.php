@@ -51,7 +51,7 @@ class News extends CI_Controller {
 		
 		$temp['data']['breadcrumb'] =  $this->map_title .$this-> arrowmap."<a href='".base_url("chu-de/".$info_cat['0']['alias'])."'>".$info_cat[0]['title_vn']."</a>";
 		
-		$temp['data']['all_tag']  = $this->catelog_model->list_data();
+		$temp['data']['all_tag']  = $this->catelog_model->list_data(null,null);
 		$temp['template']='default/news/news'; 
 
 		$this->load->view("default/layout",$temp); 
