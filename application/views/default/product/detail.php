@@ -91,6 +91,7 @@
 <?php echo $item['description_vn']; ?>
 </div>
 <?php endif; ?>
+<?php if($item['status'] == 0){ ?>
   <form action="<?php echo base_url('addcart_fromdetail'); ?>" method="post" class="cart" id="" enctype='multipart/form-data'/>
     <div class="quantity"><span style="float: left;line-height: 36px;display: inline-block;margin-right: 5px;">Số lượng</span>&nbsp;
       <input type="number" step="1" min="1" max="" name="quanty" value="1" title="SL" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric" />
@@ -103,7 +104,7 @@
     <button type="submit" class="single_add_to_cart_button button alt" name="buynow" value="1">Mua ngay</button>
     <button type="submit" class="single_add_to_cart_button button alt" style="background: #0188b7!important">Cho vào giỏ</button>
 	</form>
-
+<?php } ?>
 <div class="rating_sku"></div>
         <!--<div id="review_form">
           <div id="respond" class="comment-respond">

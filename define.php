@@ -31,7 +31,7 @@ define("PATH_IMG_PARTNERS","/data/Partners/");
 define('CONSUMER_KEY', '27wxHrOIG1oLoRr5NxvIkxPcp'); 
 define('CONSUMER_SECRET', 'BqTReJG7wnLYFk0UAHUaNIuBeFjoQlb492wtNJy1cevreq39H1');
 define('OAUTH_CALLBACK', '');
-
+define('LAZYLOAD_IMAGE','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC');
 $server_name = $_SERVER['HTTP_HOST'];
 //$server_name = 'http://localhost/babyshop.com';
 define("BASE_URL","http://anhle93.com:93/");

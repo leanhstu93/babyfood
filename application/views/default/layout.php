@@ -181,6 +181,7 @@ header .header_maincontent.fixed-top{padding: 3px 0}
 <meta name="generator" content="Nextweb 5.0" />
   
 <link rel="shortcut icon" type="image/x-icon" href="/public/template/images/favicon1.png"/>
+<?php $this->load->view('schema'); ?>
 </head>
 <body data-rsssl=1 class="home blog">
 <?php $this->load->view('messenger-fb'); ?>
@@ -480,6 +481,7 @@ Copyright © <?php echo $web['title_vn'] ?>. All right Reserved
 </div>
                     
 <script src="nextweb/themes/babyshop/js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="nextweb/themes/babyshop/assets/lazyload.min.js" type="text/javascript"></script>
 <script src="nextweb/themes/babyshop/js/jquery-ui.min.js" type="text/javascript"></script>
     <script type='text/javascript' src='nextweb/js/product.js?ver=1.12.4'></script>
 <script src="nextweb/themes/babyshop/js/bootstrap.min.js" type="text/javascript"></script>

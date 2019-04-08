@@ -20,6 +20,8 @@ $route['thanh-toan'] = 'payment/order';
 $route['dat-hang-thanh-cong/(:num)'] = 'payment/success/$1';
 $route['call-back'] ="home/call_back";
 
+$route['sitemap.xml'] ="tools/index";
+
 $route['admincp'] ="admincp/login";
 
 $route['404.html'] ="home/notfoud";

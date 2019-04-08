@@ -48,12 +48,12 @@ class Product extends CI_Controller {
 		if($subid != ""){
 			$subid = substr($subid,0,-1);
 			$sql ="SELECT * FROM  mn_product 
-			 	 WHERE idcat IN (".$info_cat[0]['Id'].",".$subid.") AND ticlock = 0  AND trash = 0 AND status = 0
+			 	 WHERE idcat IN (".$info_cat[0]['Id'].",".$subid.") AND ticlock = 0  AND trash = 0
 			 	 AND sale_price >=".$fromprice." AND sale_price <=".$toprice." 
 			 	 ORDER BY ".$sort;
 
             $sql_price ="SELECT MAX(mn_product.sale_price) AS price_max, MIN(mn_product.sale_price) AS price_min FROM  mn_product 
-			 	 WHERE idcat IN (".$info_cat[0]['Id'].",".$subid.") AND ticlock = 0  AND trash = 0 AND status = 0
+			 	 WHERE idcat IN (".$info_cat[0]['Id'].",".$subid.") AND ticlock = 0  AND trash = 0
 			 	 ORDER BY ".$sort;
 				 //$subid[] = $cat_id;*/
 			//var_dump($subid);
@@ -62,7 +62,7 @@ class Product extends CI_Controller {
 			
 			
 			$sql_total = "SELECT COUNT(mn_product.Id) AS total FROM mn_product 
-				WHERE idcat IN (".$info_cat[0]['Id'].",".$subid.") AND ticlock = 0  AND trash = 0 AND status = 0
+				WHERE idcat IN (".$info_cat[0]['Id'].",".$subid.") AND ticlock = 0  AND trash = 0
 			 	 AND sale_price >=".$fromprice." AND sale_price <=".$toprice." 
 				 GROUP BY mn_product.Id ";
 				
@@ -73,13 +73,13 @@ class Product extends CI_Controller {
 
 		}else{
 			$sql ="SELECT * FROM  mn_product 
-			 	 WHERE idcat IN (".$info_cat[0]['Id'].") AND ticlock = 0  AND trash = 0  AND status = 0
+			 	 WHERE idcat IN (".$info_cat[0]['Id'].") AND ticlock = 0  AND trash = 0 
 			 	 AND sale_price >=".$fromprice." AND sale_price <=".$toprice." 
 			 	 GROUP BY mn_product.Id
 			 	 ORDER BY ".$sort;
 
 			$sql_total = "SELECT COUNT(mn_product.Id) AS total FROM mn_product
-				 WHERE  ticlock =0 and idcat = '".$info_cat[0]['Id']."' AND mn_product.trash = 0  AND status = 0
+				 WHERE  ticlock =0 and idcat = '".$info_cat[0]['Id']."' AND mn_product.trash = 0 
 				AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." 
 				GROUP BY mn_product.Id ";
 			$sql_max_price ="SELECT MAX(mn_product.sale_price) AS pricemax
@@ -88,7 +88,7 @@ class Product extends CI_Controller {
 				 WHERE  ticlock =0 and idcat = '".$info_cat[0]['Id']."'";
 
             $sql_price ="SELECT MAX(mn_product.sale_price) AS price_max, MIN(mn_product.sale_price) AS price_min FROM  mn_product 
-			 	 WHERE idcat IN (".$info_cat[0]['Id'].") AND ticlock = 0  AND trash = 0 AND status = 0
+			 	 WHERE idcat IN (".$info_cat[0]['Id'].") AND ticlock = 0  AND trash = 0
 			 	 ORDER BY ".$sort;
 				
 		}
@@ -228,13 +228,13 @@ class Product extends CI_Controller {
 		$sort .= ",Id DESC";
 
 		$sql ="SELECT * FROM  mn_product 
-			 	 WHERE ticlock = 0  AND trash = 0 AND status = 0 AND price != sale_price AND price != 0
+			 	 WHERE ticlock = 0  AND trash = 0 AND price != sale_price AND price != 0
 			 	 AND sale_price >=".$fromprice." AND sale_price <=".$toprice." 
 			 	 GROUP BY Id
 			 	 ORDER BY ".$sort;
 
 		$sql_total = "SELECT COUNT(Id) AS total FROM mn_product
-				 WHERE  ticlock =0 AND trash = 0 AND status = 0 AND price != sale_price AND price != 0
+				 WHERE  ticlock =0 AND trash = 0 AND price != sale_price AND price != 0
 				AND sale_price >=".$fromprice." AND sale_price <=".$toprice."
 				GROUP BY Id ";
 
@@ -322,11 +322,16 @@ class Product extends CI_Controller {
 		$catelog  = (int)$this->input->get('catelog', TRUE);
 		$temp['data']['sort'] = $sort  = $this->input->get('sort', TRUE);
 		$p  = (int)$this->input->get('page', TRUE);
+
 		//$temp['data']['toprice'] = $toprice =  0;
-		$sort .= ",Id DESC";
+        if(!empty($sort)) {
+            $sort .= ",Id DESC";
+        } else {
+            $sort .= "Id DESC";
+        }
 		//--------meta-----------
 		//$temp['meta']['description'] = $temp['meta']['title'] = stripcslashes($s).' - Tìm kiếm sản phẩm trên Mada.vn';
-		
+
 		$alias = $this->page->strtoseo($s);
 		$result = $this->tags_model->get_list(array("title_vn"=>$s,"alias"=>$alias));
 		if(!empty($result)){
@@ -355,7 +360,7 @@ class Product extends CI_Controller {
 		(SELECT COUNT(Id) as total FROM mn_comment
 		 WHERE ticlock = 0 AND mn_comment.idpro= mn_product.Id) AS countstar
 		 FROM mn_product 
-		 WHERE   mn_product.title_vn like '%".$s."%'  AND  mn_product.ticlock = 0 AND mn_product.trash= 0 
+		 WHERE   (mn_product.title_vn like '%".$s."%' OR mn_product.codepro like '%".$s."%')  AND  mn_product.ticlock = 0 AND mn_product.trash= 0 
 		 	AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." 
 		 	AND (mn_product.idcat= '".$catelog."' OR ".$catelog."= 0) 
 		 GROUP BY mn_product.Id
@@ -380,7 +385,7 @@ class Product extends CI_Controller {
 		$temp['data']['linkredirect'] = BASE_URL."tim-kiem";
 		//$temp['data']['linked'] = BASE_URL."tim-kiem?s=".$s."&catelog=".$catelog;
 		//$temp['data']['linked'] =  getLink($temp['data']['linkredirect'],0,$arr_manu,$fromprice,$toprice,$sort,$task = 'link');
-		
+
 		$params = $this->input->get();
 		$params['page'] = '';
 		$temp['data']['linked'] = BASE_URL."tim-kiem?".http_build_query($params);
@@ -393,7 +398,7 @@ class Product extends CI_Controller {
 		$temp['data']['menu']  = $this->catelog_model->get_list(array('ticlock'=>'0', 'parentid'=>0), 'sort ASC', 0,0);
 		//$temp['data']['menu']  = $this->catelog_model->list_data();
 		//$temp['data']['breadcrumb'] =  $this->map_title .$this-> arrowmap . '<a href = "#">Tìm kiếm</a>';
-		$temp['template']='default/product/danh-muc'; 
+		$temp['template']='default/product/danh-muc';
 			$this->load->view("default/layout",$temp);
 	}
 
@@ -439,7 +444,6 @@ class Product extends CI_Controller {
 				 AND (pro_size.idsize IN (".implode(",",$arr_size).") OR ".count($arr_size)."= 1 )
 				 AND (mn_product.idmanufacturer IN (".implode(',',$arr_manu).") OR ".count($arr_manu)."= 1 )
 				 AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." 
-				 AND mn_product.status = 0
 				 GROUP BY mn_product.Id
 				 ORDER BY ".$sort;	
 			$sql_total = "SELECT COUNT(mn_product.Id) AS total FROM  
@@ -450,7 +454,6 @@ class Product extends CI_Controller {
 				 AND (pro_size.idsize IN (".implode(",",$arr_size).") OR ".count($arr_size)."= 1 )
 				 AND (mn_product.idmanufacturer IN (".implode(',',$arr_manu).") OR ".count($arr_manu)."= 1 )
 				 AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." 
-				 AND mn_product.status = 0
 				 GROUP BY mn_product.Id ";
 				
 			$sql_max_price ="SELECT MAX(mn_product.sale_price) AS pricemax
@@ -484,7 +487,6 @@ class Product extends CI_Controller {
 				 AND (pro_size.idsize IN (".implode(",",$arr_size).") OR ".count($arr_size)."= 1 )
 				 AND (mn_product.idmanufacturer IN (".implode(',',$arr_manu).") OR ".count($arr_manu)."= 1 )
 				 AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice."  
-				  AND mn_product.status = 0 
 				  GROUP BY mn_product.Id
 				 ORDER BY ".$sort;	
 			 
@@ -495,7 +497,6 @@ class Product extends CI_Controller {
 				  AND (pro_color.idcolor IN (".implode(",",$arr_color).") OR ".count($arr_color)."= 1 )
 				 AND (pro_size.idsize IN (".implode(",",$arr_size).") OR ".count($arr_size)."= 1 )
 				 AND (mn_product.idmanufacturer IN (".implode(',',$arr_manu).") OR ".count($arr_manu)."= 1 ) 
-				  AND mn_product.status = 0   
 				AND mn_product.sale_price >=".$fromprice." AND mn_product.sale_price <=".$toprice." ";	
 			$sql_max_price ="SELECT MAX(mn_product.sale_price) AS pricemax
 				FROM  mn_product LEFT JOIN pro_color ON mn_product.Id = pro_color.idpro
