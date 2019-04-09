@@ -3,6 +3,28 @@ $(document).ready(function(){
 	$('.id-short-cache').click(function(){
 		$('.id-short-cache').load(domain+"admincp/website/removecacheAjax");
 	});
+	// offer
+	$('body').on('change','.js-card-type',function(){
+		var type = parseInt($(this).val());
+		switch (type)
+		{
+			case 1:
+				// tat ca
+				$('.js-tab-product').removeClass('active');
+				$('.js-tab-category-product').removeClass('active');
+				break;
+			case 3:
+				// danh muc
+				$('.js-tab-category-product').addClass('active');
+				$('.js-tab-product').removeClass('active');
+				break;
+			case 5:
+				// san pham
+				$('.js-tab-category-product').removeClass('active');
+				$('.js-tab-product').addClass('active');
+				break;
+		}
+	});
 });
 function ticlockactive(table,colum,id,value)
 {

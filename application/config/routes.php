@@ -21,6 +21,7 @@ $route['dat-hang-thanh-cong/(:num)'] = 'payment/success/$1';
 $route['call-back'] ="home/call_back";
 
 $route['sitemap.xml'] ="tools/index";
+$route['nextweb/themes/babyshop/css/customize-css'] ="tools/customizeCss";
 
 $route['admincp'] ="admincp/login";
 

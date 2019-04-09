@@ -25,15 +25,8 @@ $cart = $this->session->userdata('cart');
     <meta name="viewport" content="width=device-width">
     <title><?php if(isset($meta['title'])) echo $meta['title']; else echo $web['meta_title']; ?></title>
     <base href="<?php echo BASE_URL ?>" />
-    <link rel="stylesheet" href="public/template/css/reset.css" />
-    <link rel="stylesheet" href="nextweb/themes/babyshop/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="nextweb/themes/babyshop/owl-carousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="nextweb/themes/babyshop/owl-carousel/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="nextweb/themes/babyshop/css/style.css" />
-    <link rel="stylesheet" href="nextweb/themes/babyshop/css/product.css" />
-    <link rel="stylesheet" href="nextweb/themes/babyshop/css/lindo_menu_cat.css?v=1" /> 
     <link rel="stylesheet" href="nextweb/themes/babyshop/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="nextweb/themes/babyshop/css/responsive.css" />
+    <link rel="stylesheet" href="nextweb/themes/babyshop/css/customize-css" />
 	<link rel="canonical" href="<?=current_url()?>" >
                 <script type="text/javascript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
                         <style>

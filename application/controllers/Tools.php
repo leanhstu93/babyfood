@@ -77,4 +77,44 @@ class Tools extends CI_Controller {
         exit;
     }
 
+    public function customizeCss()
+    {
+        header("Content-type: text/css");
+        $data = [
+            'nextweb/themes/babyshop/css/reset.css',
+            'nextweb/themes/babyshop/css/bootstrap.min.css',
+            'nextweb/themes/babyshop/css/owl.carousel.min.css',
+            'nextweb/themes/babyshop/css/style.css',
+            'nextweb/themes/babyshop/css/product.css',
+            'nextweb/themes/babyshop/css/lindo_menu_cat.css',
+            'nextweb/themes/babyshop/css/responsive.css',
+        ];
+
+        foreach ($data as $value) {
+            $content = file_get_contents(BASE_URL.$value);
+            echo minimizeCSS($content);
+        }
+        exit;
+    }
+
+    public function customizeJs()
+    {
+        header("Content-type: text/javascript");
+        $data = [
+            'nextweb/themes/babyshop/css/reset.css',
+            'nextweb/themes/babyshop/css/bootstrap.min.css',
+            'nextweb/themes/babyshop/css/owl.carousel.min.css',
+            'nextweb/themes/babyshop/css/style.css',
+            'nextweb/themes/babyshop/css/product.css',
+            'nextweb/themes/babyshop/css/lindo_menu_cat.css',
+            'nextweb/themes/babyshop/css/responsive.css',
+        ];
+
+        foreach ($data as $value) {
+            $content = file_get_contents(BASE_URL.$value);
+            echo minimizeCSS($content);
+        }
+        exit;
+    }
+
 }

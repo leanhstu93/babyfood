@@ -165,7 +165,13 @@
           <?php } ?>
           <a style="text-decoration: none;" title="<?php echo $item['title_vn'] ?>" href="<?php echo base_url($item['alias'].'.html'); ?>" class="woocommerce-LoopProduct-link">
 				  <span class="onsale">Giảm giá!</span>
-				<img width="300" height="300" src="<?php echo PATH_IMG_PRODUCT.$item['images']."?v=".time();?>" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="<?php echo $item['title_vn'] ?>" title="<?php echo $item['title_vn'] ?>" srcset="<?php echo PATH_IMG_PRODUCT.$item['images']."?v=".time();?>" sizes="(max-width: 300px) 100vw, 300px" />
+				<img width="300"
+                     height="300"
+                     src="<?php echo LAZYLOAD_IMAGE ?>"
+                     data-src="<?php echo resizeImage(PATH_IMG_PRODUCT.$item['images'], 300,300,3)?>"
+                     class="lazyload attachment-shop_catalog size-shop_catalog wp-post-image"
+                     alt="<?php echo $item['title_vn'] ?>"
+                     title="<?php echo $item['title_vn'] ?>"/>
 				<p class="max-lines"><?php echo $item['title_vn'] ?></p>
 				<p style="margin-bottom:5px;font-size: 16px;">Mã SP: <span style="font-size:16px;font-weight:bold;"><?=$item['codepro']?></span></p>
 				  <span class="price"><del>

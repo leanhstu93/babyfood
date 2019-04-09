@@ -31,6 +31,8 @@ body a{text-decoration:none}
 	top:-8px; right:-3px;
 	display:none;
 }
+.wrapper-offer .tab-product,.wrapper-offer .tab-category-product{display: none}
+.wrapper-offer .tab-product.active,.wrapper-offer .tab-category-product.active{display: table-row}
 .wrapper_submenu .wrapper_item .item:hover{background:-moz-linear-gradient(100% 100% 90deg,#6EB7CF,#3497B8) repeat scroll 0 0 transparent;background:-webkit-linear-gradient(#3497B8,#6EB7CF);background:-o-linear-gradient(#3497B8,#6EB7CF);border-color:#137090;border-radius:8px 8px 8px 8px;border-style:solid;border-width:1px;height:70px;width:80px}
 .wrapper_submenu .wrapper_item .item .text{color:#FFFFFF;font-size:11px;height:20px;text-align:center;width:80px}
 .wrapper_submenu .wrapper_item .item .image{height:50px;margin:0 auto;width:50px}

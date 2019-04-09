@@ -44,7 +44,12 @@ $menus = $this->catelog_model->get_list(array('ticlock'=>'0', 'parentid' => 0),'
      <?php foreach($menus as $item) { ?>
         <li data-category-hover="cat1">
           <a title="<?php echo $item['title_vn']?>" href="<?php echo base_url($item['alias']); ?>"><span class="fl-img">
-          <img id="imgIcon" alt="" src="<?=base_url('data/Catelog/'.$item['images'])?>" onerror="this.src='nextweb/uploads/2016/07/khuyen-mai-1.png'" style="display: block;">
+          <img id="imgIcon"
+               class="lazyload"
+               alt=""
+               src="<?php echo LAZYLOAD_IMAGE ?>"
+               data-src="<?=base_url('data/Catelog/'.$item['images'])?>"
+               onerror="this.src='nextweb/uploads/2016/07/khuyen-mai-1.png'" style="display: block;">
           </span><?php echo $item['title_vn']?></a>
 
           <ul class="lindo_supmenu " style="min-width: 920px; max-height: 950px;">
@@ -103,7 +108,7 @@ $menus = $this->catelog_model->get_list(array('ticlock'=>'0', 'parentid' => 0),'
             <?php if ($sl==0) { ?>
               <div class="item active">
                 <a href="<?php echo base_url($item['link']); ?>">
-                  <img src="<?php echo PATH_IMG_BANNER.$item['images']."?v=".time();?>" alt="<?php echo $item['images'] ?>" width="100%" style="max-height: 370px">
+                  <img src="<?php echo PATH_IMG_BANNER.$item['images']?>" alt="<?php echo $item['images'] ?>" width="100%" style="max-height: 370px">
                 </a>
               </div>
             <?php }else{ ?>
@@ -137,7 +142,10 @@ $menus = $this->catelog_model->get_list(array('ticlock'=>'0', 'parentid' => 0),'
           <?php foreach ($product_views as $item){ ?>
             <div class="header_style_produc">
               <a href="<?php echo base_url($item['alias'].'.html'); ?>" title="<?=$item['title_vn']?>">
-                <img style="width: 98%;padding: 1%;border-radius: 0%;height: auto;max-height: 180px" src="<?php echo PATH_IMG_PRODUCT.$item['images']."?v=".time();?>" class="" />
+                <img style="width: 98%;padding: 1%;border-radius: 0%;height: auto;max-height: 180px"
+                     src="<?php echo LAZYLOAD_IMAGE ?>"
+                     data-src="<?php echo PATH_IMG_PRODUCT.$item['images']?>"
+                     class="lazyload" />
               </a>
             </div>
         <?php } ?> 
@@ -161,7 +169,10 @@ $menus = $this->catelog_model->get_list(array('ticlock'=>'0', 'parentid' => 0),'
 <div class="col-sm-4 col-md-4">
   <div class="lindo_ads_3">
     <a title="seo title" href="<?php echo base_url($item['link']); ?>" target="">
-      <img alt="seo alt" src="<?php echo PATH_IMG_BANNER.$item['images']."?v=".time();?>" style="height:369px;width: 100%">
+      <img alt="seo alt"
+           class="lazyload"
+           src="<?php echo LAZYLOAD_IMAGE ?>"
+           data-src="<?php echo PATH_IMG_BANNER.$item['images']?>" style="height:369px;width: 100%">
     </a>
   </div>
 </div>
@@ -174,7 +185,10 @@ $info_cat = $this->catnews_model->get_list(array('alias'=>'bai-viet'), 3);
 $contents = $this->news_model->get_list(array("ticlock"=>0,"idcat"=>$info_cat[0]['Id']),"sort DESC, Id DESC",5,0);
 foreach ($contents as $key => $item) { ?>
   <div class="top3-news">
-    <div class="thumb"><a href="<?php echo base_url('bai-viet/'.$item['alias']); ?>"><img width="150" height="150" src="<?php echo PATH_IMG_NEWS.$item['images']."?v=".time();?>" class="img-responsive wp-post-image" alt="" srcset="<?php echo PATH_IMG_NEWS.$item['images']."?v=".time();?>" sizes="(max-width: 150px) 100vw, 150px" />       </a></div>
+    <div class="thumb"><a href="<?php echo base_url('bai-viet/'.$item['alias']); ?>">
+            <img width="150" height="150"
+                 src="<?php echo LAZYLOAD_IMAGE ?>"
+                 data-src="<?php echo PATH_IMG_NEWS.$item['images']?>" class="lazyload img-responsive wp-post-image" alt="" srcset="<?php echo PATH_IMG_NEWS.$item['images']."?v=".time();?>" sizes="(max-width: 150px) 100vw, 150px" />       </a></div>
     <h4><a href="<?php echo base_url('bai-viet/'.$item['alias']); ?>"><?=$item['title_vn']?></a></h4>
   </div>
 <?php }
@@ -264,7 +278,7 @@ foreach ($contents as $key => $item) { ?>
                     <?php foreach ($info_pr as $item_pr){ ?>
                         <?php //if (in_array($item_pr['idcat'], $arrId)){ ?>
                       <?php if ($i == 10) break; ?>
-                      <div itemprop="itemListElement" itemscope="" name="<?php echo $item_pr['name'] ?>" itemtype="http://schema.org/Product" class="col-md-5th-1 col-sm-3 col-xs-6 item">
+                      <div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product" class="col-md-5th-1 col-sm-3 col-xs-6 item">
                         <?php $price = (int)$item_pr['price'];$sale_price = $item_pr['sale_price'];
                         if ($price != 0 && $price != $sale_price) {
                             $pt = 100-floor(($sale_price/ $price)*100) ?>
@@ -272,7 +286,7 @@ foreach ($contents as $key => $item) { ?>
                             <i><?php  echo $pt?>%</i></strong></div>
                         <?php }else{ echo "";} ?>
 
-                        <a href="<?php echo base_url($item_pr['alias'].'.html'); ?>" rel="bookmark" title="<?php echo $item_pr['title_vn'] ?>">
+                        <a href="<?php echo base_url($item_pr['alias'].'.html'); ?>" rel="bookmark" itemprop="name" title="<?php echo $item_pr['title_vn'] ?>">
                           <span class="onsale">Giảm giá!</span>
                           <img width="300" height="300"
                                src="<?php echo LAZYLOAD_IMAGE ?>"
@@ -281,7 +295,7 @@ foreach ($contents as $key => $item) { ?>
                                data-src="<?php echo resizeImage(PATH_IMG_PRODUCT.$item_pr['images'], 129,129,3)?>" />
                             <p class="max-lines"><?php echo $item_pr['title_vn'] ?></p>
                         </a>
-                          <div style="text-align:center;font-size:13px;font-weight:bold;">Mã SP: <?=$item_pr['codepro']?></div>                
+                          <div style="text-align:center;font-size:13px;font-weight:bold;" itemprop="sku" >Mã SP: <?=$item_pr['codepro']?></div>
                           <!-- <div class="star-rating" title="Được xếp hạng 5 5 sao"><span style="width:100%"><strong class="rating">5</strong> trên 5</span></div> -->
                           <span class="price">
                             
