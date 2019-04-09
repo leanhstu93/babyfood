@@ -34,7 +34,7 @@ define('OAUTH_CALLBACK', '');
 define('LAZYLOAD_IMAGE','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC');
 $server_name = $_SERVER['HTTP_HOST'];
 //$server_name = 'http://localhost/babyshop.com';
-define("BASE_URL","http://anhle93.com:93/");
+define("BASE_URL","http://anhle.dev:81/");
 define('FACEBOOK_SDK_V4_SRC_DIR', __DIR__ . '/api/Facebook/');
 include __DIR__ . '/Mobile_Detect.php';
 $detect = new Mobile_Detect();

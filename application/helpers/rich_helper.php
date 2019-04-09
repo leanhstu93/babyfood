@@ -173,3 +173,12 @@
         $result = preg_replace("~.".end($m)."(?!.*.".end($m).")~", $match.'.'.end($m), $data);
         return $result;
     }
+
+function minimizeCSS($css)
+{
+    $css = preg_replace('/\/\*((?!\*\/).)*\*\//s', '', $css);
+    $css = preg_replace('/\s{2,}/', ' ', $css);
+    $css = preg_replace('/\s*([:;{}])\s*/', '$1', $css);
+    $css = preg_replace('/;}/', '}', $css);
+    return $css;
+}
