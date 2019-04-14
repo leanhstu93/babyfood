@@ -44,8 +44,14 @@ class Pagehtml_model extends CI_Model {
 		$query = $this->db->query($sql);
 		$result =  $query->result_array();
 		return $result;
-		
 	}
+    public function getListProuct()
+    {
+        $sql = "SELECT * FROM mn_product WHERE ticlock=0 ORDER BY Id DESC ";
+        $query = $this->db->query($sql);
+        $result =  $query->result_array();
+        return $result;
+    }
 	public function get_on_location($id)
 	{
 		$idcache = md5('flash_location_'.$id);
@@ -194,6 +200,7 @@ class Pagehtml_model extends CI_Model {
 	{	
 		
 		$this->db->order_by("sort ASC, Id DESC"); 
+		$this->db->order_by("sort ASC, Id DESC");
 		$query = $this->db->get_where('mn_catnews',$where,$limit,0);
 		$result =  $query->result_array();
 		return $result;

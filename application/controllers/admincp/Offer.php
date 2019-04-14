@@ -8,7 +8,7 @@ class Offer extends CI_Controller  {
         parent::__construct();
 
         $this->load->model('adminmenu_model');
-        $this->load->model('voucher_model');
+        $this->load->model('offer_model');
         $this->load->model('comment_model');
         $this->load->model('provinces_model');
         $this->load->helper('url');
@@ -35,114 +35,29 @@ class Offer extends CI_Controller  {
         }else{
             $order  = "id DESC";
         }
-        $tukhoa =$this->input->get('tukhoa', TRUE)?$this->input->get('tukhoa', TRUE):-1;
-        $type_search =$this->input->get('type_search', TRUE)?$this->input->get('type_search', TRUE):-1;
+        $tukhoa = $this->input->get('tukhoa', TRUE) ? $this->input->get('tukhoa', TRUE): '';
+        $type_search = $this->input->get('type_search', TRUE)?$this->input->get('type_search', TRUE): '';
 
         if($type_search==1){
-            $sql = "SELECT * FROM mn_voucher  WHERE ( code = '".$tukhoa."' OR order_id = '".$tukhoa."' OR '".$tukhoa."' = -1 ) ORDER BY ".$order;
-            $sql_count = "SELECT COUNT(r1.id) AS total
-			 FROM mn_voucher AS r1 WHERE  ( code = '".$tukhoa."' OR order_id = '".$tukhoa."'  OR '".$tukhoa."' = -1 )";
+            $where  = $this->input->get('tukhoa', TRUE) ? " AND `coupon_code` = '".$this->input->get('tukhoa', TRUE)."' " : '';
 
         }else{
-
-            $sql ="SELECT *, (SELECT user_id FROM mn_discount WHERE mn_discount.code = mn_voucher.code) AS userid, (SELECT username FROM mn_user WHERE mn_user.id = userid) as username, (SELECT created FROM mn_discount WHERE mn_discount.code = mn_voucher.code) as created, (SELECT email FROM mn_user WHERE mn_user.id = userid) as email, (SELECT fullname FROM mn_user WHERE mn_user.id = userid) as fullname FROM mn_voucher WHERE( code like '%".$tukhoa."' OR order_id like '%".$tukhoa."' OR '".$tukhoa."' =-1 ) ORDER BY ".$order;
-
-            $sql_count = "SELECT COUNT(r1.id) AS total
-			 FROM mn_voucher AS r1 WHERE ( code like '%".$tukhoa."%' OR order_id like '%".$tukhoa."%'  OR '".$tukhoa."' = -1 ) ";
+            $where  = $this->input->get('tukhoa', TRUE) ? " AND `coupon_code` = '%".$this->input->get('tukhoa', TRUE)."%' " : '';
         }
+        $sql = "SELECT * FROM payment_offer  WHERE 1 = 1 ".$where." ORDER BY ".$order;
+        $sql_count = "SELECT COUNT(id) AS total
+			 FROM payment_offer WHERE 1 = 1  ".$where;
         $p =$this->input->get('p', TRUE)?str_replace("/","",$this->input->get('p', TRUE)):0;
-        $temp['data']['total']= $total = $this->voucher_model->count_query($sql_count);
+        $temp['data']['total']= $total = $this->offer_model->count_query($sql_count);
         $numrow = 50;
         $div = 10;
         $skip = $p * $numrow;
-        $link	=	base_url('admincp/voucher?tukhoa='.$tukhoa.'&p=');
-        $temp['data']['info'] = $this->voucher_model->get_query($sql,$numrow,$skip);
+        $link	=	base_url('admincp/offer?tukhoa='.$tukhoa.'&p=');
+
+        $temp['data']['info'] = $this->offer_model->get_query($sql,$numrow,$skip);
         $temp['data']['page']= $this->page->divPage($temp['data']['total'],$p,$div,$numrow,$link);
         $temp['data']['tukhoa'] = $tukhoa;
         $this->load->view("admincp/layout",$temp);
-    }
-    public function export_excel_voucher(){
-
-        $this->load->library('phpexcel');
-
-        $sheet = $this->phpexcel->getActiveSheet();
-
-
-        $objWorkSheet = $this->phpexcel->createSheet(0);
-        $objWorkSheet->setCellValue('A1', 'STT');
-        $objWorkSheet->setCellValue('B1', 'HỌ TÊN');
-        $objWorkSheet->setCellValue('C1', 'USER ID');
-        $objWorkSheet->setCellValue('D1', 'USERNAME');
-        $objWorkSheet->setCellValue('E1', 'EMAIL');
-        $objWorkSheet->setCellValue('F1', 'LOẠI VOUCHER');
-        $objWorkSheet->setCellValue('G1', 'NGÀY ĐĂNG KÝ');
-        $objWorkSheet->setCellValue('H1', 'NGÀY HẾT HẠN');
-        $objWorkSheet->setCellValue('I1', 'TRẠNG THÁI');
-        $objWorkSheet->setCellValue('J1', 'MÃ ĐƠN HÀNG');
-        $objWorkSheet->setCellValue('K1', 'CODE VOUCHER');
-
-        //-------------------------------
-        $page = 24000 + $i*1000;
-        $result_data = $this->voucher_model->get_all_data(0, $page);
-
-        if(!empty($result_data)){
-            $k=1;
-            //$j= $page;
-            foreach ($result_data as $item) {
-                $k++;
-                $j++;
-                switch ($item['price']) {
-                    case 2000:
-                        $vc =' Voucher 2 triệu';
-                        break;
-                    case 1000:
-                        $vc = 'Voucher 1 triệu';
-                        break;
-                    case 500:
-                        $vc= 'Voucher 500k';
-                        break;
-                    case 200:
-                        $vc= 'Voucher 200K';
-                        break;
-                    case 100:
-                        $vc = 'Voucher 100k';
-                        break;
-                    case 20:
-                        $vc = 'Giảm 20%';
-                        break;
-                }
-                if($item['status']==1){ $status = "Đã sử dụng";} else $status= 'Chưa sử dụng';
-
-                $objWorkSheet->setCellValue('A'.$k, $j);
-                $objWorkSheet->setCellValue('B'.$k, $item['fullname']);
-                $objWorkSheet->setCellValue('C'.$k, $item['userid']);
-                $objWorkSheet->setCellValue('D'.$k, $item['username']);
-                $objWorkSheet->setCellValue('E'.$k, $item['email']);
-                $objWorkSheet->setCellValue('F'.$k, $vc);
-                $objWorkSheet->setCellValue('G'.$k, date('d-m-Y', $item['start_day']));
-                $objWorkSheet->setCellValue('H'.$k, date('d-m-Y', $item['end_day']));
-                $objWorkSheet->setCellValue('I'.$k, $status);
-                $objWorkSheet->setCellValue('J'.$k, $item['order_id']);
-                $objWorkSheet->setCellValue('K'.$k, $item['code']);
-            }
-        }
-        //------------
-        $objWorkSheet->setTitle('Danh sách mã voucher');
-        // Set active sheet index to the first sheet, so Excel opens this as the first sheet
-
-        //sleep(10);
-
-        $this->phpexcel->setActiveSheetIndex(0);
-
-        $filename='danh_sach_code_voucher.xls'; //save our workbook as this file name
-
-        header('Content-Type: application/vnd.ms-excel'); //mime type
-        header('Content-Disposition: attachment;filename="'.$filename.'"'); //tell browser what's the file name
-        header('Cache-Control: max-age=0'); //no cache
-
-        $objWriter = PHPExcel_IOFactory::createWriter($this->phpexcel, 'Excel5');
-        $objWriter->save('php://output');
-
     }
 
     public function add()
@@ -151,10 +66,10 @@ class Offer extends CI_Controller  {
         $temp['idmenu'] = 3;
         $temp['data']['map_title']  = "Thêm mới";
         $this->form_validation->set_message('required','Vui lòng nhập %s');
-        $this->form_validation->set_rules('code','Tiêu đề','required');
-        $this->form_validation->set_rules('price','Giá trị giảm giá','required');
-        $this->form_validation->set_rules('start_day','Thời gian bắt đầu','required');
-        $this->form_validation->set_rules('end_day','Thời gian kết thúc','required');
+        $this->form_validation->set_rules('coupon_code','chương trình khuyến mãi','required');
+        $this->form_validation->set_rules('discount_value','Giá trị giảm giá','required');
+        $this->form_validation->set_rules('valid_from','Thời gian bắt đầu','required');
+        $this->form_validation->set_rules('valid_until','Thời gian kết thúc','required');
         $this->form_validation->set_error_delimiters('<span class="input-error ">', '</span>');
 
         if($this->input->post('save'))
@@ -162,15 +77,18 @@ class Offer extends CI_Controller  {
             if($this->form_validation->run() == TRUE  )
             {
                 $post = $this->input->post();
-                $post['start_day'] = strtotime($post['start_day']);
-                $post['end_day'] = strtotime($post['end_day']);
-                $post['created'] = time();
+                $post['valid_until'] = strtotime($post['valid_until']);
+                $post['valid_from'] = strtotime($post['valid_from']);
+                $post['	create_date'] = time();
                 unset($post['save']);
-                $result = $this->voucher_model->add($post);
-                $url = base_url('admincp/voucher');
+                $result = $this->offer_model->add($post);
+                $url = base_url('admincp/offer');
                 redirect($url);
             }
         }
+        $temp['data']['listproduct'] = $this->pagehtml_model->getListProuct();
+
+        $temp['data']['listcat'] = $this->pagehtml_model->get_catelog(0);
         $temp['template']='admincp/offer/add';
         $this->load->view("admincp/layout",$temp);
     }
@@ -225,17 +143,17 @@ class Offer extends CI_Controller  {
     {
         $id = $this->uri->segment(4);
         if($id>0){
-            $this->voucher_model->delete($id);
+            $this->offer_model->delete($id);
         }
         if($this->input->post('check_list')) {
             $checked = $this->input->post("check_list");
             if(!empty($checked)){
                 foreach($checked as $k=>$v){
-                    $this->voucher_model->delete($v);
+                    $this->offer_model->delete($v);
                 }
             }
         }
-        $this->page->redirect(base_url('admincp/voucher'));
+        $this->page->redirect(base_url('admincp/offer'));
     }
     public function save()
     {

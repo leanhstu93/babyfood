@@ -11,8 +11,10 @@
         console.log(typeof CKEDITOR);
     </script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(ADMIN_PATH_CSS); ?>style.css?v=<?php echo time(); ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(ADMIN_PATH_CSS); ?>../assets/sumoselect/sumoselect.min.css?v=<?php echo time(); ?>"/>
 <link rel="stylesheet" type="text/css" href="<?php echo ADMIN_PATH_CSS; ?>font-awesome.min.css"/>
-<script src="<?php echo ADMIN_PATH_JS; ?>jquery-1.10.2.js"></script>
+    <script src="<?php echo ADMIN_PATH_JS; ?>jquery-1.10.2.js"></script>
+    <script src="<?php echo ADMIN_PATH_JS; ?>../assets/sumoselect/jquery.sumoselect.min.js"></script>
 <script src="<?php echo ADMIN_PATH_JS; ?>default.js"></script>
 
 <script language = 'javascript' src = '<?php echo ADMIN_PATH_JS; ?>datepicker/WdatePicker.js'></script>

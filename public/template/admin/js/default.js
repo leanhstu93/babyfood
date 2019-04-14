@@ -25,6 +25,11 @@ $(document).ready(function(){
 				break;
 		}
 	});
+	//sumoselect
+	$('.js-select-sumo').SumoSelect({
+		search:true,
+		placeholder: 'Nhập tên sản phẩm...',
+	});
 });
 function ticlockactive(table,colum,id,value)
 {

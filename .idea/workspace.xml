@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964bb42a-011f-497b-bccf-055f5cd57a05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/admincp/Offer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Offer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admincp/offer/add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admincp/offer/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admincp/offer/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nextweb/themes/babyshop/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nextweb/themes/babyshop/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/Offer_model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/template/admin/assets/sumoselect/jquery.sumoselect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/template/admin/assets/sumoselect/sumoselect.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admincp/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admincp/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/helpers/rich_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/rich_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Offer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Pagehtml_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Pagehtml_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/third_party/phpcrawl/documentation/testinterface.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/application/third_party/phpcrawl/documentation/testinterface.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/default/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/default/home/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/default/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/default/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/default/product/danh-muc.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/default/product/danh-muc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Banner/ads_banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Banner/ads_banner.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Banner/ads_banner1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Banner/ads_banner1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admincp/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admincp/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admincp/offer/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admincp/offer/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admincp/offer/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admincp/offer/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Banner/floor-nhabep-0707.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Banner/floor-nhabep-0707.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Catelog/thoi-trang--1468306678.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Catelog/thoi-trang--1468306678.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Catelog/van-phong-pham-1468307152.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Catelog/van-phong-pham-1468307152.jpg" afterDir="false" />
@@ -25,22 +21,30 @@
       <change beforePath="$PROJECT_DIR$/data/Menu/adv-vi-dieu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Menu/adv-vi-dieu.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/News/02-cach-su-dung-hat-chia-voi-dua-hau692u.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/02-cach-su-dung-hat-chia-voi-dua-hau692u.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/News/03-cach-lam-pudding-hat-chia-thom-ngon-bo-duong561a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/03-cach-lam-pudding-hat-chia-thom-ngon-bo-duong561a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/News/5-mau-sua-tam-cho-tre-so-sinh-tot-nhat-hien-nay9142.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/5-mau-sua-tam-cho-tre-so-sinh-tot-nhat-hien-nay9142.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/News/an-hat-chia-co-can-nhai-khong688g.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/an-hat-chia-co-can-nhai-khong688g.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/News/ba-bau-co-nen-uong-hat-chia-hay-khong434g.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/ba-bau-co-nen-uong-hat-chia-hay-khong434g.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/News/banh-an-dam-nhat-cho-be6682.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/banh-an-dam-nhat-cho-be6682.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-che-bien-hat-chia-voi-cac-mon-an-ngon961a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-che-bien-hat-chia-voi-cac-mon-an-ngon961a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-dung-hat-chia-nhu-the-nao-la-dung-nhat609a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-dung-hat-chia-nhu-the-nao-la-dung-nhat609a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-lam-hat-chia-voi-mot-so-loai-do-uong832a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-lam-hat-chia-voi-mot-so-loai-do-uong832a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-nau-chao-hat-chia-cho-be-an-dam-dung-nhat982m.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-nau-chao-hat-chia-cho-be-an-dam-dung-nhat982m.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-nau-hat-chia-voi-cac-mon-an-ngon796n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-nau-hat-chia-voi-cac-mon-an-ngon796n.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-ngam-hat-chia-nhu-the-nao-la-dung951a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-ngam-hat-chia-nhu-the-nao-la-dung951a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-pha-ca-phe-hat-chia-thom-ngon-bo-duong727a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-pha-ca-phe-hat-chia-thom-ngon-bo-duong727a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-pha-hat-chia-nhu-the-nao-la-dung-va-ngon-nhat466a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-pha-hat-chia-nhu-the-nao-la-dung-va-ngon-nhat466a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-pha-nuoc-hat-chia-nhu-the-nao-la-dung639a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-pha-nuoc-hat-chia-nhu-the-nao-la-dung639a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-pha-nuoc-trai-cay-hat-chia514a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-pha-nuoc-trai-cay-hat-chia514a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-pha-sua-chua-hat-chia-ngon-nhat403a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-pha-sua-chua-hat-chia-ngon-nhat403a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/News/cach-pha-tra-xanh-hat-chia-tot-cho-suc-khoe513a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-pha-tra-xanh-hat-chia-tot-cho-suc-khoe513a.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/News/cach-su-dung-hat-chia-cho-ba-bau-nhu-the-nao-la-tot100u.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-su-dung-hat-chia-cho-ba-bau-nhu-the-nao-la-tot100u.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/News/cach-su-dung-hat-chia-giam-can-nhu-the-nao-la-hieu-qua730n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-su-dung-hat-chia-giam-can-nhu-the-nao-la-hieu-qua730n.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/News/cach-uong-hat-chia-lam-dep-da217a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/News/cach-uong-hat-chia-lam-dep-da217a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/24a9a4f6e69dde68d033a41131779aa5" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/25a3e189a703a300bfc3966ee1e00e64" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/25a3e189a703a300bfc3966ee1e00e64" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/3d9c43adb77ca36cd1777dcbc4eab814" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/3d9c43adb77ca36cd1777dcbc4eab814" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/58def0c1c2db8fabafa3291d9443f54b" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/58def0c1c2db8fabafa3291d9443f54b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/5a48081fbbd3ef576f0d4f9d569ca9e8" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/5a48081fbbd3ef576f0d4f9d569ca9e8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/5aec30d8eea5f0ac053281ccf3c38655" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/5aec30d8eea5f0ac053281ccf3c38655" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/5f0806cc2bd5fc3cc5bcd233b1911b6c" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/5f0806cc2bd5fc3cc5bcd233b1911b6c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/5fb9c7a332a8eae4bc670d4b8431722f" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/5fb9c7a332a8eae4bc670d4b8431722f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/608defc841f814745e55b97d7746a5c4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/6580477e72da5309eee52e35e3904f7e" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/6580477e72da5309eee52e35e3904f7e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/6ad71e8444ccdc8f8bfbc66c39ee7469" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/6ad71e8444ccdc8f8bfbc66c39ee7469" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/6bd930ca54878974a3409ea24c689b63" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/6bd930ca54878974a3409ea24c689b63" afterDir="false" />
@@ -55,21 +59,17 @@
       <change beforePath="$PROJECT_DIR$/data/cache/aa2d1c5ea774f43a2b5651f93dbb9949" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/aa2d1c5ea774f43a2b5651f93dbb9949" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/b36736f4b3643855f4ba5a39c79a2225" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/b36736f4b3643855f4ba5a39c79a2225" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/b4b3487ca99cbd8440302266fc84bc34" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/b4b3487ca99cbd8440302266fc84bc34" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/bff97aeaba0463fa0dd00824de2d0e0a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/c223141a5c0a3f7b9da258abbf024d24" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/c223141a5c0a3f7b9da258abbf024d24" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/c75176646ce0616811a93413f4d84c6a" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/c75176646ce0616811a93413f4d84c6a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/c82e22e13b23408e55400fb8a4f540b7" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/ca0ff61dda2348d2b333d397ff8804d8" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/ca0ff61dda2348d2b333d397ff8804d8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/d49bc2234d0f7ad8e892607abda5061d" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/d49bc2234d0f7ad8e892607abda5061d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/d4d0ed8d5a5d2f8377f5a193cf96bb8f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/df00f5d18f79e3fc5e5e135b3d979a17" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/df00f5d18f79e3fc5e5e135b3d979a17" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/e27eced1012ae1c6c0fb2eaf36c66f6c" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/e27eced1012ae1c6c0fb2eaf36c66f6c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/e9c10a98d427ce1872f05d49502155d2" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/e9c10a98d427ce1872f05d49502155d2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/eb7e5d9c8d56c824c3f470f5fb2970ac" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/eb7e5d9c8d56c824c3f470f5fb2970ac" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/ed6f6197bb80071cd24146420dfede74" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/ed6f6197bb80071cd24146420dfede74" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/fe47c9a4716167977c3996f760c320a3" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/fe47c9a4716167977c3996f760c320a3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/define.php" beforeDir="false" afterPath="$PROJECT_DIR$/define.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/template/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/template/admin/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/template/admin/js/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/template/admin/js/default.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,43 +80,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admincp/offer/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="59" column="69" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#1894#1900#0#HTML" expanded="true" />
-                <element signature="e#1900#1906#0#HTML" expanded="true" />
-                <element signature="e#1906#1912#0#HTML" expanded="true" />
-                <element signature="e#1912#1918#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="372">
+              <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/template/admin/css/style.css">
+        <entry file="file://$PROJECT_DIR$/application/views/admincp/voucher/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="97" selection-start-line="34" selection-start-column="97" selection-end-line="34" selection-end-column="97" />
+            <state relative-caret-position="-102" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Offer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admincp/product/add.php">
+        <entry file="file://$PROJECT_DIR$/application/models/Offer_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/admincp/offer/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="35" column="215" lean-forward="true" selection-start-line="35" selection-start-column="215" selection-end-line="35" selection-end-column="215" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Voucher.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Voucher_model.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="27" column="88" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="27" selection-end-column="88" />
+              <caret line="18" column="29" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -124,8 +144,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/template/admin/js/default.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+            <state relative-caret-position="239">
+              <caret line="216" column="9" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admincp/layout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-206">
+              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -134,13 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.js</find>
-      <find>addCommas</find>
-      <find>slider-range</find>
-      <find>selectorSlidePrice</find>
-      <find>jquer</find>
-      <find>$sql</find>
-      <find>lider-range</find>
       <find>$sql_price</find>
       <find>price_max</find>
       <find>.woocommerce .widget_price_filter .ui-slider .ui-slider-range</find>
@@ -152,7 +174,6 @@
       <find>'sta</find>
       <find>info_ct</find>
       <find>info_pr</find>
-      <find>get_query</find>
       <find>BASEPATH</find>
       <find>home</find>
       <find>product_model</find>
@@ -164,6 +185,14 @@
       <find>itemtype</find>
       <find>admincp</find>
       <find>voucher</find>
+      <find>mn_product</find>
+      <find>getListProuct</find>
+      <find>js-card-type</find>
+      <find>Offer_model</find>
+      <find>Voucher</find>
+      <find>delete</find>
+      <find>get_query</find>
+      <find>offer_model</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,10 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/admincp/Admin.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admincp/Login.php" />
-        <option value="$PROJECT_DIR$/application/views/admincp/layout.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admincp/Product.php" />
         <option value="$PROJECT_DIR$/application/views/admincp/product/edit.php" />
         <option value="$PROJECT_DIR$/application/views/admincp/product/add.php" />
         <option value="$PROJECT_DIR$/public/template/css/style.css" />
@@ -206,8 +231,6 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/application/controllers/Home.php" />
         <option value="$PROJECT_DIR$/system/core/Config.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/application/helpers/rich_helper.php" />
         <option value="$PROJECT_DIR$/define.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/views/default/layout.php" />
@@ -217,12 +240,18 @@
         <option value="$PROJECT_DIR$/images.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-3/define.php" />
         <option value="$PROJECT_DIR$/application/models/Offer.php" />
-        <option value="$PROJECT_DIR$/application/views/admincp/offer/index.php" />
         <option value="$PROJECT_DIR$/application/views/admincp/offer/edit.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admincp/Offer.php" />
-        <option value="$PROJECT_DIR$/public/template/admin/js/default.js" />
         <option value="$PROJECT_DIR$/public/template/admin/css/style.css" />
+        <option value="$PROJECT_DIR$/application/helpers/rich_helper.php" />
+        <option value="$PROJECT_DIR$/application/models/Pagehtml_model.php" />
+        <option value="$PROJECT_DIR$/application/views/admincp/layout.php" />
+        <option value="$PROJECT_DIR$/public/template/admin/js/default.js" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/views/admincp/offer/add.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admincp/Offer.php" />
+        <option value="$PROJECT_DIR$/application/models/Offer_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admincp/Voucher.php" />
+        <option value="$PROJECT_DIR$/application/views/admincp/offer/index.php" />
       </list>
     </option>
   </component>
@@ -237,6 +266,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,53 +283,50 @@
               <item name="babyfood" type="b2602c69:ProjectViewProjectNode" />
               <item name="babyfood" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="babyfood" type="b2602c69:ProjectViewProjectNode" />
               <item name="babyfood" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="admincp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="babyfood" type="b2602c69:ProjectViewProjectNode" />
               <item name="babyfood" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admincp" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="babyfood" type="b2602c69:ProjectViewProjectNode" />
               <item name="babyfood" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/admincp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/models" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\babyfood\babyfood\nextweb\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\babyfood\babyfood\application\models" />
+      <recent name="C:\xampp\htdocs\babyfood\babyfood\public\template\admin\assets\sumoselect" />
       <recent name="C:\xampp\htdocs\babyfood\babyfood\application\views\admincp" />
       <recent name="C:\xampp\htdocs\babyfood\babyfood\nextweb\themes\babyshop\css" />
       <recent name="C:\xampp\htdocs\babyfood\babyfood\nextweb\themes\babyshop\assets\lazyload" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\babyfood\babyfood\nextweb\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -333,6 +360,8 @@
       <workItem from="1554652389139" duration="5512000" />
       <workItem from="1554694796712" duration="2675000" />
       <workItem from="1554817267718" duration="6748000" />
+      <workItem from="1555222234379" duration="2216000" />
+      <workItem from="1555253637567" duration="9662000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1554309958323</created>
@@ -394,13 +423,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69803000" />
+    <option name="totallyTimeSpent" value="81681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24100257" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24742931" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,13 +441,34 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49871466" weight="0.04037685" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.048465267" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50192803" side_tool="true" visible="true" weight="0.04037685" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993573" weight="0.04845222" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50064266" side_tool="true" weight="0.04845222" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24421594" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49871466" weight="0.04037685" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993573" visible="true" weight="0.04845222" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50064266" side_tool="true" visible="true" weight="0.04845222" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -452,45 +501,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/sitemaps/ror.xml" />
-    <entry file="file://$USER_HOME$/Downloads/sitemap (1).xml" />
-    <entry file="file://$USER_HOME$/Downloads/sitemaps/sitemap.html" />
-    <entry file="file://$USER_HOME$/Downloads/sitemaps/sitemap.xml~/sitemap.xml" />
-    <entry file="file://$USER_HOME$/Downloads/sitemap-2.4.php" />
-    <entry file="file://$PROJECT_DIR$/system/core/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Product_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="127" column="71" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="71" />
-          <folding>
-            <element signature="n#category#0;n#Product#0;n#!!top" />
-            <element signature="n#sales#0;n#Product#0;n#!!top" />
-            <element signature="n#detail#0;n#Product#0;n#!!top" />
-            <element signature="n#GetSubCatelogId#0;n#Product#0;n#!!top" />
-            <element signature="n#comment#0;n#Product#0;n#!!top" />
-            <element signature="n#loadcomment#0;n#Product#0;n#!!top" />
-            <element signature="n#sphot#0;n#Product#0;n#!!top" />
-            <element signature="n#order#0;n#Product#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml" />
-    <entry file="file://$USER_HOME$/Downloads/sitemaps/sitemap.xml" />
-    <entry file="file://$PROJECT_DIR$/sitemap.php" />
     <entry file="file://$PROJECT_DIR$/system/core/Router.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7342">
@@ -548,16 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
-          <folding>
-            <element signature="e#6#1666#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/helpers/htmlpurifier_helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-465" />
@@ -582,13 +582,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nextweb/themes/babyshop/css/owl.carousel.min.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/rich_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="176" column="20" selection-start-line="176" selection-start-column="9" selection-end-line="176" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/default/layout.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -661,27 +654,10 @@
     <entry file="file://$PROJECT_DIR$/application/views/admincp/dashboard/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admincp/product/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admincp/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Adminmenu_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Voucher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="27" selection-end-line="254" />
         </state>
       </provider>
     </entry>
@@ -699,22 +675,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admincp/offer/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="32" column="177" selection-start-line="32" selection-start-column="177" selection-end-line="32" selection-end-column="177" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admincp/offer/edit.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Offer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="203" column="40" selection-start-line="203" selection-start-column="40" selection-end-line="203" selection-end-column="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/helpers/form_helper.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -723,45 +685,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/template/admin/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/template/admin/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="578">
           <caret line="34" column="97" selection-start-line="34" selection-start-column="97" selection-end-line="34" selection-end-column="97" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admincp/product/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="88" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="27" selection-end-column="88" />
+        <state relative-caret-position="459">
+          <caret line="27" column="88" selection-start-line="26" selection-start-column="11" selection-end-line="27" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/rich_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="181" column="25" selection-start-line="181" selection-start-column="25" selection-end-line="181" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Pagehtml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2397">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="n#category#0;n#Product#0;n#!!top" />
+            <element signature="n#sales#0;n#Product#0;n#!!top" />
+            <element signature="n#detail#0;n#Product#0;n#!!top" />
+            <element signature="n#GetSubCatelogId#0;n#Product#0;n#!!top" />
+            <element signature="n#comment#0;n#Product#0;n#!!top" />
+            <element signature="n#loadcomment#0;n#Product#0;n#!!top" />
+            <element signature="n#sphot#0;n#Product#0;n#!!top" />
+            <element signature="n#order#0;n#Product#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admincp/product/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Catelog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="71" column="74" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admincp/catelog/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pagehtml_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/template/admin/assets/sumoselect/sumoselect.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1275">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+          <folding>
+            <element signature="e#6#1666#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admincp/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admincp/offer/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="59" column="69" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#1894#1900#0#HTML" expanded="true" />
-            <element signature="e#1900#1906#0#HTML" expanded="true" />
-            <element signature="e#1906#1912#0#HTML" expanded="true" />
-            <element signature="e#1912#1918#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="372">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admincp/voucher/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/template/admin/js/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="216" column="9" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admincp/voucher/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Offer_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Voucher_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Voucher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admincp/Offer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admincp/offer/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="35" column="215" lean-forward="true" selection-start-line="35" selection-start-column="215" selection-end-line="35" selection-end-column="215" />
         </state>
       </provider>
     </entry>

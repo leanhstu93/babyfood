@@ -17,8 +17,8 @@
       <table>
         <tr>
           <td class = 'title_td' >Tạo chương trình khuyến mãi</td>
-          <td><input type="text" name="code" value="<?php echo set_value('code','') ?>"  style="width:400px">
-            <?php echo form_error('code'); ?></td>
+          <td><input type="text" name="coupon_code" value=""  style="width:400px">
+            <?php echo form_error('coupon_code'); ?></td>
         </tr>
         <tr>
           <td class = 'title_td' >Đơn vị khuyến mãi</td>
@@ -38,29 +38,45 @@
                   <option value="3">Danh mục sản phẩm</option>
                   <option value="5">Sản phẩm</option>
               </select>
-              <?php echo form_error('valid_until'); ?>
+              <?php echo form_error('card_type '); ?>
           </td>
       </tr>
 
       <tr class="js-tab-product tab-product">
           <td class = 'title_td' >Sản phẩm</td>
           <td>
-              <select name = 'card_type' style="width:400px">
-                  <option value="1">Tất cả</option>
-                  <option value="3">Danh mục sản phẩm</option>
-                  <option value="5">Sản phẩm</option>
+              <select name = 'product_id' class="js-select-sumo" style="width:400px" multiple>
+                  <?php
+                  if(!empty($listproduct)){
+                      foreach($listproduct as $item){ ?>
+                          <option value="<?php echo $item['Id'] ?>">
+                            <?php echo $item['title_vn']; ?>
+                          </option>
+
+                  <?php }
+                  } ?>
               </select>
-              <?php echo form_error('valid_until'); ?>
+              <?php echo form_error('product_id'); ?>
           </td>
       </tr>
 
       <tr class="js-tab-category-product tab-category-product">
           <td class = 'title_td' >Danh mục sản phẩm</td>
           <td>
-              <select name = 'card_type' style="width:400px">
-                  <?php echo $this->page->TreeCat($listcat,0,"",set_value('idcat',''),"--");?>
+              <select name = 'product_category_id' class="js-select-sumo" style="width:400px" multiple>
+                  <?php
+                  if(!empty($listcat)){
+                      foreach($listcat as $item){
+                          $sub= $this->pagehtml_model->get_catelog($item['Id']);
+                          ?>
+                          <option value="<?php echo $item['Id'] ?>" <?php echo set_select('parentid', $item['Id']); ?>><?php echo $item['title_vn']; ?></option>
+                          <?php if(!empty($sub)){
+                              foreach($sub as $row){
+                                  ?>
+                                  <option value="<?php echo $row['Id'] ?>" <?php echo set_select('parentid', $row['Id']); ?>>---<?php echo $row['title_vn']; ?></option>
+                              <?php }}}} ?>
               </select>
-              <?php echo form_error('valid_until'); ?>
+              <?php echo form_error('product_category_id'); ?>
           </td>
       </tr>
 
@@ -72,15 +88,19 @@
 
         <tr>
           <td class = 'title_td' >Thời gian bắt đầu</td>
-          <td><input type="text" name="start_day" value="<?php echo set_value('start_day','') ?>" onclick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})"  style="width:400px"></td>
+          <td><input type="text" name="valid_from" value="<?php echo set_value('valid_from','') ?>" onclick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})"  style="width:400px">
+              <?php echo form_error('valid_from'); ?></td>
+          </td>
         </tr>
         <tr>
           <td class = 'title_td' >Thời gian kết thúc</td>
-          <td><input type="text" name="end_day" value="<?php echo set_value('end_day','') ?>"  onclick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})" style="width:400px"></td>
+          <td><input type="text" name="valid_until" value="<?php echo set_value('valid_until','') ?>"  onclick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})" style="width:400px">
+              <?php echo form_error('valid_until'); ?></td>
+          </td>
         </tr>
         <tr>
           <td class = 'title_td' >Khóa</td>
-          <td><input type="checkbox" value="1" name="ticlock"  <?php echo set_checkbox('ticlock', '1'); ?>/></td>
+          <td><input type="checkbox" value="1" name="active"  <?php echo set_checkbox('active', '1'); ?>/></td>
         </tr>
         <tr>
           <td  ></td>
