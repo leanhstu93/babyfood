@@ -56,7 +56,8 @@ class Home extends CI_Controller {
 		$skip = $p * $numrow;
 		
 		$temp['data']['info_ct']= $this->product_model->get_query($sql,$numrow,$skip);
-		$temp['data']['info_pr']= $this->product_model->get_query($sql1,$numrow,$skip);
+		$info_pr = $this->product_model->get_query($sql1,$numrow,$skip,true);
+		$temp['data']['info_pr']= $info_pr;
 		$temp['data']['cateloghome']  = $this->catelog_model->get_list(array('ticlock'=>0,/*'home'=>1,*/"parentid"=>0),'sort ASC, Id DESC',100,0);
 		
 		//$temp['data']['menu']  = $this->catelog_model->list_data();

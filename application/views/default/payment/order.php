@@ -232,7 +232,7 @@ var totalOrder = <?=$tongtien?>;
 														<?=form_error('ReCaptcha')?>
 													</p>
                                                     <div class="form-group">
-                                                        <input type="submit" class="btn btn-primary btn-block" name="woocommerce_checkout_place_order" id="place_order" value="Đặt hàng" data-value="Đặt hàng" disabled>
+                                                        <input type="submit" class="btn btn-primary btn-block" name="woocommerce_checkout_place_order" id="place_order" value="Đặt hàng" data-value="Đặt hàng">
                                                     </div>
 													<input type="hidden" name="transfee" id="transfee">
 													<script>
@@ -249,6 +249,7 @@ var correctCaptcha = function(response) {
         console.log('error');
     }
 };
+
 </script>
                                                     <script>
 													

@@ -9,8 +9,8 @@ class Offer extends CI_Controller  {
 
         $this->load->model('adminmenu_model');
         $this->load->model('offer_model');
-        $this->load->model('comment_model');
-        $this->load->model('provinces_model');
+        $this->load->model('product_model');
+        $this->load->model('catelog_model');
         $this->load->helper('url');
         $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
         $controller = $this->router->fetch_class();
@@ -77,9 +77,10 @@ class Offer extends CI_Controller  {
             if($this->form_validation->run() == TRUE  )
             {
                 $post = $this->input->post();
+
                 $post['valid_until'] = strtotime($post['valid_until']);
                 $post['valid_from'] = strtotime($post['valid_from']);
-                $post['	create_date'] = time();
+                $post['create_date'] = time();
                 unset($post['save']);
                 $result = $this->offer_model->add($post);
                 $url = base_url('admincp/offer');
@@ -96,29 +97,12 @@ class Offer extends CI_Controller  {
     public function edit($id)
     {
         $id = $this->uri->segment(4);
-        $info =  $this->voucher_model->get_id_edit($id);
+        $info =  $this->offer_model->get_id_edit($id);
         $temp['data']['info'] = $info;
         $temp['idmenu'] = 3;
         $temp['data']['map_title']  = "Sửa";
-        $this->form_validation->set_message('required','Vui lòng nhập %s');
-        $this->form_validation->set_message('is_unique','%s đã tồn tại');
-        $this->form_validation->set_message('is_natural_no_zero','Vui lòng chọn %s');
-
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');;
-        $this->form_validation->set_rules('fullname', 'Họ tên', 'required');
-        $this->form_validation->set_rules('address', 'Địa chỉ', 'required');
-        $this->form_validation->set_rules('phone', 'Điện thoại', 'required');
-        $this->form_validation->set_rules('idtinh','Tỉnh thành','required|is_natural_no_zero');
         $this->form_validation->set_error_delimiters('<span class="input-error ">', '</span>');
-        if($this->input->post('save'))
-        {
-            if($this->form_validation->run() == TRUE  )
-            {
-                $this->voucher_model->update($id,NULL,TRUE);
-                redirect(base_url('voucher/user'));
-            }
-        }
-        $temp['data']['listprovinces'] = $this->provinces_model->getdata(array('ticlock'=>0));
+
         $temp['template']='admincp/offer/edit';
         $this->load->view("admincp/layout",$temp);
     }

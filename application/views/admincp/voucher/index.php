@@ -75,7 +75,14 @@
         <td><?php echo date('d-m-Y', $item->end_day) ?></td>
         <td><?php if($item->status==1){echo "Đã sử dụng";} else echo 'Chưa sử dụng'; ?></td>
         <td><?php echo $item->order_id; ?></td>
-        <td align = 'center' width="50"><a href = '<?php echo $urledit;?>' title = 'Sửa'><img src = '<?php echo ADMIN_PATH_IMG;?>b_edit.png'></a> <a href = '<?php echo $urldel; ?>' title = 'Xóa' onclick = 'javascript:return thongbao("Bạn có chắc muốn xóa");'><img src = '<?php echo ADMIN_PATH_IMG;?>b_drop.png'></a></td>
+        <td align = 'center' width="50">
+            <a href = '<?php echo $urledit;?>' title = 'Sửa'>
+                <img src = '<?php echo ADMIN_PATH_IMG;?>b_edit.png'>
+            </a>
+            <a href = '<?php echo $urldel; ?>' title = 'Xóa' onclick = 'javascript:return thongbao("Bạn có chắc muốn xóa");'>
+                <img src = '<?php echo ADMIN_PATH_IMG;?>b_drop.png'>
+            </a>
+        </td>
       </tr>
       <?php }} ?>
     </table>

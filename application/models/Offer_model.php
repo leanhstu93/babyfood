@@ -52,7 +52,7 @@ class Offer_model extends CI_Model {
         return $this->db->where('id', $id)->get('mn_voucher_type')->row_array();
     }
 	public function get_id_edit($id){
-		$sql = 'SELECT *, (SELECT user_id FROM mn_discount WHERE mn_discount.code = mn_voucher.code) AS userid, (SELECT username FROM mn_user WHERE mn_user.id = userid) as username, (SELECT email FROM mn_user WHERE mn_user.id = userid) as email FROM mn_voucher WHERE id="'.$id.'"';
+		$sql = 'SELECT * FROM `payment_offer` WHERE id="'.$id.'"';
 		$query = $this->db->query($sql);
 		return $query->row_array();	
 	}
@@ -63,9 +63,35 @@ class Offer_model extends CI_Model {
 		return $this->db->count_all_results();
 	}
  	public function add($data){
-		$this->db->insert('payment_offer', $data);
-		return $this->db->insert_id();
+	    $product_id = $data['product_id'];
+        $category_id = $data['category_id'];
+        unset($data['product_id']);
+        unset($data['category_id']);
+		$result = $this->db->insert('payment_offer', $data);
+        $id = $this->db->insert_id();
+
+		if($result === TRUE && $id > 0) {
+            if($data['card_type'] == 3 && !empty($category_id) && is_array($category_id)) {
+                foreach ($category_id as $value) {
+                    $this->db->insert('offer_product', array('category_id' => $value, 'offer_id' => $id));
+                }
+            } else if($data['card_type'] == 5 && !empty($product_id) && is_array($product_id)) {
+                foreach ($product_id as $value) {
+                    $this->db->insert('offer_product', array('product_id' => $value , 'offer_id' => $id));
+                }
+            }
+        }
+
+		return $id;
 	}
+
+    /**
+     * kiem tra sp co chuong trinh khuyen mai k
+     */
+    public function check_product_offer()
+    {
+
+    }
 	public function update($id,$data,$option = false)
 	{
 		if($option==true){

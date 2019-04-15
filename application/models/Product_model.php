@@ -10,12 +10,16 @@ class Product_model extends CI_Model {
 		$this->load->database();
 		$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
 	}
-  	public function get_query($sql,$limit  = NULL,$skip  = NULL)
+  	public function get_query($sql,$limit  = NULL,$skip  = NULL,$format = FALSE)
 	{
 		if($limit>0)
 			$sql  .=" LIMIT ".$skip.",".$limit;
 		$query = $this->db->query($sql);
-		return $query->result_array();
+        $data = $query->result_array();
+        if($format === true && is_array($data)) {
+            $data = $this->priceOffer($data);
+        }
+		return $data;
 	}
 	public function get_product($id,$sale_price = '', $toprice = ''){
 		$this->db->select('*');
@@ -29,7 +33,8 @@ class Product_model extends CI_Model {
 		$this->db->order_by('sort','ASC');
 		$this->db->order_by('Id','DESC');
 		$query = $this->db->get();
-		return $query -> result_array();
+		$data = $this->priceOffer($query -> result_array());
+		return $data;
 		
 	}
 	public function cout_product($id,$sale_price = '', $toprice = ''){
@@ -113,12 +118,60 @@ class Product_model extends CI_Model {
 	{
 		//$this->db->cache_off();
 		$query = $this->db->get_where('mn_product',array("Id"=>$id));
-		return $query->result_array();
+		return $this->priceOffer($query->result_array());
 	}
+
+	public function getOffer($product_id,$category_id) {
+         $time = time();
+        $query = $this->db->query("SELECT * FROM `payment_offer` WHERE 
+            `active` = 0 AND 
+            `valid_until` >= $time AND (
+             `card_type` = 1 OR 
+             (`card_type` = 3 AND (SELECT count(id) FROM `offer_product` WHERE `offer_id` = payment_offer.id AND `category_id` =  $category_id  ) > 0 ) OR 
+             (`card_type` = 5 AND (SELECT count(id) FROM `offer_product` WHERE `offer_id` = payment_offer.id AND `product_id` =  $product_id  ) > 0 )) 
+            ORDER BY payment_offer.id DESC  LIMIT 1  ");
+        $data = $query->result_array();
+        return $data;
+    }
+	public function priceOffer($product)
+    {
+        /**
+         * valid_until [1 : VND; 3: %; 5: đồng giá]
+         */
+
+        foreach ($product as $key => $item) {
+            $price_ori = $item['price'];
+            $price = $item['sale_price'];
+            $product_id = $item['Id'];
+            $category_id = $item['idcat'];
+            $data = $this->getOffer($product_id,$category_id);
+            if(!empty($data) && is_array($data)) {
+                $data = $data[0];
+                $price_final = $price;
+
+                if ($data['discount_unit'] == 1) {
+                    $price_final = $price - $data['discount_value'];
+                } else if ($data['discount_unit'] == 3 && $data['discount_value'] <= 100) {
+                    $price_final = $price - ($price * $data['discount_value'] / 100);
+                } else if ($data['discount_unit'] == 5) {
+                    $price_final = $data['discount_value'];
+                }
+
+                if ($price_ori == 0 && $price_final != $price) {
+                    $price_ori = $price;
+                }
+                // set
+                $product[$key]['price'] = $price_ori;
+                $product[$key]['sale_price'] = $price_final;
+            }
+        }
+        return $product;
+    }
 	public function getAlias($id)
 	{
 		$query = $this->db->get_where('mn_product',array("alias"=>$id),1,0);
-		return $query->result_array();
+        $data = $query->result_array();
+		return $this->priceOffer($data);
 	}
 	public function list_data($where,$limit=50,$skip = 0,$orderby = "Id DESC")
 	{

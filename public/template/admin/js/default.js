@@ -25,10 +25,19 @@ $(document).ready(function(){
 				break;
 		}
 	});
+	// change currency
+	$('.js-discount-unit').change(function () {
+		var val = $(this).val();
+		if(val == 3) {
+			$('.js-currency-name').text('%')
+		} else {
+			$('.js-currency-name').text('VND')
+		}
+	});
 	//sumoselect
 	$('.js-select-sumo').SumoSelect({
 		search:true,
-		placeholder: 'Nhập tên sản phẩm...',
+		placeholder: 'Nhập tên ...',
 	});
 });
 function ticlockactive(table,colum,id,value)

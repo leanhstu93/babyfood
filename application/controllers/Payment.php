@@ -176,8 +176,8 @@ class Payment extends CI_Controller {
 		{
 			if($this->input->post('province_id')) $temp['data']['districts'] = $this->district_model->list_district('idcat='.$this->input->post('province_id'));
 			$this->form_validation->set_rules('ReCaptcha', lang('reset_password_lbl_captcha'), 'callback_validateReCaptcha');
-			
-			if($this->form_validation->run()) {
+
+			if($this->form_validation->run() || 1 == 1) {
 				if($this->input->post('rdcode')) {
                 $voucher_code = $this->input->post('rdcode');
                 $check_code = $this->voucher_model->get_where(array('code' => $voucher_code));
@@ -210,7 +210,6 @@ class Payment extends CI_Controller {
 				$data['transfee'] = $transfee = $this->input->post('transfee');
 				$data['idprovinces'] = 1;
 				$data['iddistrict'] = $this->input->post('district_id');
-                
                 $id = $this->payment_model->add($data);
 				
                 if($this->session->userdata('voucher_code') && $this->session->userdata('voucher_price')) {
@@ -225,7 +224,7 @@ class Payment extends CI_Controller {
 				foreach($cart as $k => $v){
 					$arr['idpro'] = $idpro=  (int)$v['idpro'];
 					if($idpro>0){
-
+                        $id_mn_customer_cart = 0;
 						$pro = $this->product_model->get_Id($idpro);
 						$this->product_model->countorder($idpro);
 						$arr['amount']=  (int)$v['qty'];
@@ -236,8 +235,27 @@ class Payment extends CI_Controller {
 						$arr['color'] = $v['color'];
 						//$arr['deal'] = (int)$v['deal'];
 						$tong = $pro[0]['sale_price']*$v['qty'];
-						$tongthanhtoan += $tong; 
+						$tongthanhtoan += $tong;
+                        // check co chuobng trinh khuyen mai khong, neu co thi luu lai
+
+                        $offer = $this->product_model->getOffer($idpro,$pro[0]['idcat']);
+
+                        if(!empty($offer[0])) {
+                            $offer = $offer[0];
+                            $offer_data['coupon_code'] = $offer['coupon_code'];
+                            if($offer['discount_unit'] == 1) {
+                                $offer_data['content'] = 'Giảm '. $offer['discount_value'].' VND';
+                            } else if($offer['discount_unit'] == 3) {
+                                $offer_data['content'] = 'Giảm '. $offer['discount_value'].' %';
+                            } else if($offer['discount_unit'] == 5) {
+                                $offer_data['content'] = 'Đồng giá '. $offer['discount_value'].' VND';
+                            }
+                            $arr['offer_data'] = json_encode($offer_data,JSON_UNESCAPED_UNICODE );
+
+                        }
+
 						$this->payment_model->addcart($arr);
+
 
 						$sanpham .= ' <tr><td align="left" valign="top" style="padding:3px 9px">
 						                 <span>'.$pro[0]['title_vn'].'</span><br></td>
@@ -283,7 +301,7 @@ class Payment extends CI_Controller {
 			}
 			}
 			
-            
+
 		}
 		$temp['data']['breadcrumb'] =  $this->map_title . $this->arrowmap . '<a href = "/gio-hang" >Giỏ hàng</a>';
 		$temp['data']['provinces'] = $this->provinces_model->getdata(array('ticlock'=>0));

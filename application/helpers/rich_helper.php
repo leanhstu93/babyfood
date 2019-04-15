@@ -182,3 +182,12 @@ function minimizeCSS($css)
     $css = preg_replace('/;}/', '}', $css);
     return $css;
 }
+
+/**
+ * get gia khuyen mai
+ * @param $price
+ */
+function getPriceOffer($price)
+{
+
+}

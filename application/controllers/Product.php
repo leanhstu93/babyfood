@@ -173,7 +173,7 @@ class Product extends CI_Controller {
 		$this -> pagination -> initialize($config);
 		$page = ($this->uri->segment(2))? $this->uri->segment(2) : 0;
 		$offset = ($page  == 0) ? 0 : ($page * $config['per_page']) - $config['per_page'];
-		$temp['data']['info']= $this->product_model->get_query($sql,$config["per_page"],$offset);
+		$temp['data']['info']= $this->product_model->get_query($sql,$config["per_page"],$offset,true);
 		$temp['data']['info_price'] = $info_price[0];
 		$temp['data']['phantrang']= $this->pagination->create_links();
         //debug($sql);
@@ -258,7 +258,9 @@ class Product extends CI_Controller {
 
 	public function detail($id){
 		//lay thong tin san pham
-		$temp['data']['prod'] = $this->product_model->getAlias($id);
+        $product_format =$this->product_model->getAlias($id);
+		$temp['data']['prod'] = $product_format;
+
 		if(empty($temp['data']['prod'])) redirect(base_url('404.html'));
 		$temp['data']['namepage'] = 'detail';
 		//------------meta--------------------	
@@ -292,20 +294,6 @@ class Product extends CI_Controller {
 
 		$temp['data']['info_cat'] = $this->catelog_model->get_where($temp['data']['prod'][0]['idcat']);
 		$temp['data']['all_tag']  = $this->catelog_model->list_data(30,0);
-		// if($iduser >0){
-		// 	$temp['data']['follow'] = $this->page->readFile($iduser.'_'.$temp['data']['prod'][0]["Id"]);  
-		// }else{
-		// 	$temp['data']['follow'] = 0;
-		// }
-		//$temp['data']['userId'] = $iduser;
-		/*$ship_provinces_id = $this->session->userdata('ship_provinces_id');
-		if($ship_provinces_id>0){
-			
-			$temp['data']['districtOne'] = $this->provinces_model->list_district(array('Id'=>$ship_provinces_id,"ticlock"=>0));
-			$temp['data']['provincesOne'] = $this->provinces_model->getdata(array('Id'=>$temp['data']['districtOne'][0]["idcat"]));
-			$temp['data']['district'] = $this->provinces_model->list_district(array('idcat'=>$temp['data']['provincesOne'][0]["Id"],"ticlock"=>0));
-		}
-		$temp['data']['provinces'] = $this->provinces_model->getdata(array('ticlock'=>0));*/
 		$temp['template']='default/product/detail';
 		$this->load->view("default/layout",$temp); 
 	}

@@ -5,7 +5,7 @@
       <tbody>
         <tr>
           <td width="25"><i class="fa icon-23 fa-windows"></i></td>
-          <td> Nội dung / Mã giảm giá / <?php echo $map_title ?></td>
+          <td> Nội dung / Chương trình khuyến mãi / <?php echo $map_title ?></td>
         </tr>
       </tbody>
     </table>
@@ -22,12 +22,12 @@
         </tr>
         <tr>
           <td class = 'title_td' >Đơn vị khuyến mãi</td>
-          <td><select name = 'valid_until' style="width:400px">
+          <td><select name = 'discount_unit' class="js-discount-unit" style="width:400px">
                   <option value = '1'>VND</option>
                   <option value="3">% Giảm</option>
                   <option value="5">Đồng giá</option>
               </select>
-            <?php echo form_error('valid_until'); ?></td>
+            <?php echo form_error('discount_unit'); ?></td>
         </tr>
 
       <tr>
@@ -45,7 +45,7 @@
       <tr class="js-tab-product tab-product">
           <td class = 'title_td' >Sản phẩm</td>
           <td>
-              <select name = 'product_id' class="js-select-sumo" style="width:400px" multiple>
+              <select name = 'product_id[]' class="js-select-sumo" style="width:400px" multiple>
                   <?php
                   if(!empty($listproduct)){
                       foreach($listproduct as $item){ ?>
@@ -63,45 +63,57 @@
       <tr class="js-tab-category-product tab-category-product">
           <td class = 'title_td' >Danh mục sản phẩm</td>
           <td>
-              <select name = 'product_category_id' class="js-select-sumo" style="width:400px" multiple>
+              <select name = 'category_id' class="js-select-sumo" style="width:400px" multiple="multiple">
                   <?php
                   if(!empty($listcat)){
                       foreach($listcat as $item){
                           $sub= $this->pagehtml_model->get_catelog($item['Id']);
                           ?>
-                          <option value="<?php echo $item['Id'] ?>" <?php echo set_select('parentid', $item['Id']); ?>><?php echo $item['title_vn']; ?></option>
+                          <option value="<?php echo $item['Id'] ?>" <?php echo set_select('parentid', $item['Id']); ?>>
+                              <?php echo $item['title_vn']; ?>
+                          </option>
                           <?php if(!empty($sub)){
                               foreach($sub as $row){
                                   ?>
                                   <option value="<?php echo $row['Id'] ?>" <?php echo set_select('parentid', $row['Id']); ?>>---<?php echo $row['title_vn']; ?></option>
                               <?php }}}} ?>
               </select>
-              <?php echo form_error('product_category_id'); ?>
+              <?php echo form_error('category_id'); ?>
           </td>
       </tr>
 
       <tr>
           <td class = 'title_td' >Giá trị giảm</td>
-          <td><input name="discount_value" value="<?php echo set_value('discount_value','') ?>" style="width:400px">
+          <td>
+              <div style="position: relative">
+                <input name="discount_value" value="<?php echo set_value('discount_value','') ?>" style="width:400px">
+                  <div class="js-currency-name" style="position: absolute;
+    right: 12px;
+    top: 5px;
+    bottom: 0;
+    margin: auto;
+    font-size: 76%;
+    color: #797979;">VND</div>
+              </div>
               <?php echo form_error('discount_value'); ?></td>
       </tr>
 
         <tr>
           <td class = 'title_td' >Thời gian bắt đầu</td>
-          <td><input type="text" name="valid_from" value="<?php echo set_value('valid_from','') ?>" onclick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})"  style="width:400px">
+          <td><input autocomplete="off" type="text" name="valid_from" value="" onclick="WdatePicker({startDate:'%y-%M-%D 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})"  style="width:400px">
               <?php echo form_error('valid_from'); ?></td>
           </td>
         </tr>
         <tr>
           <td class = 'title_td' >Thời gian kết thúc</td>
-          <td><input type="text" name="valid_until" value="<?php echo set_value('valid_until','') ?>"  onclick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})" style="width:400px">
+          <td><input autocomplete="off" type="text" name="valid_until" value=""  onclick="WdatePicker({startDate:'%y-%M-%D 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})" style="width:400px">
               <?php echo form_error('valid_until'); ?></td>
           </td>
         </tr>
-        <tr>
-          <td class = 'title_td' >Khóa</td>
-          <td><input type="checkbox" value="1" name="active"  <?php echo set_checkbox('active', '1'); ?>/></td>
-        </tr>
+<!--        <tr>-->
+<!--          <td class = 'title_td' >Không áp dụng</td>-->
+<!--          <td><input type="checkbox" value="1" name="active"  --><?php //echo set_checkbox('active', '1'); ?><!--/></td>-->
+<!--        </tr>-->
         <tr>
           <td  ></td>
           <th align = 'left'> <button type = 'submit' name="save" value="save"  class="button" >Thêm mới</button>

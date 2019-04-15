@@ -272,8 +272,8 @@ foreach ($contents as $key => $item) { ?>
           <div class="col-sm-9 col-md-10 lindo-left-0">
                 <div class="items lindo-pro-style-sp">
                   <?php $i=0; ?>
-                  <?php $sql_product = "SELECT Id,title_vn,price, sale_price, images, alias, codepro FROM mn_product WHERE idcat ='".$item_ct['Id']."' OR idcat IN (SELECT Id FROM mn_catelog WHERE parentid='".$item_ct['Id']."' OR parentid IN (SELECT Id FROM mn_catelog WHERE parentid='".$item_ct['Id']."')) ORDER BY Id DESC";
-				  $info_pr = $this->product_model->get_query($sql_product,10,0); 
+                  <?php $sql_product = "SELECT Id,title_vn,price,idcat, sale_price, images, alias, codepro FROM mn_product WHERE idcat ='".$item_ct['Id']."' OR idcat IN (SELECT Id FROM mn_catelog WHERE parentid='".$item_ct['Id']."' OR parentid IN (SELECT Id FROM mn_catelog WHERE parentid='".$item_ct['Id']."')) ORDER BY Id DESC";
+				  $info_pr = $this->product_model->get_query($sql_product,10,0,true);
 				  ?>
                     <?php foreach ($info_pr as $item_pr){ ?>
                         <?php //if (in_array($item_pr['idcat'], $arrId)){ ?>

@@ -64,10 +64,28 @@
 			$i++;
 		?>
 		<tr class="order_item">
-		<td class="product-name">
-			<a href="<?php echo base_url($pro[0]['alias'].".html") ?>"><?php echo $pro[0]['title_vn'];?></a> <strong class="product-quantity">× <?php echo $item['amount'];?></strong></td>
-		<td class="product-total">
-			<span class="woocommerce-Price-amount amount"><?php echo bsVndDot($tong);?><span class="woocommerce-Price-currencySymbol">₫</span></span>	</td>
+            <td class="product-name">
+                <a href="<?php echo base_url($pro[0]['alias'].".html") ?>"><?php echo $pro[0]['title_vn'];?></a>
+                <strong class="product-quantity">× <?php echo $item['amount'];?></strong>
+            </td>
+            <td class="product-total">
+                <span class="woocommerce-Price-amount amount"><?php echo bsVndDot($tong);?><span class="woocommerce-Price-currencySymbol">₫</span></span>
+                <br>
+            <?php
+            if(!empty($item['offer_data'])){
+                $offer_data = json_decode($item['offer_data']);
+                ?>
+                <hr>
+                <strong>
+                    <span class="woocommerce-Price-amount amount">
+                        <?php echo $offer_data->coupon_code  ?> -
+                    </span>
+                </strong>
+                <span>
+                    <?php  echo $offer_data->content  ?>
+                </span>
+            <?php } ?>
+            </td>
 		</tr>
 		<?php 
 		}

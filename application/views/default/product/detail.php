@@ -69,7 +69,18 @@
         ?>
   <div class="lindo_price">
   	<p class="price">
-  	<del><span class="woocommerce-Price-amount amount"><?php echo bsVndDot($item['price']); ?><span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount"><?php echo bsVndDot($item['sale_price']); ?><span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>    </p>
+        <del>
+            <span class="woocommerce-Price-amount amount"><?php echo bsVndDot($item['price']); ?>
+                <span class="woocommerce-Price-currencySymbol">&#8363;</span>
+            </span>
+        </del>
+        <ins>
+            <span class="woocommerce-Price-amount amount">
+                <?php echo bsVndDot($item['sale_price']); ?>
+                <span class="woocommerce-Price-currencySymbol">&#8363;</span>
+            </span>
+        </ins>
+    </p>
   </div>  
   <div class="lindo_sale">
     <div class="sale_off">Tiết kiệm đến<br><strong> <?php echo $pt?>%</strong></div> </div>  

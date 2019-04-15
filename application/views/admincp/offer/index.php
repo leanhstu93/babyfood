@@ -34,8 +34,6 @@
         <th width="150"><span onClick="javascript:sortOrder('valid_from','<?php if($this->session->userdata('sortuser')=='	valid_from asc') echo 0; else echo 1; ?>');" style="cursor:pointer">Bắt đầu</span></th>
 
         <th width="80"><span onClick="javascript:sortOrder('valid_until','<?php if($this->session->userdata('sortuser')=='valid_until asc') echo 0; else echo 1; ?>');" style="cursor:pointer">Ngày hết hạn</span></th>
-
-        <th width="80"><span onClick="javascript:sortOrder('active','<?php if($this->session->userdata('sortuser')=='active asc') echo 0; else echo 1; ?>');" style="cursor:pointer">Trạng thái</span></th>
         <th>Thao tác</th>
       </tr>
       <?php
@@ -65,19 +63,28 @@
         <td align="left">
             <?php echo $item->coupon_code; ?>
         </td>
-        <td><?php 
-			echo $item->discount_value;
-		 ?></td>
+        <td>
+            <?php
+            if($item->discount_unit == 1) {
+                echo 'Giảm '. $item->discount_value.' VND';
+            } else if($item->discount_unit == 3) {
+                echo 'Giảm '. $item->discount_value.' %';
+            } else if($item->discount_unit == 5) {
+                echo 'Đồng giá '. $item->discount_value.' VND';
+            }
+            ?>
+        </td>
         <td><?php echo date('d-m-Y', $item->valid_from) ?></td>
 
         <td><?php echo date('d-m-Y', $item->valid_until) ?></td>
-
-        <td><?php if($item->active==1){echo "Đã sử dụng";} else echo 'Chưa sử dụng'; ?></td>
 
         <td align = 'center' width="50">
           <a href = '<?php echo $urldel; ?>' title = 'Xóa' onclick = 'javascript:return thongbao("Bạn có chắc muốn xóa");'>
               <img src = '<?php echo ADMIN_PATH_IMG;?>b_drop.png'>
           </a>
+            <a href = '<?php echo $urledit;?>' title = 'Sửa'>
+                Xem
+            </a>
           </td>
       </tr>
       <?php }} ?>
@@ -87,7 +94,9 @@
 if($page) echo $page;
 ?>
     </div>
-    <div class="list_button"><a href="/admincp/offer/add" class="button">Add</a> </div>
+    <div class="list_button">
+        <a href="/admincp/offer/add" class="button">Add</a>
+    </div>
 
   </form>
 </div>
