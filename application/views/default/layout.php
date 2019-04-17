@@ -26,7 +26,14 @@ $cart = $this->session->userdata('cart');
     <title><?php if(isset($meta['title'])) echo $meta['title']; else echo $web['meta_title']; ?></title>
     <base href="<?php echo BASE_URL ?>" />
     <link rel="stylesheet" href="nextweb/themes/babyshop/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="nextweb/themes/babyshop/css/customize-css" />
+    <link rel="stylesheet" href="nextweb/themes/babyshop/css/reset.css">
+    <link rel="stylesheet" href="nextweb/themes/babyshop/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="nextweb/themes/babyshop/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="nextweb/themes/babyshop/css/style.css">
+    <link rel="stylesheet" type="text/css" href="nextweb/themes/babyshop/css/product.css">
+    <link rel="stylesheet" type="text/css" href="nextweb/themes/babyshop/css/lindo_menu_cat.css">
+    <link rel="stylesheet" type="text/css" href="nextweb/themes/babyshop/css/responsive.css">
+    <!-- <link rel="stylesheet" href="nextweb/themes/babyshop/css/customize-css" /> -->
 	<link rel="canonical" href="<?=current_url()?>" >
                 <script type="text/javascript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
                         <style>
@@ -205,7 +212,11 @@ header .header_maincontent.fixed-top{padding: 3px 0}
             <div class="col-md-12">
                     <div class="header_info">
                         <h1 class="site-title"><a title="<?php echo $web['title_vn'] ?>" href="" rel="home"><?php echo $web['title_vn'] ?></a></h1>
-                         <p class="hotline_header"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Tổng đài: <strong><a href="tel:<?php echo $web['hotline'] ?>" title="Call"><?php echo $web['hotline'] ?></a></strong></p>
+                         <p class="hotline_header"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Tổng đài: <strong>
+                                 <a href="tel:<?php echo $web['hotline'] ?>" title="Call">
+                                     <?php echo $web['hotline'] ?>
+                                 </a>
+                             </strong></p>
                     </div>
                  <div class="lindo-header_top_menu">
 
@@ -487,7 +498,23 @@ Copyright © <?php echo $web['title_vn'] ?>. All right Reserved
 <script type="text/javascript" src="nextweb/themes/babyshop/mmenu/js/jquery.mmenu.all.min.js"></script>
 <script type="text/javascript">
 $(function() {
-    $('nav#mlindo_mobile').mmenu();
+    $('nav#mlindo_mobile').mmenu({
+        "navbars": [
+            {
+                "position": "top",
+                "content": [
+                    "<div class='nav-custom-top-lg'><a href='/'><img alt='Plantmore' class='img_logo' src='<?php echo PATH_IMG_FLASH.$data['logo'][0]->file_vn ?>   '></a></div>"
+                ]
+            },
+
+            {
+                "position": "bottom",
+                "content": [
+                    "<a class='nav-footer-tel' href='tel:<?php echo $web['hotline'] ?>'><i class='fa fa-phone animated tada'></i> <?php echo $web['hotline'] ?></a>"
+                ]
+            }
+        ]
+    });
     
     $(window).scroll(function () {
         //Mobile fixed top

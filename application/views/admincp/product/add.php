@@ -61,6 +61,14 @@
    		 <?php echo form_error('codepro'); ?>
      </td>
 </tr>
+
+<tr>
+    <td class = 'title_td'>Mã QR</td>
+    <td> <input type="text" name="code_qr" value="<?php echo set_value('code_qr','');  ?>"  style="width:200px" >
+        <?php echo form_error('code_qr'); ?>
+    </td>
+</tr>
+
     <tr>
         <td class="title_td">Kho hàng</td>
         <td>

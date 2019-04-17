@@ -45,7 +45,8 @@
 
 		<div class="cont-news-detail-page">
 			<h1 class="tib"><?php echo  $info[0]['title_vn'] ?></h1>
-			<?php echo $info[0]['content_vn'];?>
+            <?php $content =  $info[0]['content_vn'] ?>
+            <?php ECHO $content; ?>
 		</div><!--end .cont-news-detail-page-->
 
 		<?php if($info[0]['tag']) { 

@@ -203,7 +203,9 @@ class Product_model extends CI_Model {
 			$data['description_vn'] = $this->page->replace_script($this->input->post('description_vn'));
 			$data['content_vn'] = $this->page->replace_script($this->input->post('content_vn'));
 			$data['digital'] = $this->page->replace_script($this->input->post('digital'));
-			$data['hot'] = (int)$this->input->post('hot');	
+			$data['hot'] = (int)$this->input->post('hot');
+            $data['codepro'] = $this->input->post('codepro');
+            $data['code_qr'] = $this->input->post('code_qr');
 			$data['view'] = (int)0;
 			$data['tag'] = $this->input->post('tag');	
 			$data['date'] = time();	
@@ -226,6 +228,7 @@ class Product_model extends CI_Model {
 			$data['idcat'] = (int)$this->input->post('idcat');
             $data['status'] = (int)$this->input->post('status');
 			$data['codepro'] = $this->input->post('codepro');
+            $data['code_qr'] = $this->input->post('code_qr');
 			if($this->input->post('idmanufacturer')==0){
 				$data['idmanufacturer'] = '-1';
 			}else{

@@ -17,7 +17,7 @@
       <table>
         <tr>
           <td class = 'title_td' >Tạo chương trình khuyến mãi</td>
-          <td><input type="text" name="coupon_code" value=""  style="width:400px">
+          <td><input type="text" name="coupon_code" value=""  style="width:393px">
             <?php echo form_error('coupon_code'); ?></td>
         </tr>
         <tr>
@@ -45,7 +45,7 @@
       <tr class="js-tab-product tab-product">
           <td class = 'title_td' >Sản phẩm</td>
           <td>
-              <select name = 'product_id[]' class="js-select-sumo" style="width:400px" multiple>
+              <select name = 'product_id[]' class="js-select-sumo" style="width:384px" multiple>
                   <?php
                   if(!empty($listproduct)){
                       foreach($listproduct as $item){ ?>
@@ -63,7 +63,7 @@
       <tr class="js-tab-category-product tab-category-product">
           <td class = 'title_td' >Danh mục sản phẩm</td>
           <td>
-              <select name = 'category_id' class="js-select-sumo" style="width:400px" multiple="multiple">
+              <select name = 'category_id' class="js-select-sumo" style="width:384px" multiple="multiple">
                   <?php
                   if(!empty($listcat)){
                       foreach($listcat as $item){
@@ -86,7 +86,7 @@
           <td class = 'title_td' >Giá trị giảm</td>
           <td>
               <div style="position: relative">
-                <input name="discount_value" value="<?php echo set_value('discount_value','') ?>" style="width:400px">
+                <input name="discount_value" value="<?php echo set_value('discount_value','') ?>" style="width:395px">
                   <div class="js-currency-name" style="position: absolute;
     right: 12px;
     top: 5px;
@@ -118,7 +118,7 @@
           <td  ></td>
           <th align = 'left'> <button type = 'submit' name="save" value="save"  class="button" >Thêm mới</button>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <input type = 'reset' value = 'Làm lại' class="button">
+            <input type = 'reset' value = 'Làm lại' class="button js-reset">
           </th>
         </tr>
       </table>

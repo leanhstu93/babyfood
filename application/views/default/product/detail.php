@@ -60,8 +60,13 @@
 </div>
 
 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-<p style="margin-bottom:5px;font-size: 16px;">Mã SP: <span style="font-size:16px;font-weight:bold;"><?=$item['codepro']?></span></p>
-    <p style="margin-bottom:5px;font-size: 16px;">Tình trạng: <span style="font-size:16px;font-weight:bold;" class="<?= ($item['status'] == 0) ? 'in-stock' : 'out-stock' ?>"><?= ($item['status'] == 0) ? 'Còn hàng' : 'Hết hàng' ?></span></p>
+<p style="margin-bottom:10px;font-size: 16px;">Mã SP: <span style="font-size:16px;font-weight:bold;"><?=$item['codepro']?></span>
+    <?php if(!empty($item['code_qr'])) { ?>
+    <span style="    color: #888888; float: right;margin-bottom:10px;font-size: 16px;">Mã QR: <span style="font-size:16px;font-weight:bold;"><?= $item['code_qr']?></span></span>
+    <?php } ?>
+</p>
+
+    <p style="margin-bottom:10px;font-size: 16px;">Tình trạng: <span style="font-size:16px;font-weight:bold;" class="<?= ($item['status'] == 0) ? 'in-stock' : 'out-stock' ?>"><?= ($item['status'] == 0) ? 'Còn hàng' : 'Hết hàng' ?></span></p>
 <div class="lindo_sale_price">
 <?php
     if ((int)$item['price'] != 0 && (int)$item['price'] != $item['sale_price']) {

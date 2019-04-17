@@ -39,6 +39,21 @@ $(document).ready(function(){
 		search:true,
 		placeholder: 'Nhập tên ...',
 	});
+
+	$('.js-reset').on('click', function () {
+		var obj = [];
+		$('.js-select-sumo ').each(function(){
+			var $self = $(this);
+			$self.find('option:selected').each(function () {
+				obj.push($(this).index());
+			});
+
+			for (var i = 0; i < obj.length; i++) {
+				$self[0].sumo.unSelectItem(obj[i]);
+			}
+		});
+
+	});
 });
 function ticlockactive(table,colum,id,value)
 {

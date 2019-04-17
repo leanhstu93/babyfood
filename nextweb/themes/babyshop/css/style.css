@@ -1,3 +1,39 @@
+.cont-news-detail-page ol{
+	list-style-type: decimal;
+	padding-left: 19px;
+}
+.cont-news-detail-page ul{
+	list-style-type: disc;
+	padding-left: 19px;
+}
+.BLOCK_BUY_NOW{
+	background: red;
+	padding: 10px;
+	color: white;
+	border: 1px solid black;
+	font-weight: bold;
+	border-radius: 7px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: table;
+	width: auto;
+	text-align: center;
+	-webkit-transition: color .2s ease;
+	-moz-transition: color .2s ease;
+	-ms-transition: color .2s ease;
+	-o-transition: color .2s ease;
+	transition: color .2s ease;
+}
+.BLOCK_NOTE{
+	width: 100%;
+	float: left;
+	padding: 15px;
+	border: 1px solid #f26f21;
+	background: #fff4ec;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
 .out-stock{
 	color: red;
 }
@@ -17,33 +53,71 @@ header .header_maincontent.fixed-top .group_like_cart .notify:after{
 #amount{
 	border: 0px;
 }
-.btn-buy-now {
-	width: 100px;
-	background: red;
-	color: white;
-	text-align: center;
-	position: fixed;
-	right: 15px;
-	bottom: 50px;
-	z-index: 9;
-	border:1px solid red;
-	-webkit-transition: color .2s ease;
-	-moz-transition: color .2s ease;
-	-ms-transition: color .2s ease;
-	-o-transition: color .2s ease;
-	transition: color .2s ease;
+.header_maincontent .title_cat.col-md-4.col-sm-24.col-xs-24{
+	display: none;
 }
-.btn-buy-now:hover{
-	background: white;
+.mm-navbar-bottom{
+	background: #f2731f !important;
 }
-.btn-buy-now:hover a{
-	color: red;
+.mm-navbar-bottom a{
+	color: white !important;
+	font-size: 150%;
 }
-.btn-buy-now a{
-	color: white ;
-	padding: 10px;
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes tada {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	10%, 20% {
+		transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+	}
+
+	30%, 50%, 70%, 90% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+	}
+
+	40%, 60%, 80% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.tada {
+	animation-name: tada;
+}
+
+.mm-navbar.mm-navbar-top.mm-navbar-top-1.mm-navbar-size-1{
+	height: 60px !important;
+}
+.mm-hasnavbar-top-1 .mm-panels, .mm-navbar-top-2{
+	top: 60px !important;
+}
+.nav-custom-top-lg{
 	width: 100%;
 	float: left;
+	height: 100%;
+	padding: 5px 0 !important;
+}
+.nav-custom-top-lg .img_logo{
+	height: 100%;
+}
+.mm-menu{
+	background: white !important;
+}
+.mm-listview .mm-next:before{
+	border-left: 0 !important;
+}
+.BLOCK_BUY_NOW:hover{
+	background: white;
+	color: red;
 }
 .lindo_mega_left li a{
 	text-decoration: none;
@@ -731,7 +805,7 @@ footer .social-pint{background-position:76% 58.5%}
 .woocommerce .woocommerce-product-rating .star-rating { margin:2px !important; font-size:18px}
 
 .woocommerce-page div.product div.summary .price { width:100%; float:left; padding:0 0 10px 0}
-.woocommerce-page div.product div.summary .price del  { display:block;}
+.woocommerce-page div.product div.summary .price del  { display:block;margin-bottom: 10px;}
 .woocommerce-page div.product div.summary .price ins { display:block; text-decoration:none}
 .woocommerce div.product p.price del, .woocommerce div.product span.price del { text-decoration:none}
 .woocommerce-page div.product div.summary .price ins span { color:#F00; font-size:19px}
@@ -752,7 +826,7 @@ footer .social-pint{background-position:76% 58.5%}
 .woocommerce div.product form.cart .button { background:#F00 !important; color:#FFF; padding:10px 15px; font-size:15px; font-weight:normal; border:none; text-transform:uppercase;}
 .woocommerce div.product form.cart { padding-top:10px; width:100%; float:left; margin:0 !important}
 .woocommerce div.product form.cart .button i.fa { padding-right:10px;}
-.woocommerce .quantity .qty { border:1px solid #EEE; border-radius:3px; padding:8px; width:68px !important;  float:left}
+.woocommerce .quantity .qty { border:1px solid #EEE; border-radius:3px; padding:6px 8px; width:68px !important;  float:left}
 .woocommerce span.onsale { display:none}
 
 .yith-wcwl-add-to-wishlist{float: left;width:auto;margin: 10px 0;padding-left: 20px;position: relative;}
@@ -815,6 +889,11 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 .mlindo_mobile { font-size:18px; text-transform:uppercase; color:#333}
 .description p { padding-bottom:10px;}
 #tab-description  p { padding-bottom:10px;}
+@media screen and (max-width:1200px){
+	.btn-buy-now{
+		left: 18px;
+	}
+}
 @media screen and (max-width:480px){
 	.woocommerce div.product form.cart div.quantity{display:block;float:none!important}
 	.woocommerce div.product form.cart div.quantity:after{display:block;clear:both;content:''}
